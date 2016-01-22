@@ -131,4 +131,4 @@ public class Main {
     double heronBase = Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
     return heronBase;
   }
-}  
+}
