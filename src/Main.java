@@ -1,6 +1,4 @@
 //Integration project that demonstrates the skills I learned in COP 2006
-package src;
-
 import java.util.Scanner;
 
 public class Main {
