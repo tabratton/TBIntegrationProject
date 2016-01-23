@@ -1,6 +1,4 @@
 //Integration project that demonstrates the skills I learned in COP 2006
-//Test for Eclipse
-package src;
 import java.util.Scanner;
 
 public class Main {
@@ -9,6 +7,7 @@ public class Main {
     System.out.println("The Hello World is the most basic computer program, " +
         "showing that you made the computer do something");
     System.out.println("Hello World!");
+    System.out.println("");
 
     //Variables 1 - Declaring Variables
     //Simply declares a few variables and then prints them
@@ -20,6 +19,7 @@ public class Main {
     System.out.println("The value of first variable is " + a1);
     System.out.println("The value of second variable is " + b1);
     System.out.println("The value of third variable is " + c1);
+    System.out.println("");
 
     //Variables 2 - Even or Odd
     //Takes one number from the user and then prints if it is even or odd
@@ -39,6 +39,7 @@ public class Main {
     else{
       System.out.println("Odd");
     }
+    System.out.println("");
 
     //Variables 3 - Multiple Any Two Numbers
     //Takes two numbers from the user, multiplies them, and then prints the
@@ -52,6 +53,7 @@ public class Main {
     int num2 = scanner.nextInt();
     product = num1 * num2;
     System.out.println("The product of the two numbers is: " + product);
+    System.out.println("");
 
     //Variables 4 - Age, Name, Salary
     //Takes input from he user and then prints it back with comments on the
@@ -65,6 +67,7 @@ public class Main {
     System.out.println("How much do you make " + name + "?");
     double salary = scanner.nextDouble();
     System.out.println(salary + "! I hope that's per hour and not per year!");
+    System.out.println("");
 
     //Variables 5 - Prime Number Checker
     //Takes a number from the user and then checks if it is prime
@@ -89,6 +92,7 @@ public class Main {
     else{
       System.out.println("Input number is a prime number");
     }
+    System.out.println("");
 
     //Variables 6 - Testing Your Variable Knowledge
     //Subtracts a variable from a number and then prints the original and the
@@ -99,6 +103,7 @@ public class Main {
     int variableKnowledgeB = 100 - variableKnowledgeA;
     System.out.println("Output is: " + variableKnowledgeA);
     System.out.println("Output is: " + variableKnowledgeB);
+    System.out.println("");
 
     //Variables 7 - Variable Max Values
     //Prints the minimum and maximum values of the int variable in Java
@@ -109,6 +114,7 @@ public class Main {
     int max = 2_147_483_647;
     System.out.println(min);
     System.out.println(max);
+    System.out.println("");
 
     //Variables 8 - Area of a Triangle
     //All code from this exercise except for the triangleArea function is
@@ -123,6 +129,7 @@ public class Main {
     System.out.println("A triangle with sides 3, 4, 5 has an area of: " + a);
     a = triangleArea(9, 9, 9);
     System.out.println("A triangle with sides 9, 9, 9 has an area of: " + a);
+    System.out.println("");
   }
   public static double triangleArea(double a, double b, double c){
     //Uses Heron's formula to calculate the area of a triangle from its side
