@@ -1,6 +1,7 @@
 //Integration project that demonstrates the skills I learned in COP 2006
 //Test from eclipse
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Main {
   public static void main(String[] args) {
@@ -14,12 +15,12 @@ public class Main {
     //Simply declares a few variables and then prints them
     System.out.println("This next program will just print a few variables to " +
         "demonstrate the kinds of variables in Java.");
-    int a1 = 63;
-    float b1 = 45.0f;
-    double c1 = 67.675586d;
-    System.out.println("The value of first variable is " + a1);
-    System.out.println("The value of second variable is " + b1);
-    System.out.println("The value of third variable is " + c1);
+    int declaringVariablesInt = 63;
+    float declaringVariablesFloat = 45.0f;
+    double declaringVariablesDouble = 67.675586d;
+    System.out.println("The value of first variable is " + declaringVariablesInt);
+    System.out.println("The value of second variable is " + declaringVariablesFloat);
+    System.out.println("The value of third variable is " + declaringVariablesDouble);
     System.out.println("");
 
     //Variables 2 - Even or Odd
@@ -47,13 +48,13 @@ public class Main {
     // product
     System.out.println("The following program will ask you to give it two " +
         "numbers, which it will then multiply them and tell you the product");
-    int product;
+    int multiplyAnyTwoNumersProduct;
     System.out.println("Enter the 1st number:");
-    int num1 = scanner.nextInt();
+    int multiplyAnyTwoNumbers1 = scanner.nextInt();
     System.out.println("Enter the 2nd number:");
-    int num2 = scanner.nextInt();
-    product = num1 * num2;
-    System.out.println("The product of the two numbers is: " + product);
+    int multiplyAnyTwoNumbers2 = scanner.nextInt();
+    multiplyAnyTwoNumersProduct = multiplyAnyTwoNumbers1 * multiplyAnyTwoNumbers2;
+    System.out.println("The product of the two numbers is: " + multiplyAnyTwoNumersProduct);
     System.out.println("");
 
     //Variables 4 - Age, Name, Salary
@@ -75,17 +76,17 @@ public class Main {
     System.out.println("This program will ask for you to give it a number, " +
         "and it will then tell you if that number is a prime number or not");
     System.out.println("Enter your input number: ");
-    int n = scanner.nextInt();
-    int i = 2;
+    int primeNumberInput = scanner.nextInt();
+    int primeNumberLoopCounter = 2;
     int isPrime = 1;
     //This while loop checks to see if the given number is evenly divisible
     // by any number greater than 2 and less than half of the original number
     //  If it is, then the number is not a prime.
-    while(i < n / 2){
-      if(n % i == 0){
+    while(primeNumberLoopCounter < primeNumberInput / 2){
+      if(primeNumberInput % primeNumberLoopCounter == 0){
         isPrime = 0;
       }
-      i++;
+      primeNumberLoopCounter++;
     }
     if(isPrime == 0){
       System.out.println("Input number is not a prime number");
@@ -111,10 +112,10 @@ public class Main {
     System.out.println("Similar to the second program you saw, this one " +
         "simply prints the minimum and maximum values for the int variable in" +
         " Java.");
-    int min = -2_147_483_648;
-    int max = 2_147_483_647;
-    System.out.println(min);
-    System.out.println(max);
+    int intMin = -2_147_483_648;
+    int intMax = 2_147_483_647;
+    System.out.println(intMin);
+    System.out.println(intMax);
     System.out.println("");
 
     //Variables 8 - Area of a Triangle
@@ -123,15 +124,77 @@ public class Main {
     System.out.println("This program takes the side lengths of a triangle and" +
         " uses Heron's formula to calculate the area, which it then prints to" +
         " the console.");
-    double a;
-    a = triangleArea(3, 3, 3);
-    System.out.println("A triangle with sides 3, 3, 3 has an area of: " + a);
-    a = triangleArea(3, 4, 5);
-    System.out.println("A triangle with sides 3, 4, 5 has an area of: " + a);
-    a = triangleArea(9, 9, 9);
-    System.out.println("A triangle with sides 9, 9, 9 has an area of: " + a);
+    double triangleAreaVariable;
+    triangleAreaVariable = triangleArea(3, 3, 3);
+    System.out.println("A triangle with sides 3, 3, 3 has an area of: " + triangleAreaVariable);
+    triangleAreaVariable = triangleArea(3, 4, 5);
+    System.out.println("A triangle with sides 3, 4, 5 has an area of: " + triangleAreaVariable);
+    triangleAreaVariable = triangleArea(9, 9, 9);
+    System.out.println("A triangle with sides 9, 9, 9 has an area of: " + triangleAreaVariable);
     System.out.println("");
-  }
+    
+    //Arithmetic 1 - Absolute Equals
+    boolean equal = false;
+    System.out.println("Enter the 1st number:");
+    int num1 = Math.abs(scanner.nextInt());
+    System.out.println("Enter the 2nd number:");
+    int num2 = Math.abs(scanner.nextInt());
+    if(num1 == num2){
+      equal = true;
+    }
+    else if(num1 != num2){
+      equal = false;
+    }
+    System.out.println("Result is: " + equal);
+
+    //Arithmetic 2 - Floor and Ceiling
+    System.out.println("Enter a number: ");
+    double dob = scanner.nextDouble();
+    System.out.println((int) Math.ceil(dob));
+    System.out.println((int) Math.floor(dob));
+    
+    //Arithmetic 3 - Square Root
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    double x = scan.nextDouble();
+    DecimalFormat df = new DecimalFormat("0.00000");
+    System.out.println(df.format(Math.pow(x, 0.5)));
+    System.out.println(df.format(Math.pow(x, 0.25)));
+
+    //Arithmetic 4 - Taylor Series
+    double sinDegrees = scanner.nextDouble();
+    double sinRadians = sinDegrees * 3.14 / 180;
+    double sinTaylorSeries = sinRadians - ((sinRadians * sinRadians *
+    sinRadians) / (3 * 2 * 1)) + ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians) / (5 * 4 * 3 * 2 * 1)) - ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians) / (7 * 6 * 5 * 4 * 3 * 2 * 1));
+    DecimalFormat df = new DecimalFormat("0.00000#");
+    String sinRounded = df.format(sinTaylorSeries);
+    System.out.println(sinRounded);
+
+    //Arithmetic 5 - Multiples of 3 and 5
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int sumFive = 0;
+    int sumThree = 0;
+    int sumFifteen = 0;
+    System.out.println("Enter a number below which sum must be calculated: ");
+    int input = scanner.nextInt();
+    while(i < input){
+      sumFive = i + sumFive;
+      i = i + 5;
+    }
+    while(j < input){
+      sumThree = j + sumThree;
+      j = j + 3;
+    }
+    while(k < input){
+      sumFifteen = k + sumFifteen;
+      k = k + 15;
+    }
+    int finalSum = sumFive + sumThree - sumFifteen;
+    System.out.println(finalSum);
+}
+  
   public static double triangleArea(double a, double b, double c){
     //Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
