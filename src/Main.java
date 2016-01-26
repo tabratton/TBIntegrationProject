@@ -154,7 +154,7 @@ public class Main {
     System.out.println((int) Math.floor(dob));
     
     //Arithmetic 3 - Square Root
-    Scanner scan = new Scanner(System.in);
+    
     System.out.println("Enter a number: ");
     double x = scan.nextDouble();
     DecimalFormat df = new DecimalFormat("0.00000");
@@ -193,13 +193,95 @@ public class Main {
     }
     int finalSum = sumFive + sumThree - sumFifteen;
     System.out.println(finalSum);
-}
-  
+    
+//Leap Year
+
+
+    System.out.println("Enter the year to be checked: ");
+    int leapYear = scanner.nextInt();
+    boolean isLeap = false;
+    if(leapYear % 400 == 0){
+      isLeap = true;
+    }
+    else if(leapYear % 100 == 0){
+      isLeap = false;
+    }
+    else if(leapYear % 4 == 0){
+      isLeap = true;
+    }
+    System.out.println(isLeap);
+
+
+//Largest of Three Numbers
+
+    int x, y, z;
+    System.out.println("Enter three integers:");
+    x = scanner.nextInt();
+    y = scanner.nextInt();
+    z = scanner.nextInt();
+    if(x == y || x == z || y == z){
+      System.out.println("Entered numbers are not distinct.");
+    }
+    else if(x > y && x > z){
+      System.out.println("First number is largest.");
+    }
+    else if(y > x && y > z){
+      System.out.println("Second number is largest.");
+    }
+    else if(z > x && z > y){
+      System.out.println("Third number is largest.");
+    }
+
+
+//FindSimpleInterest
+    double principal;  // the value of the investment
+    double rate;       // the annual interest rate
+    double interest;   // the interest earned during the year
+    
+    System.out.println("Enter the initial investment: ");
+    principal = scanner.nextDouble();
+    System.out.println("Enter the annual interest rate: ");
+    rate = scanner.nextDouble();
+    interest = principal * (rate / 100);
+    principal = principal + interest;
+    System.out.println("The value of the investment after one year is: "
+        + principal);
+
+  //DegreeToFahrenheit
+    System.out.println("Enter a temperature in Celsius: ");
+    
+    double celsiusDegrees = scanner.nextDouble();
+    double fahrenheitDegrees = 0;
+    fahrenheitDegrees = (celsiusDegrees * 9 / 5) + 32;
+    System.out.println("The temperature in Fahrenheit is: " +
+        fahrenheitDegrees);
+
+  //Arithmetic Operator
+   calculateValues();
+}  
   public static double triangleArea(double a, double b, double c){
     //Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
     double s = (a + b + c)/2;
     double heronBase = Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
     return heronBase;
+  }
+  static void calculateValues() {
+    float a, b;
+    int resulta, results, resultm;
+    float resultd;
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a:");
+    a = sc.nextInt();
+    System.out.print("Enter b:");
+    b = sc.nextInt();
+    resulta = (int) (a + b);
+    results = (int) (a - b);
+    resultm = (int) (a * b);
+    resultd = a / b;
+    System.out.println("The result of adding is " + resulta);
+    System.out.println("The result of subtracting is " + results);
+    System.out.println("The result of multiplying is " + resultm);
+    System.out.println("The result of dividing is " + resultd);
   }
 }
