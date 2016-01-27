@@ -18,9 +18,12 @@ public class Main {
     int declaringVariablesInt = 63;
     float declaringVariablesFloat = 45.0f;
     double declaringVariablesDouble = 67.675586d;
-    System.out.println("The value of first variable is " + declaringVariablesInt);
-    System.out.println("The value of second variable is " + declaringVariablesFloat);
-    System.out.println("The value of third variable is " + declaringVariablesDouble);
+    System.out.println("The value of first variable is " +
+        declaringVariablesInt);
+    System.out.println("The value of second variable is " +
+        declaringVariablesFloat);
+    System.out.println("The value of third variable is " +
+        declaringVariablesDouble);
     System.out.println("");
 
     //Variables 2 - Even or Odd
@@ -53,8 +56,10 @@ public class Main {
     int multiplyAnyTwoNumbers1 = scanner.nextInt();
     System.out.println("Enter the 2nd number:");
     int multiplyAnyTwoNumbers2 = scanner.nextInt();
-    multiplyAnyTwoNumersProduct = multiplyAnyTwoNumbers1 * multiplyAnyTwoNumbers2;
-    System.out.println("The product of the two numbers is: " + multiplyAnyTwoNumersProduct);
+    multiplyAnyTwoNumersProduct = multiplyAnyTwoNumbers1 *
+        multiplyAnyTwoNumbers2;
+    System.out.println("The product of the two numbers is: " +
+        multiplyAnyTwoNumersProduct);
     System.out.println("");
 
     //Variables 4 - Age, Name, Salary
@@ -126,11 +131,14 @@ public class Main {
         " the console.");
     double triangleAreaVariable;
     triangleAreaVariable = triangleArea(3, 3, 3);
-    System.out.println("A triangle with sides 3, 3, 3 has an area of: " + triangleAreaVariable);
+    System.out.println("A triangle with sides 3, 3, 3 has an area of: " +
+        triangleAreaVariable);
     triangleAreaVariable = triangleArea(3, 4, 5);
-    System.out.println("A triangle with sides 3, 4, 5 has an area of: " + triangleAreaVariable);
+    System.out.println("A triangle with sides 3, 4, 5 has an area of: " +
+        triangleAreaVariable);
     triangleAreaVariable = triangleArea(9, 9, 9);
-    System.out.println("A triangle with sides 9, 9, 9 has an area of: " + triangleAreaVariable);
+    System.out.println("A triangle with sides 9, 9, 9 has an area of: " +
+        triangleAreaVariable);
     System.out.println("");
     
     //Arithmetic 1 - Absolute Equals
@@ -154,49 +162,49 @@ public class Main {
     System.out.println((int) Math.floor(dob));
     
     //Arithmetic 3 - Square Root
-    
     System.out.println("Enter a number: ");
-    double x = scan.nextDouble();
-    DecimalFormat df = new DecimalFormat("0.00000");
-    System.out.println(df.format(Math.pow(x, 0.5)));
-    System.out.println(df.format(Math.pow(x, 0.25)));
+    double roots = scanner.nextDouble();
+    DecimalFormat squareRootRounding = new DecimalFormat("0.00000");
+    System.out.println(squareRootRounding.format(Math.pow(roots, 0.5)));
+    System.out.println(squareRootRounding.format(Math.pow(roots, 0.25)));
 
     //Arithmetic 4 - Taylor Series
     double sinDegrees = scanner.nextDouble();
     double sinRadians = sinDegrees * 3.14 / 180;
     double sinTaylorSeries = sinRadians - ((sinRadians * sinRadians *
-    sinRadians) / (3 * 2 * 1)) + ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians) / (5 * 4 * 3 * 2 * 1)) - ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians) / (7 * 6 * 5 * 4 * 3 * 2 * 1));
-    DecimalFormat df = new DecimalFormat("0.00000#");
-    String sinRounded = df.format(sinTaylorSeries);
+        sinRadians) / (3 * 2)) + ((sinRadians * sinRadians * sinRadians *
+        sinRadians * sinRadians) / (5 * 4 * 3 * 2)) - ((sinRadians *
+        sinRadians * sinRadians * sinRadians * sinRadians * sinRadians *
+        sinRadians) / (7 * 6 * 5 * 4 * 3 * 2));
+    DecimalFormat taylorSeriesRounding = new DecimalFormat("0.00000#");
+    String sinRounded = taylorSeriesRounding.format(sinTaylorSeries);
     System.out.println(sinRounded);
 
     //Arithmetic 5 - Multiples of 3 and 5
-    int i = 0;
-    int j = 0;
-    int k = 0;
+    int sumFiveCounter = 0;
+    int sumThreeCounter = 0;
+    int sumFifteenCounter = 0;
     int sumFive = 0;
     int sumThree = 0;
     int sumFifteen = 0;
     System.out.println("Enter a number below which sum must be calculated: ");
     int input = scanner.nextInt();
-    while(i < input){
-      sumFive = i + sumFive;
-      i = i + 5;
+    while(sumFiveCounter < input){
+      sumFive = sumFiveCounter + sumFive;
+      sumFiveCounter = sumFiveCounter + 5;
     }
-    while(j < input){
-      sumThree = j + sumThree;
-      j = j + 3;
+    while(sumThreeCounter < input){
+      sumThree = sumThreeCounter + sumThree;
+      sumThreeCounter = sumThreeCounter + 3;
     }
-    while(k < input){
-      sumFifteen = k + sumFifteen;
-      k = k + 15;
+    while(sumFifteenCounter < input){
+      sumFifteen = sumFifteenCounter + sumFifteen;
+      sumFifteenCounter = sumFifteenCounter + 15;
     }
     int finalSum = sumFive + sumThree - sumFifteen;
     System.out.println(finalSum);
     
-//Leap Year
-
-
+    //Operators 1 - Leap Year
     System.out.println("Enter the year to be checked: ");
     int leapYear = scanner.nextInt();
     boolean isLeap = false;
@@ -211,9 +219,7 @@ public class Main {
     }
     System.out.println(isLeap);
 
-
-//Largest of Three Numbers
-
+    //Operators 2 - Largest of Three Numbers
     int x, y, z;
     System.out.println("Enter three integers:");
     x = scanner.nextInt();
@@ -232,12 +238,10 @@ public class Main {
       System.out.println("Third number is largest.");
     }
 
-
-//FindSimpleInterest
+    //Operators 3 - Find Simple Interest
     double principal;  // the value of the investment
     double rate;       // the annual interest rate
     double interest;   // the interest earned during the year
-    
     System.out.println("Enter the initial investment: ");
     principal = scanner.nextDouble();
     System.out.println("Enter the annual interest rate: ");
@@ -247,17 +251,16 @@ public class Main {
     System.out.println("The value of the investment after one year is: "
         + principal);
 
-  //DegreeToFahrenheit
+    //Operators 4 - DegreeToFahrenheit
     System.out.println("Enter a temperature in Celsius: ");
-    
     double celsiusDegrees = scanner.nextDouble();
-    double fahrenheitDegrees = 0;
+    double fahrenheitDegrees;
     fahrenheitDegrees = (celsiusDegrees * 9 / 5) + 32;
     System.out.println("The temperature in Fahrenheit is: " +
         fahrenheitDegrees);
 
-  //Arithmetic Operator
-   calculateValues();
+    //Operators 5 - Arithmetic Operator
+    calculateValues();
 }  
   public static double triangleArea(double a, double b, double c){
     //Uses Heron's formula to calculate the area of a triangle from its side
@@ -266,22 +269,22 @@ public class Main {
     double heronBase = Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
     return heronBase;
   }
-  static void calculateValues() {
+  static void calculateValues(){
     float a, b;
-    int resulta, results, resultm;
-    float resultd;
+    int resultAddition, resultSubtraction, resultMultiplication;
+    float resultDivision;
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter a:");
     a = sc.nextInt();
     System.out.print("Enter b:");
     b = sc.nextInt();
-    resulta = (int) (a + b);
-    results = (int) (a - b);
-    resultm = (int) (a * b);
-    resultd = a / b;
-    System.out.println("The result of adding is " + resulta);
-    System.out.println("The result of subtracting is " + results);
-    System.out.println("The result of multiplying is " + resultm);
-    System.out.println("The result of dividing is " + resultd);
+    resultAddition = (int) (a + b);
+    resultSubtraction = (int) (a - b);
+    resultMultiplication = (int) (a * b);
+    resultDivision = a / b;
+    System.out.println("The result of adding is " + resultAddition);
+    System.out.println("The result of subtracting is " + resultSubtraction);
+    System.out.println("The result of multiplying is " + resultMultiplication);
+    System.out.println("The result of dividing is " + resultDivision);
   }
 }
