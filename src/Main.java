@@ -14,6 +14,14 @@ public class Main {
 
     // Variables 1 - Declaring Variables
     // Simply declares a few variables and then prints them
+    byte declaringVariablesByte = 65;
+    short declaringVariablesShort = 15_065;
+    int declaringVariablesInt = 1_894_657_478;
+    long declaringVariablesLong = 6_441_023_087_321_637_684L;
+    float declaringVariablesFloat = 45.4f;
+    double declaringVariablesDouble = 67.675586d;
+    char declaringVariablesChar = 't';
+    boolean declaringVariablesBoolean = true;
     System.out.println("This next program will print a few variables to " +
         "demonstrate the kinds of variables in Java.");
     System.out.println("A Variable is kind of like a box.  You can put things" +
@@ -21,32 +29,27 @@ public class Main {
     System.out.println("There are 8 different types of variables in Java, " +
         "called primitive data types, and they are as follows:");
     System.out.println("byte: An 8-bit integer. Has a minimum value of -128 " +
-        "and a maximum of 127");
+        "and a maximum of 127. Example: " + declaringVariablesByte);
     System.out.println("short: A 16-bit integer. Has a minimum value of -32," +
-        "168 and a maximum of 32,767");
+        "168 and a maximum of 32,767. Example: " + declaringVariablesShort);
     System.out.println("int: A 32-bit integer. Has a minimum value of -2,147," +
-        "483,648 and a maximum of 2,147,483,647");
+        "483,648 and a maximum of 2,147,483,647. Example: " +
+        declaringVariablesInt);
     System.out.println("long: A 64-bit integer. Has a minimum value of " +
         "-9,223,372,036,854,775,808 and a maximum of 9,223,372,036,854,775," +
-        "807");
+        "807. Example: " + declaringVariablesLong);
     System.out.println("float: A single-precision 32-bit floating point " +
         "number. Unlike the previous data types, floating point numbers can " +
-        "be used for decimal numbers instead of just integers");
+        "be used for decimal numbers instead of just integers. Example " +
+        declaringVariablesFloat);
     System.out.println("double: A double-precision 64-bit floating point " +
         "number. Unlike the previous data types, floating point numbers can " +
-        "be used for decimal numbers instead of just integers");
-    System.out.println("char: A single 16-bit Unicode character.");
-    System.out.println("boolean: Only has two possible values, true and false" +
-        ".");
-    int declaringVariablesInt = 63;
-    float declaringVariablesFloat = 45.0f;
-    double declaringVariablesDouble = 67.675586d;
-    System.out.println("The value of first variable is " +
-        declaringVariablesInt);
-    System.out.println("The value of second variable is " +
-        declaringVariablesFloat);
-    System.out.println("The value of third variable is " +
+        "be used for decimal numbers instead of just integers. Example: " +
         declaringVariablesDouble);
+    System.out.println("char: A single 16-bit Unicode character. Example: " +
+        declaringVariablesChar);
+    System.out.println("boolean: Only has two possible values, true and false" +
+        ". Example: " + declaringVariablesBoolean);
     System.out.println("");
 
     // Variables 2 - Even or Odd
