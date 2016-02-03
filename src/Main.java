@@ -16,7 +16,7 @@ public class Main {
     // Simply declares a few variables and then prints them
     byte declaringVariablesByte = 65;
     short declaringVariablesShort = 15_065;
-    int declaringVariablesInt = 1_894_657_478;
+    int declaringVariablesInt = 7_355_608;
     long declaringVariablesLong = 6_441_023_087_321_637_684L;
     float declaringVariablesFloat = 45.4f;
     double declaringVariablesDouble = 67.675586d;
