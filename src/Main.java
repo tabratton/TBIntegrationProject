@@ -5,14 +5,128 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Please choose the category of programs you would like "
+            + "to run from the list below by entering the number infront of its"
+            + " name: ");
+    System.out.println("1. Explanations and Demonstrations and simple things");
+    System.out.println("2. Variables Exercises"); 
+    System.out.println("3. Operators Exercises"); 
+    System.out.println("4. Arithmetic Exercises");
+    System.out.println("5. Flow Control Exercises");
+    int userCategoryChoice = scanner.nextInt();
+    int userProgramChoice;
+    switch(userCategoryChoice){
+      case 1:
+        // Explanations, Demonstrations and simple things
+        System.out.println("Please choose a program to run from the list below"
+                + " by entering a number: ");
+        userProgramChoice = scanner.nextInt();
+        switch(userProgramChoice){
+          case 1:
+            // Hello World
+            break;
+          case 2:
+            // Variables Explanation
+            break;
+          case 3:
+            // Integer Division
+            break;
+          default:
+            System.out.println("You did not enter a valid category number");
+            break;
+        }
+        break;
+      case 2:
+        // Variables Exercises
+        System.out.println("Please choose a program to run from the list below"
+                + " by entering a number: ");
+        userProgramChoice = scanner.nextInt();
+        switch(userProgramChoice){
+          case 1:
+            // Even or Odd
+            break;
+          case 2:
+            // Multiply Any Two Numbers
+            break;
+          case 3:
+            // Age, Name, Salary
+            break;
+          case 4:
+            // Prime Number Checker
+            break;
+          case 5:
+            // Area of a Triangle
+            break;
+          default:
+            System.out.println("You did not enter a valid category number");
+            break;
+        }
+        break;
+      case 3:
+        // Operators Exercises
+        System.out.println("Please choose a program to run from the list below"
+                + " by entering a number: ");
+        userProgramChoice = scanner.nextInt();
+        switch(userProgramChoice){
+          case 1:
+            // Absolute Equals
+            break;
+          case 2:
+            // Floor and Ceiling
+            break;
+          case 3:
+            // Square Root
+            break;
+          case 4:
+            // Taylor Series
+            break;
+          case 5:
+            // Multiples of 3 and 5
+            break;
+          default:
+            System.out.println("You did not enter a valid category number");
+            break;
+        }
+        break;
+      case 4:
+        // Arithmetic Exercises
+        System.out.println("Please choose a program to run from the list below"
+                + " by entering a number: ");
+        userProgramChoice = scanner.nextInt();
+        break;
+      case 5:
+        // Flow Control Exercises
+        System.out.println("Please choose a program to run from the list below"
+                + " by entering a number: ");
+        userProgramChoice = scanner.nextInt();
+        break;
+      default:
+        System.out.println("You did not enter a valid category number");
+    }
     // Hello World
     // It says hello world.  That's it.  That's all there is.
     System.out.println("The Hello World program is the most basic computer " +
         "program, showing that you made the computer do something");
     System.out.println("Hello World!");
     System.out.println("");
+    
+    // Integer Division Definition
+    System.out.println("This wasn't in the original exercise, but I want to " +
+        "demonstrate what integer division is");
+    System.out.println("I'm going to divide 2 integers and hopefully you'll " +
+        "see how this works");
+    System.out.println("The result of dividing 9 by 5 is: " + 9/5);
+    System.out.println("As you can see, that isn't the actual answer you " +
+        "would get by dividing 9 and 5");
+    System.out.println("This happens because Java does something called " +
+        "truncating when two integers are divided");
+    System.out.println("Since an integer can't have any decimal places in it," +
+        " Java simply cuts off the decimal place and anything that comes " +
+        "after it when two integers are divided");
+    System.out.println("");
 
-    // Variables 1 - Declaring Variables
+    // Examples and Explanations of variable types
     // Simply declares a few variables and then prints them
     byte declaringVariablesByte = 65;
     short declaringVariablesShort = 15_065;
@@ -52,12 +166,11 @@ public class Main {
         ". Example: " + declaringVariablesBoolean);
     System.out.println("");
 
-    // Variables 2 - Even or Odd
+    // Variables 1 - Even or Odd
     // Takes one number from the user and then prints if it is even or odd
     // Creates a new scanner object to accept input
     System.out.println("This program will ask you for a number, and will then" +
         " tell you if it is even or odd");
-    Scanner scanner = new Scanner(System.in);
     int evenCheck;
     System.out.println("Enter a number:");
     int evenNum = scanner.nextInt();
@@ -69,7 +182,7 @@ public class Main {
     }
     System.out.println("");
 
-    // Variables 3 - Multiple Any Two Numbers
+    // Variables 2 - Multiply Any Two Numbers
     // Takes two numbers from the user, multiplies them, and then prints the
     // product
     System.out.println("The following program will ask you to give it two " +
@@ -84,21 +197,8 @@ public class Main {
     System.out.println("The product of the two numbers is: " +
         multiplyAnyTwoNumbersProduct);
     System.out.println("");
-    System.out.println("This wasn't in the original exercise, but I want to " +
-        "demonstrate what integer division is");
-    System.out.println("I'm going to divide 2 integers and hopefully you'll " +
-        "see how this works");
-    System.out.println("The result of dividing 9 by 5 is: " + 9/5);
-    System.out.println("As you can see, that isn't the actual answer you " +
-        "would get by dividing 9 and 5");
-    System.out.println("This happens because Java does something called " +
-        "truncating when two integers are divided");
-    System.out.println("Since an integer can't have any decimal places in it," +
-        " Java simply cuts off the decimal place and anything that comes " +
-        "after it when two integers are divided");
-    System.out.println("");
 
-    // Variables 4 - Age, Name, Salary
+    // Variables 3 - Age, Name, Salary
     // Takes input from the user and then prints it back with comments on the
     // input
     System.out.println("This program will ask you for some basic information " +
@@ -112,7 +212,7 @@ public class Main {
     System.out.println(salary + "! I hope that's per hour and not per year!");
     System.out.println("");
 
-    // Variables 5 - Prime Number Checker
+    // Variables 4 - Prime Number Checker
     // Takes a number from the user and then checks if it is prime
     System.out.println("This program will ask for you to give it a number, " +
         "and it will then tell you if that number is a prime number or not");
@@ -136,29 +236,7 @@ public class Main {
     }
     System.out.println("");
 
-    // Variables 6 - Testing Your Variable Knowledge
-    // Subtracts a variable from a number and then prints the original and the
-    // result
-    System.out.println("The next program is a very simple one that just " +
-        "prints the result of a variable being subtracted from a number");
-    int variableKnowledgeA = 10;
-    int variableKnowledgeB = 100 - variableKnowledgeA;
-    System.out.println("Output is: " + variableKnowledgeA);
-    System.out.println("Output is: " + variableKnowledgeB);
-    System.out.println("");
-
-    // Variables 7 - Variable Max Values
-    // Prints the minimum and maximum values of the int variable in Java
-    System.out.println("Similar to the second program you saw, this one " +
-        "simply prints the minimum and maximum values for the int variable in" +
-        " Java.");
-    int intMin = -2_147_483_648;
-    int intMax = 2_147_483_647;
-    System.out.println("The minimum value of int is: " + intMin);
-    System.out.println("The maximum value of int is: " + intMax);
-    System.out.println("");
-
-    // Variables 8 - Area of a Triangle
+    // Variables 5 - Area of a Triangle
     // All code from this exercise except for the triangleArea function is
     // from http://www.programmr.com/area-triangle
     System.out.println("This program takes the side lengths of a triangle and" +
@@ -255,16 +333,16 @@ public class Main {
     System.out.println("Enter a number below which sum must be calculated: ");
     int input = scanner.nextInt();
     while (sumFiveCounter < input) {
-      sumFive = sumFiveCounter + sumFive;
-      sumFiveCounter = sumFiveCounter + 5;
+      sumFive += sumFiveCounter;
+      sumFiveCounter += 5;
     }
     while (sumThreeCounter < input) {
-      sumThree = sumThreeCounter + sumThree;
-      sumThreeCounter = sumThreeCounter + 3;
+      sumThree += sumThreeCounter;
+      sumThreeCounter += 3;
     }
     while (sumFifteenCounter < input) {
-      sumFifteen = sumFifteenCounter + sumFifteen;
-      sumFifteenCounter = sumFifteenCounter + 15;
+      sumFifteen += sumFifteenCounter;
+      sumFifteenCounter += 15;
     }
     int finalSum = sumFive + sumThree - sumFifteen;
     System.out.println("The final sum is: " + finalSum);
