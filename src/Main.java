@@ -8,7 +8,7 @@ public class Main {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     int mainLoopRunning = 1;
-    while (mainLoopRunning == 1) {
+    while (mainLoopRunning == 1) {  // Loops the choosing of a category
       System.out.println("Please choose the category of programs you would like" +
           " to run from the list below by entering the number in front of its " +
           "name: ");
@@ -23,7 +23,7 @@ public class Main {
         case 1:
           // Explanations, Demonstrations, and simple things
           int caseOneLoop = 1;
-          while (caseOneLoop == 1) {
+          while (caseOneLoop == 1) { // Lets user choose different programs
             System.out.println("Please choose a program to run from the list " +
                 "below by entering a number: ");
             System.out.println("1. Hello World");
@@ -48,13 +48,13 @@ public class Main {
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
-            caseOneLoop = scanner.nextInt();
+            caseOneLoop = scanner.nextInt(); // Lets user choose new program
           }
           break;
         case 2:
           // Week 1 - Variable Exercises
           int caseTwoLoop = 1;
-          while (caseTwoLoop == 1) {
+          while (caseTwoLoop == 1) { // Same as case 1, same loop for all cases
             System.out.println("Please choose a program to run from the list " +
                 "below by entering a number: ");
             System.out.println("1. Even or Odd");
@@ -94,8 +94,8 @@ public class Main {
           // Week 2 - Operators Exercises
           int caseThreeLoop = 1;
           while (caseThreeLoop == 1) {
-            System.out.println("Please choose a program to run from the list below"
-                + " by entering a number: ");
+            System.out.println("Please choose a program to run from the list " +
+                "below by entering a number: ");
             System.out.println("1. Absolute Equals");
             System.out.println("2. Floor and Ceiling");
             System.out.println("3. Square Root");
@@ -303,7 +303,6 @@ public class Main {
       System.out.println("Odd");
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void multiplyTwoNumbers() {
@@ -323,7 +322,6 @@ public class Main {
     System.out.println("The product of the two numbers is: " +
         multiplyAnyTwoNumbersProduct);
     System.out.println("");
-    scanner.close();
   }
 
   public static void takeAgeNameSalary() {
@@ -333,6 +331,7 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for some basic information " +
         "about yourself and then respond to you with small comments on it");
+    System.out.println("Please enter your name: ");
     String name = scanner.nextLine();
     System.out.println("Hi " + name + "! How old are you?");
     int age = scanner.nextInt();
@@ -341,7 +340,6 @@ public class Main {
     double salary = scanner.nextDouble();
     System.out.println(salary + "! I hope that's per hour and not per year!");
     System.out.println("");
-    scanner.close();
   }
 
   public static void checkPrime() {
@@ -369,7 +367,6 @@ public class Main {
       System.out.println("Input number is a prime number");
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void sayTriangleArea() {
@@ -414,7 +411,6 @@ public class Main {
           "not equal");
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void findFloorAndCeiling() {
@@ -429,7 +425,6 @@ public class Main {
     System.out.println("The number rounded up is: " + (int) Math.ceil(dob));
     System.out.println("The number rounded down is: " + (int) Math.floor(dob));
     System.out.println("");
-    scanner.close();
   }
 
   public static void findSquareRoot() {
@@ -448,14 +443,13 @@ public class Main {
     System.out.println("The fourth root of the number is: " +
         squareRootRounding.format(Math.pow(roots, 0.25)));
     System.out.println("");
-    scanner.close();
   }
 
   public static void useTaylorSeries() {
     // Arithmetic 4 - Taylor Series
     // Finds the sine of an angle by using the Taylor Series to five terms
-    System.out.print("This program will ask you for an angle in degrees, and " +
-        "it will then tell you the sine of that number using the Taylor " +
+    System.out.println("This program will ask you for an angle in degrees, " +
+        "and it will then tell you the sine of that number using the Taylor " +
         "Series to 5 terms");
     System.out.println("Please enter an angle in degrees: ");
     Scanner scanner = new Scanner(System.in);
@@ -470,7 +464,6 @@ public class Main {
     String sinRounded = taylorSeriesRounding.format(sinTaylorSeries);
     System.out.println("The sine of the angle is: " + sinRounded);
     System.out.println("");
-    scanner.close();
   }
 
   public static void findThreeAndFiveMultiples() {
@@ -503,7 +496,6 @@ public class Main {
     int finalSum = sumFive + sumThree - sumFifteen;
     System.out.println("The final sum is: " + finalSum);
     System.out.println("");
-    scanner.close();
   }
 
   public static void checkLeapYear() {
@@ -528,7 +520,6 @@ public class Main {
       System.out.println(leapYear + " is not a leap year");
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void findLargestNumber() {
@@ -543,16 +534,15 @@ public class Main {
     y = scanner.nextInt();
     z = scanner.nextInt();
     if (x == y || x == z || y == z) {
-      System.out.println("Entered numbers are not distinct.");
+      System.out.println("The entered numbers are all the same.");
     } else if (x > y && x > z) {
-      System.out.println("First number is largest.");
+      System.out.println("The first number, " + x + ", is largest.");
     } else if (y > x && y > z) {
-      System.out.println("Second number is largest.");
+      System.out.println("The second number, " + y + ", is largest.");
     } else if (z > x && z > y) {
-      System.out.println("Third number is largest.");
+      System.out.println("The third number, " + z + ", is largest.");
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void findSimpleInterest() {
@@ -574,7 +564,6 @@ public class Main {
     System.out.println("The value of the investment after one year is: "
         + principal);
     System.out.println("");
-    scanner.close();
   }
 
   public static void convertCelsiusToFahrenheit() {
@@ -590,7 +579,6 @@ public class Main {
     System.out.println("The temperature in Fahrenheit is: " +
         fahrenheitDegrees);
     System.out.println("");
-    scanner.close();
   }
 
   public static void useArithmeticOperators() {
@@ -622,7 +610,6 @@ public class Main {
       }
     }
     System.out.println("");
-    scanner.close();
   }
 
   public static void tellRightOrWrong() {
@@ -640,7 +627,6 @@ public class Main {
     }
     System.out.println(rightOrWrongAnswer);
     System.out.println("");
-    scanner.close();
   }
 
   public static void convertSpaceWeight() {
@@ -681,7 +667,6 @@ public class Main {
     }
     System.out.println("Your weight in pounds : " + earthWeight);
     System.out.println("");
-    scanner.close();
   }
 
   public static void takeLuckySum() {
@@ -700,7 +685,6 @@ public class Main {
     luckySumS = calculateLuckySum(luckySumA, luckySumB, luckySumC);
     System.out.println("Lucky sum: " + luckySumS);
     System.out.println("");
-    scanner.close();
   }
 
   public static void calculateRedLotteryTicket() {
@@ -725,7 +709,6 @@ public class Main {
     }
     System.out.println("The value of your ticket: " + lotteryS);
     System.out.println("");
-    scanner.close();
   }
 
   public static double findTriangleArea(double a, double b, double c) {
@@ -753,7 +736,6 @@ public class Main {
     System.out.println("The result of subtracting is " + resultSubtraction);
     System.out.println("The result of multiplying is " + resultMultiplication);
     System.out.println("The result of dividing is " + resultDivision);
-    scanner.close();
   }
 
   public static int calculateLuckySum(int a, int b, int c) {
