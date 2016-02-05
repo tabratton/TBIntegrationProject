@@ -9,10 +9,11 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     int mainLoopRunning = 1;
     while (mainLoopRunning == 1) {  // Loops the choosing of a category
-      System.out.println("Please choose the category of programs you would like" +
-          " to run from the list below by entering the number in front of its " +
-          "name: ");
-      System.out.println("1. Explanations and Demonstrations and simple things");
+      System.out.println("Please choose the category of programs you would " +
+          "like to run from the list below by entering the number in front of" +
+          " its name: ");
+      System.out.println("1. Explanations and Demonstrations and simple " +
+          "things");
       System.out.println("2. Variables Exercises");
       System.out.println("3. Operators Exercises");
       System.out.println("4. Arithmetic Exercises");
