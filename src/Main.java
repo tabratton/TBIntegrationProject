@@ -19,6 +19,7 @@ public class Main {
       System.out.println("4. Arithmetic Exercises");
       System.out.println("5. Flow Control Exercises");
       int userCategoryChoice = scanner.nextInt();
+      System.out.println("");
       int userProgramChoice;
       switch (userCategoryChoice) {
         case 1:
@@ -44,12 +45,14 @@ public class Main {
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
+                System.out.println("");
                 break;
             }
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseOneLoop = scanner.nextInt(); // Lets user choose new program
+            System.out.println("");
           }
           break;
         case 2:
@@ -83,12 +86,14 @@ public class Main {
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
+                System.out.println("");
                 break;
             }
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseTwoLoop = scanner.nextInt();
+            System.out.println("");
           }
           break;
         case 3:
@@ -122,12 +127,14 @@ public class Main {
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
+                System.out.println("");
                 break;
             }
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseThreeLoop = scanner.nextInt();
+            System.out.println("");
           }
           break;
         case 4:
@@ -142,6 +149,7 @@ public class Main {
             System.out.println("4. Convert Celsius to Fahrenheit");
             System.out.println("5. Arithmetic in Java Example");
             userProgramChoice = scanner.nextInt();
+            System.out.println("");
             switch (userProgramChoice) {
               case 1:
                 checkLeapYear();
@@ -160,12 +168,14 @@ public class Main {
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
+                System.out.println("");
                 break;
             }
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseFourLoop = scanner.nextInt();
+            System.out.println("");
           }
           break;
         case 5:
@@ -180,6 +190,7 @@ public class Main {
             System.out.println("4. Lucky Sum");
             System.out.println("5. Red Lottery Ticket");
             userProgramChoice = scanner.nextInt();
+            System.out.println("");
             switch (userProgramChoice) {
               case 1:
                 listNotMultiplesOfThreeOrFour();
@@ -198,23 +209,29 @@ public class Main {
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
+                System.out.println("");
                 break;
             }
             System.out.println("Would you like to choose another program to " +
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseFiveLoop = scanner.nextInt();
+            System.out.println("");
           }
           break;
         default:
           System.out.println("You did not enter a valid category number");
+          System.out.println("");
+          break;
       }
       System.out.println("Would you like to choose another program to run " +
           "from a different category?");
       System.out.println("Enter 0 for No, and 1 for Yes");
       mainLoopRunning = scanner.nextInt();
+      System.out.println("");
       if (mainLoopRunning < 0 || mainLoopRunning > 1) {
         System.out.println("Error: You did not enter a valid input");
+        System.out.println("");
       }
     }
   }
