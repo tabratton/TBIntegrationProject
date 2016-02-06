@@ -602,7 +602,8 @@ public class Main {
         "not a multiple of 3 or 4");
     System.out.println("Enter a number:");
     int noMultiplesOf3Or4 = scanner.nextInt();
-    for (int i = 0; i <= noMultiplesOf3Or4; i++) {
+    int i = 1;
+    while (i <= noMultiplesOf3Or4) {
       if (i % 3 == 0 || i % 4 == 0) {
         i++;
       } else {
