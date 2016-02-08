@@ -1,4 +1,5 @@
-// Integration project that demonstrates the skills I learned in COP 2006
+// Created by Tyler Bratton - Integration project that demonstrates the
+// skills I learned in COP 2006
 // Some code for exercises taken from programmr.com
 
 import java.text.DecimalFormat;
@@ -102,47 +103,6 @@ public class Main {
           while (caseThreeLoop == 1) {
             System.out.println("Please choose a program to run from the list " +
                 "below by entering a number: ");
-            System.out.println("1. Absolute Equals");
-            System.out.println("2. Floor and Ceiling");
-            System.out.println("3. Square Root");
-            System.out.println("4. Taylor Series");
-            System.out.println("5. Multiples of 3 and 5");
-            userProgramChoice = scanner.nextInt();
-            System.out.println("");
-            switch (userProgramChoice) {
-              case 1:
-                checkAbsoluteEquals();
-                break;
-              case 2:
-                findFloorAndCeiling();
-                break;
-              case 3:
-                findSquareRoot();
-                break;
-              case 4:
-                useTaylorSeries();
-                break;
-              case 5:
-                findThreeAndFiveMultiples();
-                break;
-              default:
-                System.out.println("You did not enter a valid category number");
-                System.out.println("");
-                break;
-            }
-            System.out.println("Would you like to choose another program to " +
-                "run from this category?");
-            System.out.println("Enter 0 for No, and 1 for Yes");
-            caseThreeLoop = scanner.nextInt();
-            System.out.println("");
-          }
-          break;
-        case 4:
-          // Week 2 The Sequel - Arithmetic Exercises
-          int caseFourLoop = 1;
-          while (caseFourLoop == 1) {
-            System.out.println("Please choose a program to run from the list " +
-                "below by entering a number: ");
             System.out.println("1. Leap Year");
             System.out.println("2. Find Largest of Three Numbers");
             System.out.println("3. Find Simple Interest");
@@ -165,6 +125,47 @@ public class Main {
                 break;
               case 5:
                 useArithmeticOperators();
+                break;
+              default:
+                System.out.println("You did not enter a valid category number");
+                System.out.println("");
+                break;
+            }
+            System.out.println("Would you like to choose another program to " +
+                "run from this category?");
+            System.out.println("Enter 0 for No, and 1 for Yes");
+            caseThreeLoop = scanner.nextInt();
+            System.out.println("");
+          }
+          break;
+        case 4:
+          // Week 2 The Sequel - Arithmetic Exercises
+          int caseFourLoop = 1;
+          while (caseFourLoop == 1) {
+            System.out.println("Please choose a program to run from the list " +
+                "below by entering a number: ");
+            System.out.println("1. Absolute Equals");
+            System.out.println("2. Floor and Ceiling");
+            System.out.println("3. Square Root");
+            System.out.println("4. Taylor Series");
+            System.out.println("5. Multiples of 3 and 5");
+            userProgramChoice = scanner.nextInt();
+            System.out.println("");
+            switch (userProgramChoice) {
+              case 1:
+                checkAbsoluteEquals();
+                break;
+              case 2:
+                findFloorAndCeiling();
+                break;
+              case 3:
+                findSquareRoot();
+                break;
+              case 4:
+                useTaylorSeries();
+                break;
+              case 5:
+                findThreeAndFiveMultiples();
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
@@ -551,13 +552,13 @@ public class Main {
     x = scanner.nextInt();
     y = scanner.nextInt();
     z = scanner.nextInt();
-    if (x == y || x == z || y == z) {
+    if (x == y && y == z) {
       System.out.println("The entered numbers are all the same.");
     } else if (x > y && x > z) {
       System.out.println("The first number, " + x + ", is largest.");
     } else if (y > x && y > z) {
       System.out.println("The second number, " + y + ", is largest.");
-    } else if (z > x && z > y) {
+    } else {
       System.out.println("The third number, " + z + ", is largest.");
     }
     System.out.println("");
