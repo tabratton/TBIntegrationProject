@@ -71,16 +71,16 @@ public class Main {
             System.out.println("");
             switch (userProgramChoice) {
               case 1:
-                findEvenOrOdd();
+                findEvenOrOdd(scanner);
                 break;
               case 2:
-                multiplyTwoNumbers();
+                multiplyTwoNumbers(scanner);
                 break;
               case 3:
-                takeAgeNameSalary();
+                takeAgeNameSalary(scanner);
                 break;
               case 4:
-                checkPrime();
+                checkPrime(scanner);
                 break;
               case 5:
                 sayTriangleArea();
@@ -112,19 +112,19 @@ public class Main {
             System.out.println("");
             switch (userProgramChoice) {
               case 1:
-                checkLeapYear();
+                checkLeapYear(scanner);
                 break;
               case 2:
-                findLargestNumber();
+                findLargestNumber(scanner);
                 break;
               case 3:
-                findSimpleInterest();
+                findSimpleInterest(scanner);
                 break;
               case 4:
-                convertCelsiusToFahrenheit();
+                convertCelsiusToFahrenheit(scanner);
                 break;
               case 5:
-                useArithmeticOperators();
+                useArithmeticOperators(scanner);
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
@@ -153,19 +153,19 @@ public class Main {
             System.out.println("");
             switch (userProgramChoice) {
               case 1:
-                checkAbsoluteEquals();
+                checkAbsoluteEquals(scanner);
                 break;
               case 2:
-                findFloorAndCeiling();
+                findFloorAndCeiling(scanner);
                 break;
               case 3:
-                findSquareRoot();
+                findSquareRoot(scanner);
                 break;
               case 4:
-                useTaylorSeries();
+                useTaylorSeries(scanner);
                 break;
               case 5:
-                findThreeAndFiveMultiples();
+                findThreeAndFiveMultiples(scanner);
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
@@ -194,19 +194,19 @@ public class Main {
             System.out.println("");
             switch (userProgramChoice) {
               case 1:
-                listNotMultiplesOfThreeOrFour();
+                listNotMultiplesOfThreeOrFour(scanner);
                 break;
               case 2:
-                tellRightOrWrong();
+                tellRightOrWrong(scanner);
                 break;
               case 3:
-                convertSpaceWeight();
+                convertSpaceWeight(scanner);
                 break;
               case 4:
-                takeLuckySum();
+                takeLuckySum(scanner);
                 break;
               case 5:
-                calculateRedLotteryTicket();
+                calculateRedLotteryTicket(scanner);
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
@@ -305,11 +305,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findEvenOrOdd() {
+  public static void findEvenOrOdd(Scanner scanner) {
     // Variables 1 - Even or Odd
     // Takes one number from the user and then prints if it is even or odd
     // Creates a new scanner object to accept input
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for a number, and will then" +
         " tell you if it is even or odd");
     int evenCheck;
@@ -324,11 +323,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void multiplyTwoNumbers() {
+  public static void multiplyTwoNumbers(Scanner scanner) {
     // Variables 2 - Multiply Any Two Numbers
     // Takes two numbers from the user, multiplies them, and then prints the
     // product
-    Scanner scanner = new Scanner(System.in);
     System.out.println("The following program will ask you to give it two " +
         "numbers, which it will then multiply them and tell you the product");
     int multiplyAnyTwoNumbersProduct;
@@ -343,11 +341,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void takeAgeNameSalary() {
+  public static void takeAgeNameSalary(Scanner scanner) {
     // Variables 3 - Age, Name, Salary
     // Takes input from the user and then prints it back with comments on the
     // input
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for some basic information " +
         "about yourself and then respond to you with small comments on it");
     System.out.println("Please enter your name: ");
@@ -361,10 +358,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void checkPrime() {
+  public static void checkPrime(Scanner scanner) {
     // Variables 4 - Prime Number Checker
     // Takes a number from the user and then checks if it is prime
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask for you to give it a number, " +
         "and it will then tell you if that number is a prime number or not");
     System.out.println("Enter your input number: ");
@@ -408,11 +404,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void checkAbsoluteEquals() {
+  public static void checkAbsoluteEquals(Scanner scanner) {
     // Arithmetic 1 - Absolute Equals
     // This program takes two numbers and then tells the user if the absolute
     // value of both numbers is equal
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for two numbers, and then " +
         "it will tell you if the absolute value of both numbers is the same");
     boolean equal;
@@ -432,11 +427,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findFloorAndCeiling() {
+  public static void findFloorAndCeiling(Scanner scanner) {
     // Arithmetic 2 - Floor and Ceiling
     // Demonstrates two different ways to round numbers in Java by using the
     // floor and ceil functions
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you to enter a decimal number, " +
         "and then it will tell you the result of rounding it up and down");
     System.out.println("Enter a number: ");
@@ -446,11 +440,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findSquareRoot() {
+  public static void findSquareRoot(Scanner scanner) {
     // Arithmetic 3 - Square Root
-    // Finds the square root and fourth root of a user inputted number and
+    // Finds the square root and fourth root of a user input number and
     // rounds it to 5 decimal places
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you to enter a number, and it " +
         "will then find the square root and fourth root, and then tell you " +
         "they are to 5 decimal places");
@@ -464,14 +457,13 @@ public class Main {
     System.out.println("");
   }
 
-  public static void useTaylorSeries() {
+  public static void useTaylorSeries(Scanner scanner) {
     // Arithmetic 4 - Taylor Series
     // Finds the sine of an angle by using the Taylor Series to five terms
     System.out.println("This program will ask you for an angle in degrees, " +
         "and it will then tell you the sine of that number using the Taylor " +
         "Series to 5 terms");
     System.out.println("Please enter an angle in degrees: ");
-    Scanner scanner = new Scanner(System.in);
     double sinDegrees = scanner.nextDouble();
     double sinRadians = sinDegrees * 3.14 / 180;
     double sinTaylorSeries = sinRadians - ((sinRadians * sinRadians *
@@ -485,10 +477,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findThreeAndFiveMultiples() {
+  public static void findThreeAndFiveMultiples(Scanner scanner) {
     // Arithmetic 5 - Multiples of 3 and 5
     // Finds the sum of the multiples of 3 and 5 less than the input
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you to input a number, and then" +
         " it will calculate the sum of the sum of all the multiples of 3 and" +
         " the sum of all the multiples of 5 less than that number");
@@ -517,10 +508,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void checkLeapYear() {
+  public static void checkLeapYear(Scanner scanner) {
     // Operators 1 - Leap Year
     // Takes an input year and then says if it's a leap year or not
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you to enter a year, then it " +
         "will tell you if it is a leap year or not");
     System.out.println("Enter the year to be checked: ");
@@ -541,10 +531,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findLargestNumber() {
+  public static void findLargestNumber(Scanner scanner) {
     // Operators 2 - Largest of Three Numbers
     // Takes 3 input numbers and says what the largest is
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you to input 3 numbers, and it " +
         "will then tell you which one is the largest");
     int x, y, z;
@@ -564,11 +553,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void findSimpleInterest() {
+  public static void findSimpleInterest(Scanner scanner) {
     // Operators 3 - Find Simple Interest
     // Takes initial investment and the annual interest rate, then tells you
     // how much interest you make in a year
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will tell you how much annual interest " +
         "you will make, given the original investment and interest rate");
     double principal;  // the value of the investment
@@ -585,10 +573,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void convertCelsiusToFahrenheit() {
+  public static void convertCelsiusToFahrenheit(Scanner scanner) {
     // Operators 4 - DegreeToFahrenheit
     // This program converts Celsius to Fahrenheit
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for a temperature in " +
         "Celsius and then convert it to Fahrenheit");
     System.out.println("Enter a temperature in Celsius: ");
@@ -600,21 +587,20 @@ public class Main {
     System.out.println("");
   }
 
-  public static void useArithmeticOperators() {
+  public static void useArithmeticOperators(Scanner scanner) {
     // Operators 5 - Arithmetic Operator
     // Performs some basic arithmetic on some numbers
     System.out.println("This program will ask you to input 2 numbers, it will" +
         " then tell you the results of adding, subtracting, multiplying, and " +
         "dividing them");
-    calculateValues();
+    calculateValues(scanner);
     System.out.println("");
   }
 
-  public static void listNotMultiplesOfThreeOrFour() {
+  public static void listNotMultiplesOfThreeOrFour(Scanner scanner) {
     // Flow Control 1 - No Multiples of 3 or 4
     // Prints every number between 1 and the input that is not a multiple of
     // 3 or 4
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for a number, and then it " +
         "will list every number between 1 and the number you entered that is " +
         "not a multiple of 3 or 4");
@@ -632,11 +618,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void tellRightOrWrong() {
+  public static void tellRightOrWrong(Scanner scanner) {
     // Flow Control 2 - Right or Wrong
     // Asks the user the answer to an addition question, tells them if
     // they're wrong
-    Scanner scanner = new Scanner(System.in);
     System.out.println("What is 12 + 12?");
     int rightOrWrongInput = scanner.nextInt();
     boolean rightOrWrongAnswer;
@@ -649,10 +634,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void convertSpaceWeight() {
+  public static void convertSpaceWeight(Scanner scanner) {
     // Flow Control 3 - Space Boxing
     // This program converts weight on earth to weight on other planets
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask for your current weight, and " +
         "then tell you your weight on another planet of your choice");
     System.out.print("Please enter your current earth weight : ");
@@ -689,11 +673,10 @@ public class Main {
     System.out.println("");
   }
 
-  public static void takeLuckySum() {
+  public static void takeLuckySum(Scanner scanner) {
     // Flow Control 4 - Lucky Sum
     // Adds numbers together, but a number is 13, it is not added, and any
     // numbers after it are not added either
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for 3 numbers, then it will" +
         " add them together, unless one of them is 13. Then it will add any " +
         "numbers before 13, but not after it");
@@ -707,10 +690,9 @@ public class Main {
     System.out.println("");
   }
 
-  public static void calculateRedLotteryTicket() {
+  public static void calculateRedLotteryTicket(Scanner scanner) {
     // Flow Control 5 - Red Lottery Number
     // Gives a value based off 3 "lottery tickets" with values of 0 to 2
-    Scanner scanner = new Scanner(System.in);
     System.out.println("This program will ask you for 3 numbers, and it will " +
         "then tell you the value of your 'ticket' based on those numbers");
     int lotteryA, lotteryB, lotteryC, lotteryS;
@@ -739,11 +721,10 @@ public class Main {
     return heronBase;
   }
 
-  public static void calculateValues() {
+  public static void calculateValues(Scanner scanner) {
     float a, b;
     float resultAddition, resultSubtraction, resultMultiplication;
     float resultDivision;
-    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter a:");
     a = scanner.nextInt();
     System.out.print("Enter b:");
