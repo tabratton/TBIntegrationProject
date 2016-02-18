@@ -19,6 +19,8 @@ public class Main {
       System.out.println("3. Operators Exercises");
       System.out.println("4. Arithmetic Exercises");
       System.out.println("5. Flow Control Exercises");
+      System.out.println("6. Methods Exercises");
+      System.out.println("7. Loops Exercises");
       int userCategoryChoice = scanner.nextInt();
       System.out.println("");
       int userProgramChoice;
@@ -217,6 +219,88 @@ public class Main {
                 "run from this category?");
             System.out.println("Enter 0 for No, and 1 for Yes");
             caseFiveLoop = scanner.nextInt();
+            System.out.println("");
+          }
+          break;
+        case 6:
+          // Week 5 - Methods Exercises
+          int caseSixLoop = 1;
+          while (caseSixLoop == 1) {
+            System.out.println("Please choose a program to run from the list " +
+                "below by entering a number: ");
+            System.out.println("1. Find the Area of a Circle");
+            System.out.println("2. More Arithmetic Examples");
+            System.out.println("3. Convert Upper Case to Lower Case");
+            System.out.println("4. Check if a number is a multiple");
+            System.out.println("5. Find the Square of a Number");
+            userProgramChoice = scanner.nextInt();
+            System.out.println("");
+            switch (userProgramChoice) {
+              case 1:
+                getAreaOfCircle(scanner);
+                break;
+              case 2:
+                doArithmeticStuff(scanner);
+                break;
+              case 3:
+                convertUpperCaseToLower(scanner);
+                break;
+              case 4:
+                checkIfMultiple(scanner);
+                break;
+              case 5:
+                calculateSquare(scanner);
+                break;
+              default:
+                System.out.println("You did not enter a valid category number");
+                System.out.println("");
+                break;
+            }
+            System.out.println("Would you like to choose another program to " +
+                "run from this category?");
+            System.out.println("Enter 0 for No, and 1 for Yes");
+            caseSixLoop = scanner.nextInt();
+            System.out.println("");
+          }
+          break;
+        case 7:
+          // Week 6 - Loops Exercises
+          int caseSevenLoop = 1;
+          while (caseSevenLoop == 1) {
+            System.out.println("Please choose a program to run from the list " +
+                "below by entering a number: ");
+            System.out.println("1. Sum of Prime Digits in a String");
+            System.out.println("2. Number of a's in a String");
+            System.out.println("3. Printing a Box of #'s");
+            System.out.println("4. Sum of 5 Integers");
+            System.out.println("5. Reverse a Number");
+            userProgramChoice = scanner.nextInt();
+            System.out.println("");
+            switch (userProgramChoice) {
+              case 1:
+                findSumOfPrimeDigits(scanner);
+                break;
+              case 2:
+                findNumberOfA(scanner);
+                break;
+              case 3:
+                printBoxOfPounds(scanner);
+                break;
+              case 4:
+                findSumOfFiveDigits(scanner);
+                break;
+              case 5:
+                reverseAString(scanner);
+                break;
+              default:
+                System.out.println("You did not enter a valid category number");
+                System.out.println("");
+                break;
+            }
+            System.out.println("Would you like to choose another program to " +
+                "run from this category?");
+            System.out.println("Enter 0 for No, and 1 for Yes");
+            caseSevenLoop = scanner.nextInt();
             System.out.println("");
           }
           break;
@@ -753,5 +837,141 @@ public class Main {
       sum = a + b + c;
     }
     return sum;
+  }
+  
+  // Constant PI is defined at the class level
+  static final double PI = 3.14;
+
+  public static void getAreaOfCircle(Scanner scanner) {
+    // Method used to calculate area of a circle
+    System.out.print("Enter the radius: ");
+    double radius = scanner.nextInt();
+    double area = radius * radius * PI;
+    System.out.print("Area of circle is: " + area);
+  }
+  
+  public static void doArithmeticStuff(Scanner scanner){
+    System.out.print("Enter first number: ");
+    int num1 = scanner.nextInt();
+    System.out.print("Enter second number: ");
+    int num2 = scanner.nextInt();
+    Sum(num1, num2);
+    Difference(num1, num2);
+    System.out.print(Product(num1, num2)+"\n");
+  }
+
+  public static void Sum(int firstNumber, int secondNumber){
+    int sum = firstNumber + secondNumber;
+    System.out.println(sum);
+  }
+
+  public static void Difference(int firstNumber, int secondNumber){
+    int difference = firstNumber - secondNumber;
+    System.out.println(difference);
+  }
+
+  public static int Product(int firstNumber, int secondNumber){
+    int product = firstNumber * secondNumber;
+    return product;
+  }
+  
+  public static void convertUpperCaseToLower(Scanner scanner){
+    System.out.println("Enter an alphabet:");
+    String input;
+    input = scanner.next();
+    System.out.println(input.toLowerCase());
+  }
+  
+  public static void checkIfMultiple(Scanner scanner) {
+    System.out.println("Enter first number:");
+    int x = scanner.nextInt();
+    System.out.println("Enter second number:");
+    int y = scanner.nextInt();
+    if (y % x == 0) {
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+  }
+
+  public static void calculateSquare(Scanner scanner){
+    System.out.print("Enter a number: ");
+    double number = scanner.nextDouble();
+    double answer = Math.sqrt(number);
+    System.out.println(Math.round(answer));
+  }
+  
+  public static void findSumOfPrimeDigits(Scanner scanner) {
+    System.out.print("Enter String: ");
+    String str = scanner.nextLine();
+    int primeSum = 0;
+    for (int i = 0; i < str.length(); i++) {
+      char characterNumber = str.charAt(i);
+      int number = Character.getNumericValue(characterNumber);
+      int primeCounter = 2;
+      boolean isPrime = true;
+      while (primeCounter <= number / 2) {
+        if (number % primeCounter == 0) {
+          isPrime = false;
+        }
+        primeCounter++;
+      }
+      if(number == 1){
+        isPrime = false;
+      }
+      if (isPrime == true) {
+        primeSum += number;
+      }
+    }
+    System.out.println(primeSum);
+  }
+  
+  public static void findNumberOfA(Scanner scanner) {
+    System.out.print("Enter String: ");
+    String str = scanner.nextLine();
+    int count = 0;
+    for (int i = 0; i < str.length(); i++) {
+      char character = str.charAt(i);
+      if(character == 'a'){
+        count += 1;
+      }
+    }
+    System.out.println("Number of a's: " + count);
+  }
+
+  public static void printBoxOfPounds(Scanner scanner){
+    System.out.print("Enter height: ");
+    int height = scanner.nextInt();
+    System.out.print("Enter width: " );
+    int width = scanner.nextInt();
+    for(int i = 0; i < height; i++){
+      for(int j = 0; j < width; j++){
+        System.out.print("#");
+      }
+      System.out.println("");
+    }
+  }
+  
+  public static void findSumOfFiveDigits(Scanner scanner) {
+    int total = 0; // stores the sum of the 5 numbers
+    int number;    // stores the current input
+    for(int i = 0; i < 5; i++){
+      System.out.println("Enter an integer: ");
+      number = scanner.nextInt();
+      total += number;
+    }
+    System.out.println("Total is: " + total);
+  }
+  
+  public static void reverseAString(Scanner scanner) {
+    String reversedString = "";
+    System.out.println("Enter the number:");
+    String string = scanner.nextLine();
+    int stringLength = string.length();
+    for (int i = stringLength - 1; i >= 0; i--) {
+      char character = string.charAt(i);
+      reversedString = reversedString + character;
+    }
+    System.out.println("Reverse is: " + reversedString);
   }
 }
