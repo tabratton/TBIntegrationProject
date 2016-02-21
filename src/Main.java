@@ -28,8 +28,9 @@ public class Main {
         case 1:
           // Explanations, Demonstrations, and simple things
           while (loopRunning) { // Lets user choose a program
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Hello World");
             System.out.println("2. Explanation of variable types in Java");
             System.out.println("3. Explanation of integer division");
@@ -57,8 +58,9 @@ public class Main {
           // Week 1 - Variable Exercises
           while (loopRunning) { // Same as case 1, same loop for all
             // cases
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Even or Odd");
             System.out.println("2. Multiply Any Two Numbers");
             System.out.println("3. Age, Name, and Salary");
@@ -93,8 +95,9 @@ public class Main {
         case 3:
           // Week 2 - Operators Exercises
           while (loopRunning) {
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Leap Year");
             System.out.println("2. Find Largest of Three Numbers");
             System.out.println("3. Find Simple Interest");
@@ -129,8 +132,9 @@ public class Main {
         case 4:
           // Week 2 The Sequel - Arithmetic Exercises
           while (loopRunning) {
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Absolute Equals");
             System.out.println("2. Floor and Ceiling");
             System.out.println("3. Square Root");
@@ -165,8 +169,9 @@ public class Main {
         case 5:
           // Week 3 - Flow Control Exercises
           while (loopRunning) {
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. No Multiples of Three or Four");
             System.out.println("2. Right or Wrong");
             System.out.println("3. Space Boxing");
@@ -201,8 +206,9 @@ public class Main {
         case 6:
           // Week 5 - Methods Exercises
           while (loopRunning) {
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Find the Area of a Circle");
             System.out.println("2. Convert Upper Case to Lower Case");
             System.out.println("3. Check if a number is a multiple");
@@ -233,8 +239,9 @@ public class Main {
         case 7:
           // Week 6 - Loops Exercises
           while (loopRunning) {
-            System.out.println("Please choose a program to run from the list"
-                + " below by entering a number: ");
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
             System.out.println("1. Sum of Prime Digits in a String");
             System.out.println("2. Number of a character in a String");
             System.out.println("3. Printing a Box of #'s");
@@ -257,6 +264,40 @@ public class Main {
                 break;
               case 5:
                 reverseString(scanner);
+                break;
+              default:
+                System.out.println("You did not enter a valid category number");
+                System.out.println("");
+                break;
+            }
+            loopRunning = askToRunAgain(scanner, 1);
+          }
+          break;
+        case 8:
+          // Week 7 - Exception Handling Exercises
+          while (loopRunning) {
+            System.out.println("Please choose the program that you would like"
+                + " to run from the list below by entering the number in front"
+                + " of its name: ");
+            System.out.println("1. Sum of Prime Digits in a String");
+            System.out.println("2. Number of a character in a String");
+            System.out.println("3. Printing a Box of #'s");
+            System.out.println("4. Sum of 5 Numbers");
+            System.out.println("5. Reverse a String");
+            userProgramChoice = scanner.nextInt();
+            System.out.println("");
+            switch (userProgramChoice) {
+              case 1:
+                idNumberMachine(scanner);
+                break;
+              case 2:
+                checkIfMultipleOfFive(scanner);
+                break;
+              case 3:
+                slopePoint(scanner);
+                break;
+              case 4:
+                convertToCentimeters(scanner);
                 break;
               default:
                 System.out.println("You did not enter a valid category number");
@@ -574,7 +615,7 @@ public class Main {
     System.out.println("Enter a number below which sum must be calculated: ");
     int input = scanner.nextInt();
     for (int sumThreeCounter = 0; sumThreeCounter < input; sumThreeCounter +=
-         3) {
+        3) {
       sumThree += sumThreeCounter;
     }
     for (int sumFiveCounter = 0; sumFiveCounter < input; sumFiveCounter +=
@@ -1001,13 +1042,127 @@ public class Main {
     System.out.println("");
   }
 
+  public static void idNumberMachine(final Scanner scanner) {
+    // Exception Handling 1 - ID Number Machine
+    // Asks the user to enter a 10 digit long ID. Throws and catches an
+    // exception if it is not a number or if it is not 10 digits long
+    System.out.println("This program will ask you to enter an ID number that"
+        + " is 10 digits long.  If you do not enter a number or if it is"
+        + " not 10 digits, then an exception will be thrown and caught and"
+        + " you will be told what was wrong.");
+    System.out.println("Enter the ID number:");
+    String userInputString = scanner.next();
+    long userInputNumber = 0;
+    try {
+      userInputNumber = Long.parseLong(userInputString);
+      if (userInputString.length() > 10 || userInputString.length() < 10) {
+        throw new Exception();
+      } else {
+        System.out.println(userInputNumber + " is a valid ID number");
+      }
+    } catch (Exception e) {
+      System.out.println(userInputNumber + " is not a valid ID number"
+          + " incorrect");
+    }
+    System.out.println("");
+  }
+
+  public static void checkIfMultipleOfFive(final Scanner scanner) {
+    // Exception Handling 2 - Ask For Certain Number
+    // Asks the user to input a number that is a multiple of 5 and that is
+    // not also 5
+    System.out.println("This program will ask you to enter a number that is a"
+        + " multiple of 5.  If you do not enter a multiple of 5 or if you enter"
+        + " 5, an exception is thrown and caught that will then tell you that"
+        + " you entered a bad number.");
+    System.out.println("Please enter a multiple of 5: ");
+    int userInput = scanner.nextInt();
+    try {
+      if (userInput == 5) {
+        throw new Exception();
+      } else if (userInput % 5 == 0 || userInput % 2 == 0) {
+        System.out.println("Correct. " + userInput + " is a multiple of 5.");
+      } else {
+        throw new Exception();
+      }
+    } catch (Exception e) {
+      System.out.println("Incorrect. " + userInput + " is not a multiple of 5"
+          + ".");
+    }
+    System.out.println("");
+  }
+
+  public static void slopePoint(final Scanner scanner) {
+    // Exception Handling 3 - Slope Point
+    // Asks the user for 2 points in (x, y) form, and then calculates the
+    // slope of the line formed by connecting the points
+    boolean continueLoop = true;
+    System.out.println("This program will ask you to enter the x and y values"
+        + " of two points, and then it will tell you the slope of the line"
+        + " between those points.  If your points create a vertical line, an"
+        + " exception is caught and it tells you that the slope is undefined");
+    do {
+      try {
+        System.out.println("Please enter the x coordinate of the current"
+            + " point: ");
+        double x1 = scanner.nextInt();
+        System.out.println("Please enter the y coordinate of the current"
+            + " point: ");
+        double y1 = scanner.nextInt();
+        System.out.println("Please enter the x coordinate of the target"
+            + " point: ");
+        double x2 = scanner.nextInt();
+        System.out.println("Please enter the y coordinate of the target"
+            + " point: ");
+        double y2 = scanner.nextInt();
+        double slope = ((y2 - y1) / (x2 - x1));
+        continueLoop = false;
+        System.out.println("The slope of the line is " + slope);
+      } catch (Exception e) {
+        System.out.println("This is a vertical line, the slope is undefined.");
+      }
+    } while (continueLoop);
+    System.out.println("");
+  }
+
+  public static void convertToCentimeters(final Scanner scanner) {
+    // Exception Handling 4 - Convert feet and inches to cm
+    // Asks the user a height in feet and inches and then prints what
+    // that is in centimeters.  Displays Exceptions if an integer is not
+    // entered or a negative integer is entered
+    boolean continueLoop = true;
+    System.out.println("This program will ask you to enter a height in feet"
+        + " and inches.  If you enter invalid values, the program will catch"
+        + " an exception and tell you what you did wrong.");
+    do {
+      try {
+        System.out.println("Please enter height in feet: ");
+        String feetString = scanner.nextLine();
+        int feet = Integer.parseInt(feetString);
+        System.out.println("and anymore height in inches: ");
+        String inchesString = scanner.nextLine();
+        int inches = Integer.parseInt(inchesString);
+        if (feet < 0 || inches < 0) {
+          throw new Exception();
+        }
+        double result = height(feet, inches);
+        System.out.println("The result is: " + result + " cm");
+        continueLoop = false;
+      } catch (NumberFormatException e) {
+        System.out.println("You must enter integers. Please try again.");
+      } catch (Exception e) {
+        System.out.println("Please enter positive integers only.");
+      }
+    } while (continueLoop);
+    System.out.println("");
+  }
+
   public static double calculateTriangleArea(final double a, final double b,
                                              final double c) {
     // Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
     double s = (a + b + c) / 2;
-    double heronBase = Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
-    return heronBase;
+    return Math.pow((s * (s - a) * (s - b) * (s - c)), 0.5);
   }
 
   public static int calculateLuckySum(final int a, final int b, final int c) {
@@ -1025,5 +1180,9 @@ public class Main {
       sum = a + b + c;
     }
     return sum;
+  }
+
+  public static double height(int feet, int inches) {  // 1 inch = 2.54 cm
+    return (feet * 30.48) + (inches * 2.54);           // 1 foot = 30.48 cm
   }
 }
