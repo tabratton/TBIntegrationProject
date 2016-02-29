@@ -602,9 +602,8 @@ public class Main {
     System.out.println("Relational operators are used to create boolean"
         + " expressions that are then used to determine if a value is greater"
         + " than, greater than or equal to, less than, or less than or equal to"
-        + " another value.  When the statement is not true, the boolean"
-        + " expression becomes false, and when it is true, the expression"
-        + " becomes true");
+        + " another value.  When the expression is not true, it will become"
+        + " 'false', and when it is true, it will become 'true'");
     System.out.println("These operators will probably be very familiar from"
         + " experience in math classes, but here is a list of them: ");
     System.out.println("> Determines if the operand on the left is greater"
@@ -616,28 +615,28 @@ public class Main {
     System.out.println("> Determines if the operand on the left is less"
         + " than or equal to the one on the right");
     System.out.println("There are also two equality operators, which"
-        + " determine if the statement on equality is true or false");
+        + " determine if the expression on equality is true or false");
     System.out.println("== Determines if the values on either side are equal"
         + " to each other");
     System.out.println("!= Determines if the values on either side are not"
         + " equal to each other.  Note: When they are not equal, the"
-        + " expression is true");
+        + " expression will be true");
     System.out.println("There are also two conditional operators in Java."
-        + "  These operators are used with the above relational operators to"
+        + " These operators are used with the above relational operators to"
         + " create more complex boolean expressions.  Note: There must always"
-        + " be a statement on either side of the conditional operator in"
+        + " be an expression on either side of the conditional operator in"
         + " order for it to be valid, you cannot use a conditional operator"
-        + " with just one statement.");
-    System.out.println("&& is the conditional operator that means AND.  This"
-        + " means that the boolean expression created by two or more statements"
-        + " and the conditional operator is true only if both of the statements"
-        + " are true.  Otherwise, it is false.");
-    System.out.println("|| is the conditional operator that means OR.  This"
-        + "means that the boolean expression created by two or more statements"
-        + " and the conditional operator is true if any of the statements in"
-        + " the expression are true.  The only way for the whole boolean"
-        + " expression to be false is if all of the statements within it is"
-        + " false.");
+        + " with an expression on just one side.");
+    System.out.println("&& is the conditional operator that means AND. This"
+        + " means that the boolean expression created by two or more"
+        + " expressions and the conditional operator is true only if both of"
+        + " the expressions are true.  Otherwise, it is false.");
+    System.out.println("|| is the conditional operator that means OR. This"
+        + " means that the boolean expression created by two or more"
+        + " expressions and the conditional operator is true if any of the"
+        + " expressions in the larger expression are true. The only way for"
+        + " the whole boolean expression to be false is if all of the"
+        + " statements within it is false.");
     System.out.println("Some demonstrations: ");
     System.out.println("1 > 5 evaluates to: " + (1 > 5));
     System.out.println("11 < 87 evaluates to: " + (11 < 87));
