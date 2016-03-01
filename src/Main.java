@@ -1902,6 +1902,8 @@ public class Main {
         + " and year that you input.  It will then print back the day you put"
         + " in, ask you to input a new day, and then also print the new day");
     int day = 0;
+    int month = 0;
+    int year = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -1911,6 +1913,7 @@ public class Main {
           throw new Exception();
         }
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -1921,7 +1924,6 @@ public class Main {
         System.out.println("");
       }
     }
-    int month = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -1931,6 +1933,7 @@ public class Main {
           throw new Exception();
         }
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -1941,13 +1944,13 @@ public class Main {
         System.out.println("");
       }
     }
-    int year = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
         System.out.println("Please enter the year: ");
         year = scanner.nextInt();
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -1956,6 +1959,7 @@ public class Main {
     }
     DateExample date1 = new DateExample(day, month, year);
     date1.DisplayDate();
+    System.out.println("");
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -1965,6 +1969,7 @@ public class Main {
           throw new Exception();
         }
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -1984,6 +1989,7 @@ public class Main {
           throw new Exception();
         }
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -2000,6 +2006,7 @@ public class Main {
         System.out.println("Please enter another year: ");
         year = scanner.nextInt();
         goodUserInput = true;
+        System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
@@ -2010,6 +2017,7 @@ public class Main {
     date1.setMonth(month);
     date1.setYear(year);
     date1.DisplayDate();
+    System.out.println("");
   }
 
   public static double calculateTriangleArea(final double a, final double b,
@@ -2039,46 +2047,5 @@ public class Main {
 
   public static double height(int feet, int inches) { // 1 inch = 2.54 cm
     return (feet * 30.48) + (inches * 2.54);          // 1 foot = 30.48 cm
-  }
-}
-
-class DateExample {
-  private int day;
-  private int month;
-  private int year;
-
-  public DateExample(int newDay, int newMonth, int newYear) {
-    this.day = newDay;
-    this.month = newMonth;
-    this.year = newYear;
-  }
-
-  int getDay() {
-    return this.day;
-  }
-
-  int getMonth() {
-    return this.month;
-  }
-
-  int getYear() {
-    return this.year;
-  }
-
-  void setDay(int inputDay) {
-    this.day = inputDay;
-  }
-
-  void setMonth(int inputMonth) {
-    this.month = inputMonth;
-  }
-
-  void setYear(int inputYear) {
-    this.year = inputYear;
-  }
-
-  public void DisplayDate() {
-    System.out.println("The date is: " + getDay() + "/" + getMonth() + "/"
-        + getYear());
   }
 }
