@@ -300,8 +300,8 @@ public class Menus {
             + " front of its name: ");
         System.out.println("1. Find the Area of a Circle");
         System.out.println("2. Convert Upper Case to Lower Case");
-        System.out.println("3. Check if a number is a multiple");
-        System.out.println("4. Find the Square of a Number");
+        System.out.println("3. Check if a Number is a Multiple");
+        System.out.println("4. Find the Square Root of a Number");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();

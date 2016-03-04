@@ -263,13 +263,12 @@ public class WeekTwoArithmeticOperators {
     // Takes initial investment and the annual interest rate, then tells you
     // how much interest you make in a year
     System.out.println("This program will tell you how much annual interest"
-        + " you will make, given the original investment and interest" + " " +
-        "rate");
-    double principal; // the value of the investment
-    double rate;      // the annual interest rate
+        + " you will make, given the original investment and interest"
+        + " rate");
+    double principal = 0; // the value of the investment
+    double rate = 0;      // the annual interest rate
     double interest;  // the interest earned during the year
     System.out.println("Please enter the initial investment: ");
-    principal = scanner.nextDouble();
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -282,7 +281,6 @@ public class WeekTwoArithmeticOperators {
       }
     }
     System.out.println("Please enter the annual interest rate: ");
-    rate = scanner.nextDouble();
     goodUserInput = false;
     while (!goodUserInput) {
       try {

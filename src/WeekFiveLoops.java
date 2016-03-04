@@ -113,7 +113,7 @@ public class WeekFiveLoops {
         System.out.println("");
       }
     }
-    int width = scanner.nextInt();
+    int width = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {

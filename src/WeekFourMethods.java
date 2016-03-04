@@ -25,7 +25,7 @@ public class WeekFourMethods {
       }
     }
     double area = radius * radius * 3.14;
-    System.out.print("The area of the circle is: " + area);
+    System.out.println("The area of the circle is: " + area);
     System.out.println("");
   }
 
@@ -36,10 +36,10 @@ public class WeekFourMethods {
     System.out.println("This program will ask you to enter a string, and then"
         + " it will convert all the uppercase letters to lowercase letters");
     System.out.println("Please enter a string: ");
-    String input;
-    input = scanner.nextLine();
-    System.out.println(
-        "The lowercase version of the string: " + input.toLowerCase());
+    scanner.nextLine();
+    String input = scanner.nextLine();
+    System.out.println("The lowercase version of the string: "
+        + input.toLowerCase());
     System.out.println("");
   }
 

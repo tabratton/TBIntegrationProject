@@ -14,10 +14,12 @@ public class WeekSixExceptionHandling {
         + " is 10 digits long.  If you do not enter a number or if it is"
         + " not 10 digits, then an exception will be thrown and caught and"
         + " you will be told what was wrong.");
-    String userInputString = scanner.nextLine();
+    scanner.nextLine();
+    String userInputString;
     long userInputNumber = 0;
     try {
       System.out.println("Enter the ID number:");
+      userInputString = scanner.nextLine();
       userInputNumber = Long.parseLong(userInputString);
       if (userInputString.length() > 10 || userInputString.length() < 10) {
         throw new Exception();
@@ -31,14 +33,15 @@ public class WeekSixExceptionHandling {
   }
 
   public static void checkIfMultipleOfFive(final Scanner scanner) {
-    // Exception Handling 2 - Ask For Certain Number
+    // Exception Handling 2 - Ask For Multiple of Five
     // Asks the user to input a number that is a multiple of 5 and that is
     // not also 5
     System.out.println("This program will ask you to enter a number that is a"
-        + " multiple of 5.  If you do not enter a multiple of 5 or if you enter"
+        + " multiple of 5.");
+    System.out.println("If you do not enter a multiple of 5 or if you enter"
         + " 5, an exception is thrown and caught that will then tell you that"
         + " you entered a bad number.");
-    int userInput = scanner.nextInt();
+    int userInput = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -57,8 +60,10 @@ public class WeekSixExceptionHandling {
         scanner.nextLine();
         System.out.println("");
       } catch (Exception e) {
-        System.out.println(
-            "Incorrect. " + userInput + " is not a multiple of 5" + ".");
+        System.out.println("Incorrect. " + userInput + " is not a multiple of 5"
+            + ".");
+        scanner.nextLine();
+        System.out.println("");
       }
     }
     System.out.println("");
@@ -70,21 +75,22 @@ public class WeekSixExceptionHandling {
     // slope of the line formed by connecting the points
     System.out.println("This program will ask you to enter the x and y values"
         + " of two points, and then it will tell you the slope of the line"
-        + " between those points.  If your points create a vertical line, an"
-        + " exception is caught and it tells you that the slope is undefined");
-    int x1 = 0;
-    int y1 = 0;
-    int x2 = 0;
-    int y2 = 0;
+        + " between those points.");
+    System.out.println("If your points create a vertical line, an exception"
+        + " is caught and it tells you that the slope is undefined");
+    double x1 = 0;
+    double y1 = 0;
+    double x2 = 0;
+    double y2 = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
         System.out.println("Please enter the x coordinate of the current"
             + " point: ");
-        x1 = scanner.nextInt();
+        x1 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
+        System.out.println("You have to enter a number");
         scanner.nextLine();
         System.out.println("");
       }
@@ -94,10 +100,10 @@ public class WeekSixExceptionHandling {
       try {
         System.out.println("Please enter the y coordinate of the current"
             + " point: ");
-        y1 = scanner.nextInt();
+        y1 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
+        System.out.println("You have to enter a number");
         scanner.nextLine();
         System.out.println("");
       }
@@ -107,10 +113,10 @@ public class WeekSixExceptionHandling {
       try {
         System.out.println("Please enter the x coordinate of the target"
             + " point: ");
-        x2 = scanner.nextInt();
+        x2 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
+        System.out.println("You have to enter a number");
         scanner.nextLine();
         System.out.println("");
       }
@@ -120,10 +126,10 @@ public class WeekSixExceptionHandling {
       try {
         System.out.println("Please enter the y coordinate of the target"
             + " point: ");
-        y2 = scanner.nextInt();
+        y2 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
+        System.out.println("You have to enter a number");
         scanner.nextLine();
         System.out.println("");
       }
@@ -134,7 +140,6 @@ public class WeekSixExceptionHandling {
     } catch (Exception e) {
       System.out.println("This is a vertical line, the slope is undefined.");
     }
-
     System.out.println("");
   }
 
