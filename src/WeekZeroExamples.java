@@ -1,10 +1,13 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Explanations category of
+// the menu
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class WeekZeroExamples {
+  // Explains the "Hello World!" program and then demonstrates it.
   public static void explainHelloWorld() {
-    // Hello World
-    // It says hello world. That's it. That's all there is.
     System.out.println("The Hello World program is the most basic computer"
         + " program, showing that you made the computer do something");
     System.out.println("Hello World!");
@@ -77,7 +80,8 @@ public class WeekZeroExamples {
     System.out.println("Relational operators are used to create boolean"
         + " expressions that are then used to determine if a value is greater"
         + " than, greater than or equal to, less than, or less than or equal to"
-        + " another value.  When the expression is not true, it will become"
+        + " another value.");
+    System.out.println("When the expression is not true, it will become"
         + " 'false', and when it is true, it will become 'true'");
     System.out.println("These operators will probably be very familiar from"
         + " experience in math classes, but here is a list of them: ");
@@ -98,20 +102,21 @@ public class WeekZeroExamples {
         + " expression will be true");
     System.out.println("There are also two conditional operators in Java."
         + " These operators are used with the above relational operators to"
-        + " create more complex boolean expressions.  Note: There must always"
-        + " be an expression on either side of the conditional operator in"
-        + " order for it to be valid, you cannot use a conditional operator"
-        + " with an expression on just one side.");
-    System.out.println("&& is the conditional operator that means AND. This"
-        + " means that the boolean expression created by two or more"
-        + " expressions and the conditional operator is true only if both of"
-        + " the expressions are true.  Otherwise, it is false.");
-    System.out.println("|| is the conditional operator that means OR. This"
-        + " means that the boolean expression created by two or more"
-        + " expressions and the conditional operator is true if any of the"
-        + " expressions in the larger expression are true. The only way for"
-        + " the whole boolean expression to be false is if all of the"
-        + " statements within it is false.");
+        + " create more complex boolean expressions.");
+    System.out.println("Note: There must always be an expression on either"
+        + " side of the conditional operator in order for it to be valid, you"
+        + " cannot use a conditional operator with an expression on just one"
+        + " side.");
+    System.out.println("&& is the conditional operator that means AND.");
+    System.out.println("This means that the boolean expression created by two"
+        + " or more expressions and the conditional operator is true only if"
+        + " both of the expressions are true.  Otherwise, it is false.");
+    System.out.println("|| is the conditional operator that means OR.");
+    System.out.println("This means that the boolean expression created by two"
+        + " or more expressions and the conditional operator is true if any"
+        + " of the expressions in the larger expression are true.");
+    System.out.println("The only way for the whole boolean expression to be"
+        + " false is if all of the statements within it is false.");
     System.out.println("Some demonstrations: ");
     System.out.println("1 > 5 evaluates to: " + (1 > 5));
     System.out.println("11 < 87 evaluates to: " + (11 < 87));
@@ -122,19 +127,21 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
-  // Classes 1 - Date Class
-  // Creates a separate class and creates an object from that class, then
-  // asks the user for input and uses a constructor to create the object,
-  // displays their input, and uses set/get methods to enter new values for
-  // private fields
   public static void privateFieldsDemonstration(final Scanner scanner) {
+    // Classes 1 - Date Class
+    // Creates a separate class and creates an object from that class, then
+    // asks the user for input and uses a constructor to create the object,
+    // displays their input, and uses set/get methods to enter new values for
+    // private fields
     System.out.println("This program will create a class called day and"
         + " an object created from that class that will store the day, month,"
-        + " and year that you input.  It will then print back the day you put"
-        + " in, ask you to input a new day, and then also print the new day");
+        + " and year that you input.");
+    System.out.println("It will then print back the day you put in, ask you to"
+        + " input a new day, and then also print the new day");
     int day = 0;
     int month = 0;
     int year = 0;
+
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -155,6 +162,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -175,28 +183,13 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+
     goodUserInput = false;
     while (!goodUserInput) {
       try {
         System.out.println("Please enter the year: ");
         year = scanner.nextInt();
-        goodUserInput = true;
-        System.out.println("");
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
-    DateExample date1 = new DateExample(day, month, year);
-    date1.DisplayDate();
-    System.out.println("");
-    goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        System.out.println("Please enter another day: ");
-        day = scanner.nextInt();
-        if (day > 31 || day < 1) {
+        if (year < 1) {
           throw new Exception();
         }
         goodUserInput = true;
@@ -206,11 +199,38 @@ public class WeekZeroExamples {
         scanner.nextLine();
         System.out.println("");
       } catch (Exception ex) {
-        System.out.println("You have to enter a day between 1 and 31");
+        System.out.println("You cannot have a negative year");
         scanner.nextLine();
-        System.out.println("");
+        System.out.println();
       }
     }
+
+    DateExample date1 = new DateExample(day, month, year);
+    DateExample date2 = new DateExample();
+    date1.displayDate();
+    System.out.println("");
+
+    goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        System.out.println("Please enter another year: ");
+        year = scanner.nextInt();
+        if (year < 1) {
+          throw new Exception();
+        }
+        goodUserInput = true;
+        System.out.println("");
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
+      } catch (Exception ex) {
+        System.out.println("You cannot have a negative year");
+        scanner.nextLine();
+        System.out.println();
+      }
+    }
+
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -231,23 +251,32 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+
     goodUserInput = false;
     while (!goodUserInput) {
       try {
-        System.out.println("Please enter another year: ");
-        year = scanner.nextInt();
+        System.out.println("Please enter another day: ");
+        day = scanner.nextInt();
+        if (day > 31 || day < 1) {
+          throw new Exception();
+        }
         goodUserInput = true;
         System.out.println("");
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
         System.out.println("");
+      } catch (Exception ex) {
+        System.out.println("You have to enter a day between 1 and 31");
+        scanner.nextLine();
+        System.out.println("");
       }
     }
-    date1.setDay(day);
-    date1.setMonth(month);
-    date1.setYear(year);
-    date1.DisplayDate();
+
+    date2.setDay(day);
+    date2.setMonth(month);
+    date2.setYear(year);
+    date2.displayDate();
     System.out.println("");
   }
 }

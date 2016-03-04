@@ -1,3 +1,7 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Week 2 - Arithmetic and
+// Week 2 - Operators categories of the menu
+
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -117,12 +121,11 @@ public class WeekTwoArithmeticOperators {
       }
     }
     double sinRadians = sinDegrees * 3.14 / 180;
-    double sinTaylorSeries = sinRadians
-        - ((sinRadians * sinRadians * sinRadians) / (3 * 2))
-        + ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians)
-        / (5 * 4 * 3 * 2))
-        - ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians
-        * sinRadians * sinRadians) / (7 * 6 * 5 * 4 * 3 * 2));
+    double sinTaylorSeries = sinRadians - ((sinRadians * sinRadians
+        * sinRadians) / (3 * 2)) + ((sinRadians * sinRadians * sinRadians
+        * sinRadians * sinRadians) / (5 * 4 * 3 * 2)) - ((sinRadians
+        * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians
+        * sinRadians) / (7 * 6 * 5 * 4 * 3 * 2));
     DecimalFormat taylorSeriesRounding = new DecimalFormat("0.000000");
     String sinRounded = taylorSeriesRounding.format(sinTaylorSeries);
     System.out.println("The sine of the angle is: " + sinRounded);
@@ -263,8 +266,8 @@ public class WeekTwoArithmeticOperators {
         + " you will make, given the original investment and interest" + " " +
         "rate");
     double principal; // the value of the investment
-    double rate; // the annual interest rate
-    double interest; // the interest earned during the year
+    double rate;      // the annual interest rate
+    double interest;  // the interest earned during the year
     System.out.println("Please enter the initial investment: ");
     principal = scanner.nextDouble();
     boolean goodUserInput = false;

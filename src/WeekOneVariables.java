@@ -1,3 +1,7 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Week 1 - Variables category
+// of the menu
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,8 +15,8 @@ public class WeekOneVariables {
     boolean goodUserInput = false;
     int userInput = 0;
     System.out.println("Please enter an integer: ");
-    while (!goodUserInput) { // Basic loop and try catch structure for all
-      try { // Integer and Double input
+    while (!goodUserInput) {
+      try {
         userInput = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
@@ -50,6 +54,7 @@ public class WeekOneVariables {
         System.out.println("");
       }
     }
+
     System.out.println("Please enter the 2nd integer: ");
     goodUserInput = false;
     while (!goodUserInput) {
@@ -201,6 +206,7 @@ public class WeekOneVariables {
 
   public static double calculateTriangleArea(final double a, final double b,
                                              final double c) {
+    // Takes the three side lengths of a triangle as parameters
     // Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
     double s = (a + b + c) / 2;

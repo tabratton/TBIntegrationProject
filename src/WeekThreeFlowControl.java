@@ -1,3 +1,7 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Week 3 - Flow Control
+// category of the menu
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

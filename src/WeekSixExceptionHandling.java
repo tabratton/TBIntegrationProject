@@ -1,3 +1,7 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Week 6 - Exception Handling
+// category of the menu
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -187,7 +191,9 @@ public class WeekSixExceptionHandling {
     System.out.println("");
   }
 
-  public static double height(int feet, int inches) { // 1 inch = 2.54 cm
-    return (feet * 30.48) + (inches * 2.54);          // 1 foot = 30.48 cm
+  public static double height(final int feet, final int inches) {
+    // Height in centimeters method.  Takes an int value for feet and an int
+    // value for inches, converts to centimeters.
+    return (feet * 30.48) + (inches * 2.54);
   }
 }

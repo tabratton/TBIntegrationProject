@@ -9,7 +9,7 @@ public class Main {
   public static void main(final String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean loopRunning = true;
-    while (loopRunning) { // Loops the choosing of a category
+    while (loopRunning) {   // Loops the choosing of a category
       boolean goodUserInput = false;
       int userChoice = 0;
       while (!goodUserInput) {
@@ -78,12 +78,20 @@ public class Main {
         default:
           break;
       }
+      // Call to the askToRunAgain method with a scanner object and
+      // int value as arguments.
       loopRunning = askToRunAgain(scanner, 0);
     }
     System.out.println("The program has ended.");
   }
 
+  // This method header declares the askToRunAgain method and specifies
+  // that objects created from the Scanner class and ints are the necessary
+  // parameters of this method.
   public static boolean askToRunAgain(final Scanner scanner, final int menu) {
+    // Asks the user if they would like to choose another program/category.
+    // When menu == 0, the "category" question is asked. When menu != 0, the
+    // "different program" question is asked.
     boolean validInput = false;
     boolean isLoopRunning = true;
     if (menu == 0) {
