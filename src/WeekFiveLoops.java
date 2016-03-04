@@ -7,8 +7,8 @@ public class WeekFiveLoops {
     // Asks the user for a number and then finds the sum of all the prime
     // digits in the number
     System.out.println("This program will ask you to enter an integer, and then"
-            + " it will tell you the sum of all of the prime digits in that"
-            + " number");
+        + " it will tell you the sum of all of the prime digits in that"
+        + " number");
     String str = "";
     boolean goodUserInput = false;
     while (!goodUserInput) {
@@ -50,15 +50,15 @@ public class WeekFiveLoops {
     // Asks the user for a character they want to count and then to enter a
     // string. Then it counts the number of that character in the string
     System.out.println("This program will ask you to enter a character to"
-            + " count, and then tell you how many times that character appears"
-            + " in a string that you type");
+        + " count, and then tell you how many times that character appears"
+        + " in a string that you type");
     scanner.nextLine();
     String initialString = "";
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
         System.out.println(
-                "Please enter the character you would like to count:" + " ");
+            "Please enter the character you would like to count:" + " ");
         initialString = scanner.nextLine();
         if (initialString.length() > 1) {
           throw new Exception();
@@ -85,7 +85,7 @@ public class WeekFiveLoops {
       }
     }
     System.out.println("The number of " + desiredCharacter + "'s in the string"
-            + " is: " + count);
+        + " is: " + count);
     System.out.println("");
   }
 
@@ -94,8 +94,8 @@ public class WeekFiveLoops {
     // Asks the user for the width and height of a box, then prints a box
     // that wide and high composed of # characters
     System.out.println("This program will ask you to enter the height and"
-            + " width of a box, and then it will print a box of # characters"
-            + " with that height and width");
+        + " width of a box, and then it will print a box of # characters"
+        + " with that height and width");
     int height = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
@@ -135,8 +135,8 @@ public class WeekFiveLoops {
     // Loops 4 - Sum of Five Numbers
     // Asks the user for 5 numbers, and then adds them together
     System.out.println("This program will ask you how many integers you want"
-            + " to add, then it will ask you to put in those integers, and then"
-            + " it will tell you the sum of those integers");
+        + " to add, then it will ask you to put in those integers, and then"
+        + " it will tell you the sum of those integers");
     int total = 0;
     int number;
     int numberOfIntegers = 0;
@@ -144,7 +144,7 @@ public class WeekFiveLoops {
     while (!goodUserInput) {
       try {
         System.out.println("Please enter the number of integers you would like"
-                + " to add: ");
+            + " to add: ");
         numberOfIntegers = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
@@ -177,7 +177,7 @@ public class WeekFiveLoops {
     // Loops 5 - Reverse a String
     // Asks the user for a string and then prints that string reversed
     System.out.println("This program will ask you to enter a string, and then"
-            + " it will print out the reverse of that string");
+        + " it will print out the reverse of that string");
     StringBuffer buf = new StringBuffer();
     System.out.println("Please enter a string: ");
     scanner.nextLine();

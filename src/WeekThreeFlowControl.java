@@ -7,8 +7,8 @@ public class WeekThreeFlowControl {
     // Prints every number between 1 and the input that is not a multiple of
     // 3 or 4
     System.out.println("This program will ask you for a number, and then it"
-            + " will list every number between 1 and the number you entered"
-            + " that is not a multiple of 3 or 4");
+        + " will list every number between 1 and the number you entered"
+        + " that is not a multiple of 3 or 4");
     System.out.println("Please enter an integer: ");
     int noMultiplesOf3Or4 = 0;
     boolean goodUserInput = false;
@@ -65,7 +65,7 @@ public class WeekThreeFlowControl {
     // Flow Control 3 - Space Boxing
     // This program converts weight on earth to weight on other planets
     System.out.println("This program will ask for your current weight, and"
-            + " then tell you your weight on another planet of your choice");
+        + " then tell you your weight on another planet of your choice");
     System.out.print("Please enter your current earth weight: ");
     double weight = 0;
     boolean goodUserInput = false;
@@ -84,7 +84,7 @@ public class WeekThreeFlowControl {
     goodUserInput = false;
     while (!goodUserInput) {
       System.out.println("Please enter the number corresponding to the planet"
-              + " you want: ");
+          + " you want: ");
       System.out.println("1. Venus");
       System.out.println("2. Mars");
       System.out.println("3. Jupiter");
@@ -144,8 +144,8 @@ public class WeekThreeFlowControl {
     // Adds numbers together, but a number is 13, it is not added, and any
     // numbers after it are not added either
     System.out.println("This program will ask you for 3 numbers, then it will"
-            + " add them together, unless one of them is 13. Then it will add"
-            + " any numbers before 13, but not after it");
+        + " add them together, unless one of them is 13. Then it will add"
+        + " any numbers before 13, but not after it");
     System.out.println("Please enter 3 integers:");
     int luckySumA = scanner.nextInt();
 
@@ -160,8 +160,8 @@ public class WeekThreeFlowControl {
     // Flow Control 5 - Red Lottery Number
     // Gives a value based off 3 "lottery tickets" with values of 0 to 2
     System.out.println("This program will ask you for 3 integers, and it will"
-            + " then tell you the value of your 'ticket' based on those"
-            + " numbers");
+        + " then tell you the value of your 'ticket' based on those"
+        + " numbers");
     int lotteryA = 0;
     int lotteryB = 0;
     int lotteryC = 0;
@@ -212,7 +212,7 @@ public class WeekThreeFlowControl {
     System.out.println("The value of your ticket is: " + lotteryS);
     System.out.println("");
   }
-  
+
   public static int calculateLuckySum(final int a, final int b, final int c) {
     // Uses some if-else statements to determine how to add 3 numbers
     // 13 and any numbers input after it are not added

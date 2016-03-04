@@ -54,7 +54,7 @@ public class WeekSixExceptionHandling {
         System.out.println("");
       } catch (Exception e) {
         System.out.println(
-                "Incorrect. " + userInput + " is not a multiple of 5" + ".");
+            "Incorrect. " + userInput + " is not a multiple of 5" + ".");
       }
     }
     System.out.println("");
@@ -186,7 +186,7 @@ public class WeekSixExceptionHandling {
     System.out.println("The result is: " + result + " cm");
     System.out.println("");
   }
-  
+
   public static double height(int feet, int inches) { // 1 inch = 2.54 cm
     return (feet * 30.48) + (inches * 2.54);          // 1 foot = 30.48 cm
   }

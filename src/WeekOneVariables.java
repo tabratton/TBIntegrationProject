@@ -2,13 +2,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class WeekOneVariables {
-
   public static void checkIfEvenOrOdd(final Scanner scanner) {
     // Variables 1 - Even or Odd
     // Takes one number from the user and then prints if it is even or odd
     // Creates a new scanner object to accept input
     System.out.println("This program will ask you for a number, and will then"
-            + " tell you if it is even or odd");
+        + " tell you if it is even or odd");
     boolean goodUserInput = false;
     int userInput = 0;
     System.out.println("Please enter an integer: ");
@@ -35,8 +34,8 @@ public class WeekOneVariables {
     // Takes two numbers from the user, multiplies them, and then prints the
     // product
     System.out.println("The following program will ask you to give it two"
-            + " numbers, which it will then multiply them and tell you the"
-            + " product");
+        + " numbers, which it will then multiply them and tell you the"
+        + " product");
     System.out.println("Please enter the 1st integer: ");
     int userInputNumber1 = 0;
     int userInputNumber2 = 0;
@@ -73,8 +72,8 @@ public class WeekOneVariables {
     // Takes input from the user and then prints it back with comments on the
     // input
     System.out.println("This program will ask you for some basic information"
-            + " about yourself and then respond to you with small comments on"
-            + " it");
+        + " about yourself and then respond to you with small comments on"
+        + " it");
     System.out.println("Please enter your name: ");
     scanner.nextLine();
     String name = scanner.nextLine();
@@ -113,8 +112,8 @@ public class WeekOneVariables {
     // Variables 4 - Prime Number Checker
     // Takes a number from the user and then checks if it is prime
     System.out.println("This program will ask for you to give it a number,"
-            + " and it will then tell you if that number is a prime number or"
-            + " not");
+        + " and it will then tell you if that number is a prime number or"
+        + " not");
     System.out.println("Please enter an integer: ");
     int primeNumberInput = 0;
     boolean goodUserInput = false;
@@ -133,7 +132,7 @@ public class WeekOneVariables {
     // by any number greater than 2 and less than half of the original number
     // If it is, then the number is not a prime.
     for (int loopCounter = 2; loopCounter <= primeNumberInput
-            / 2; loopCounter++) {
+        / 2; loopCounter++) {
       if (primeNumberInput % loopCounter == 0) {
         isPrime = false;
       }
@@ -153,8 +152,8 @@ public class WeekOneVariables {
     // Rewritten from programmr exercise to take user input instead of
     // displaying the area of predetermined triangles
     System.out.println("This program takes the side lengths of a triangle and"
-            + " uses Heron's formula to calculate the area, which it then"
-            + " prints to the console.");
+        + " uses Heron's formula to calculate the area, which it then"
+        + " prints to the console.");
     System.out.println("Please enter the length of the first side");
     double side1 = 0;
     boolean goodUserInput = false;
@@ -196,12 +195,12 @@ public class WeekOneVariables {
     }
     double triangleArea = calculateTriangleArea(side1, side2, side3);
     System.out.println("A triangle with sides " + side1 + ", " + side2 + ", "
-            + " and " + side3 + " has an area of: " + triangleArea);
+        + " and " + side3 + " has an area of: " + triangleArea);
     System.out.println("");
   }
 
   public static double calculateTriangleArea(final double a, final double b,
-          final double c) {
+                                             final double c) {
     // Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
     double s = (a + b + c) / 2;
