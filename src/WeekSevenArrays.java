@@ -33,6 +33,7 @@ public class WeekSevenArrays {
     if (!evensEntered) {
       System.out.println("Even number not found in array.");
     }
+    System.out.println("");
   }
 
   public static void locateLargestInArray(Scanner scanner) {
@@ -70,6 +71,7 @@ public class WeekSevenArrays {
     System.out.println();
     System.out.println("The largest number is: " + a[maxPos]);
     System.out.println("Its location is at index: " + maxPos);
+    System.out.println("");
   }
 
   public static void findProductOfGreatestAndSmallest(Scanner scanner) {
@@ -108,6 +110,7 @@ public class WeekSevenArrays {
     }
     System.out.println("The product of the greatest and smallest"
         + " integers in the array is :" + (a[maxPos] * a[minPos]));
+    System.out.println("");
   }
 
   public static void reverseAString(Scanner scanner) {
@@ -126,6 +129,7 @@ public class WeekSevenArrays {
       reversedCount++;
     }
     System.out.println(reversedArray);
+    System.out.println("");
   }
 
   public static void swapElements(Scanner scanner) {
@@ -163,5 +167,6 @@ public class WeekSevenArrays {
     for (int i = 0; i < input.length; i++) {
       System.out.println(swapped[i]);
     }
+    System.out.println("");
   }
 }

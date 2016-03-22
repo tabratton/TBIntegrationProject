@@ -32,6 +32,7 @@ public class WeekEightCollections {
     a1.set((a1.size() - 1), -7);
     System.out.println("ArrayList 1: " + a1);
     System.out.println("ArrayList 2: " + a2);
+    System.out.println("");
   }
 
   public static void locateLargestValue(Scanner scanner) {
@@ -45,10 +46,21 @@ public class WeekEightCollections {
         + " largest number you entered, tell you what it is, and tell you the"
         + " location of that number in the ArrayList.");
     System.out.println("Enter the number of integers that will be inserted: ");
-    int size = scanner.nextInt();
+    int size = 0;
+    boolean goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        size = scanner.nextInt();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
     System.out.println("Enter some integers to insert to the ArrayList: ");
     while (size-- > 0) {
-      boolean goodUserInput = false;
+      goodUserInput = false;
       while (!goodUserInput) {
         try {
           al.add(scanner.nextInt());
@@ -70,6 +82,7 @@ public class WeekEightCollections {
     }
     System.out.println("The largest value is " + max + "; which is at index "
         + maxIndex);
+    System.out.println("");
   }
 
   public static void findLongestString(Scanner scanner) {
@@ -85,6 +98,7 @@ public class WeekEightCollections {
     }
     int max = findMaxLength(al);
     System.out.println("Length of the longest string in the ArrayList: " + max);
+    System.out.println("");
   }
 
   public static void useStack(Scanner scanner) {
@@ -144,6 +158,7 @@ public class WeekEightCollections {
     System.out.println(st);
     st.pop();
     System.out.println(st);
+    System.out.println("");
   }
 
   public static void findLargestValueInArrayList(Scanner scanner) {
@@ -156,11 +171,22 @@ public class WeekEightCollections {
         + " it is.");
     System.out.println("Please enter the number of integers that will be"
         + " inserted: ");
-    int size = scanner.nextInt();
+    int size = 0;
+    boolean goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        size = scanner.nextInt();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
     System.out.println("Please enter " + size + " integers to insert into"
         + " the ArrayList: ");
     while (size-- > 0) {
-      boolean goodUserInput = false;
+      goodUserInput = false;
       while (!goodUserInput) {
         try {
           al.add(scanner.nextInt());
@@ -179,6 +205,7 @@ public class WeekEightCollections {
       }
     }
     System.out.println("The largest value is: " + max);
+    System.out.println("");
   }
 
   public static int findMaxLength(ArrayList<String> list) {
