@@ -25,10 +25,12 @@ public class Main {
         System.out.println("6. Methods Exercises");
         System.out.println("7. Loops Exercises");
         System.out.println("8. Exception Handling Exercises");
+        System.out.println("9. Array Exercises");
+        System.out.println("10. Collections Exercises");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 8) {
+          if (userChoice < 1 || userChoice > 10) {
             throw new Exception();
           }
           goodUserInput = true;
@@ -75,6 +77,13 @@ public class Main {
           // Week 6 - Exception Handling Exercises
           Menus.weekSixMenu(scanner);
           break;
+        case 9:
+          // Week 7 -  Arrays
+          Menus.weekSevenMenu(scanner);
+          break;
+        case 10:
+          // Week 8 - Collections
+          Menus.weekEightMenu(scanner);
         default:
           break;
       }
@@ -82,7 +91,7 @@ public class Main {
       // int value as arguments.
       loopRunning = askToRunAgain(scanner, 0);
     }
-    System.out.println("The program has ended.");
+    System.out.println("The program has exited by user choice.");
   }
 
   // This method header declares the askToRunAgain method and specifies

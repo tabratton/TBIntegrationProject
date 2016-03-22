@@ -446,4 +446,116 @@ public class Menus {
       loopRunning = Main.askToRunAgain(scanner, 1);
     }
   }
+
+  public static void weekSevenMenu(final Scanner scanner) {
+    // The menu for the Week 7 - Arrays category, takes user input and calls
+    // the method of the selected program
+    boolean loopRunning = true;
+    int userChoice = 0;
+    while (loopRunning) {
+      boolean goodUserInput = false;
+      while (!goodUserInput) {
+        System.out.println("Please choose the program that you would like"
+            + " to run from the list below by entering the number in"
+            + " front of its name: ");
+        System.out.println("1. Even Numbers Only");
+        System.out.println("2. Locate Largest Number in Array");
+        System.out.println("3. Product of Greatest and Smallest in Array");
+        System.out.println("4. Reverse a String");
+        System.out.println("5. Swapping Elements");
+        System.out.println("");
+        try {
+          userChoice = scanner.nextInt();
+          if (userChoice < 1 || userChoice > 5) {
+            throw new Exception();
+          }
+          goodUserInput = true;
+        } catch (InputMismatchException ex) {
+          System.out.println("You have to enter an integer");
+          scanner.nextLine();
+          System.out.println("");
+        } catch (Exception ex) {
+          System.out.println("You did not enter a valid menu number");
+          scanner.nextLine();
+          System.out.println("");
+        }
+      }
+      switch (userChoice) {
+        case 1:
+          WeekSevenArrays.printEvenNumbersOnly(scanner);
+          break;
+        case 2:
+          WeekSevenArrays.locateLargestInArray(scanner);
+          break;
+        case 3:
+          WeekSevenArrays.findProductOfGreatestAndSmallest(scanner);
+          break;
+        case 4:
+          WeekSevenArrays.reverseAString(scanner);
+          break;
+        case 5:
+          WeekSevenArrays.swapElements(scanner);
+          break;
+        default:
+          break;
+      }
+      loopRunning = Main.askToRunAgain(scanner, 1);
+    }
+  }
+
+  public static void weekEightMenu(final Scanner scanner) {
+    // The menu for the Week 8 - Collections category, takes user input and
+    // calls the method of the selected program
+    boolean loopRunning = true;
+    int userChoice = 0;
+    while (loopRunning) {
+      boolean goodUserInput = false;
+      while (!goodUserInput) {
+        System.out.println("Please choose the program that you would like"
+            + " to run from the list below by entering the number in"
+            + " front of its name: ");
+        System.out.println("1. Copying ArrayLists");
+        System.out.println("2. Locating Largest Value in ArrayList");
+        System.out.println("3. Longest String");
+        System.out.println("4. Stack");
+        System.out.println("5. The Largest Value in an ArrayList");
+        System.out.println("");
+        try {
+          userChoice = scanner.nextInt();
+          if (userChoice < 1 || userChoice > 5) {
+            throw new Exception();
+          }
+          goodUserInput = true;
+        } catch (InputMismatchException ex) {
+          System.out.println("You have to enter an integer");
+          scanner.nextLine();
+          System.out.println("");
+        } catch (Exception ex) {
+          System.out.println("You did not enter a valid menu number");
+          scanner.nextLine();
+          System.out.println("");
+        }
+      }
+      switch (userChoice) {
+        case 1:
+          WeekEightCollections.copyArrayLists(scanner);
+          break;
+        case 2:
+          WeekEightCollections.locateLargestValue(scanner);
+          break;
+        case 3:
+          WeekEightCollections.findLongestString(scanner);
+          break;
+        case 4:
+          WeekEightCollections.useStack(scanner);
+          break;
+        case 5:
+          WeekEightCollections.findLargestValueInArrayList(scanner);
+          break;
+        default:
+          break;
+      }
+      loopRunning = Main.askToRunAgain(scanner, 1);
+    }
+  }
 }
