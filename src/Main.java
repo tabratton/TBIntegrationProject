@@ -27,10 +27,11 @@ public class Main {
         System.out.println("8. Exception Handling Exercises");
         System.out.println("9. Array Exercises");
         System.out.println("10. Collections Exercises");
+        System.out.println("11. Strings Exercises");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 10) {
+          if (userChoice < 1 || userChoice > 11) {
             throw new Exception();
           }
           goodUserInput = true;
@@ -84,6 +85,9 @@ public class Main {
         case 10:
           // Week 8 - Collections
           Menus.weekEightMenu(scanner);
+        case 11:
+          // Week 9 - Strings
+          Menus.weekNineMenu(scanner);
         default:
           break;
       }

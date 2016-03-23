@@ -1,3 +1,7 @@
+// Created by Tyler Bratton
+// Contains all of the "programs" (methods) for the Week 7 - Arrays category
+// of the menu
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
