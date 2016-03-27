@@ -560,7 +560,7 @@ public class Menus {
   }
 
   public static void weekNineMenu(final Scanner scanner) {
-    // The menu for the Week 8 - Collections category, takes user input and
+    // The menu for the Week 9 - Strings category, takes user input and
     // calls the method of the selected program
     boolean loopRunning = true;
     int userChoice = 0;
@@ -571,10 +571,10 @@ public class Menus {
             + " to run from the list below by entering the number in"
             + " front of its name: ");
         System.out.println("1. Length of a String");
-        System.out.println("2. Locating Largest Value in ArrayList");
-        System.out.println("3. Longest String");
-        System.out.println("4. Stack");
-        System.out.println("5. The Largest Value in an ArrayList");
+        System.out.println("2. Longest Word in a String");
+        System.out.println("3. Palindrome Check");
+        System.out.println("4. Remove Vowels");
+        System.out.println("5. Convert Uppercase to Lowercase");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();

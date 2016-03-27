@@ -79,15 +79,17 @@ public class Main {
           Menus.weekSixMenu(scanner);
           break;
         case 9:
-          // Week 7 -  Arrays
+          // Week 7 - Arrays
           Menus.weekSevenMenu(scanner);
           break;
         case 10:
           // Week 8 - Collections
           Menus.weekEightMenu(scanner);
+          break;
         case 11:
           // Week 9 - Strings
           Menus.weekNineMenu(scanner);
+          break;
         default:
           break;
       }

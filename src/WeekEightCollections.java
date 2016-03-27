@@ -97,6 +97,7 @@ public class WeekEightCollections {
         + " will then use an ArrayList to find the longest string and tell"
         + " you which one was the longest.");
     System.out.println("Please enter five strings to store in the ArrayList: ");
+    scanner.nextLine();
     for (int i = 0; i < 5; i++) {
       al.add(scanner.nextLine());
     }
