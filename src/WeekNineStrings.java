@@ -2,7 +2,6 @@
 // Contains all of the "programs" (methods) for the Week Nine - Strings category
 // of the menu
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WeekNineStrings {
@@ -18,6 +17,7 @@ public class WeekNineStrings {
     int length = string.length();
     System.out.println("The length of the string is: " + length + "characters"
         + ".");
+    System.out.println("");
   }
 
   public static void findLongestWord(Scanner scanner) {
@@ -37,6 +37,7 @@ public class WeekNineStrings {
       }
     }
     System.out.println("The longest word in the sentence is: " + longestWord);
+    System.out.println("");
   }
 
   public static void checkPalindrome(Scanner scanner){
@@ -54,6 +55,7 @@ public class WeekNineStrings {
     } else {
       System.out.println("The entered string is not a palindrome.");
     }
+    System.out.println("");
   }
 
   public static void removeVowels(Scanner scanner) {
@@ -62,49 +64,34 @@ public class WeekNineStrings {
     System.out.println("This program will ask you to enter a string, and then"
         + " it will remove all the vowels from the string and print it back"
         + " out");
-    System.out.println("Please enter a string:");
+    System.out.println("Please enter a string: ");
     scanner.nextLine();
     String string = scanner.nextLine();
-    char[] initialArray = string.toCharArray();
-    ArrayList<Character> tempArrayList = new ArrayList<>();
-    for(int i = 0; i < initialArray.length; i++) {
-      tempArrayList.add(initialArray[i]);
-    }
-    boolean noVowels = false;
-    while(!noVowels) {
-      for (int i = 0; i < tempArrayList.size(); i++) {
-        if (tempArrayList.get(i) == 'a') {
-          tempArrayList.remove(i);
-        } else if (tempArrayList.get(i) == 'e') {
-          tempArrayList.remove(i);
-        } else if (tempArrayList.get(i) == 'i') {
-          tempArrayList.remove(i);
-        } else if (tempArrayList.get(i) == 'o') {
-          tempArrayList.remove(i);
-        } else if (tempArrayList.get(i) == 'u') {
-          tempArrayList.remove(i);
-        }
-        if (tempArrayList.contains('a')){
-          noVowels = false;
-        } else if (tempArrayList.contains('e')) {
-          noVowels = false;
-        } else if (tempArrayList.contains('i')) {
-          noVowels = false;
-        } else if (tempArrayList.contains('o')) {
-          noVowels = false;
-        } else if (tempArrayList.contains('u')) {
-          noVowels = false;
-        } else{
-          noVowels = true;
-        }
+    StringBuilder temp = new StringBuilder(string);
+    for (int i = temp.length() - 1; 0 <= i; i--){
+      switch (temp.charAt(i)){
+        case 'a':
+          temp.deleteCharAt(i);
+          break;
+        case 'e':
+          temp.deleteCharAt(i);
+          break;
+        case 'i':
+          temp.deleteCharAt(i);
+          break;
+        case 'o':
+          temp.deleteCharAt(i);
+          break;
+        case 'u':
+          temp.deleteCharAt(i);
+          break;
+        default:
+          break;
       }
     }
-    StringBuilder tempStringBuilder = new StringBuilder(tempArrayList.size());
-    for (Character c : tempArrayList) {
-      tempStringBuilder.append(c);
-    }
-    String newString = tempStringBuilder.toString();
+    String newString = temp.toString();
     System.out.println("The string without vowels is: " + newString);
+    System.out.println("");
   }
 
   public static void convertUpperToLower(Scanner scanner) {
@@ -117,9 +104,6 @@ public class WeekNineStrings {
     String string = scanner.nextLine();
     string = string.toLowerCase();
     System.out.println(string);
-  }
-
-  public static void deleteVowels(ArrayList<Character> list){
-
+    System.out.println("");
   }
 }
