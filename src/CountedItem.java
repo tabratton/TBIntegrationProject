@@ -8,16 +8,16 @@ public class CountedItem extends PurchasedItem {
   // Constructor for the CountedItem class, calls the constructor from the
   // parent class to set the name and unitPrice fields, then sets the quantity
   // and PriceAfterQuantity fields
-  public CountedItem(String n, double up, int q) {
-    super(n, up);
-    setQuantity(q);
+  public CountedItem(String tempName, double tempPrice, int tempQuan) {
+    super(tempName, tempPrice);
+    setQuantity(tempQuan);
     setPriceAfterQuantity();
   }
 
   // Sets the value of the quantity field to the given value if it is over 0
-  public void setQuantity(int q) {
-    if (q > 0) {
-      quantity = q;
+  public void setQuantity(int tempQuan) {
+    if (tempQuan > 0) {
+      quantity = tempQuan;
     } else {
       quantity = 0;
     }

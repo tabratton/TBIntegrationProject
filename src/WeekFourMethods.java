@@ -51,11 +51,11 @@ public class WeekFourMethods {
         + " will then check to see if the second integer is a multiple of the"
         + " first integer");
     System.out.println("Please enter the first integer: ");
-    int x = 0;
+    int num1 = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
-        x = scanner.nextInt();
+        num1 = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
@@ -64,11 +64,11 @@ public class WeekFourMethods {
       }
     }
     System.out.println("Please enter the second integer: ");
-    int y = 0;
+    int num2 = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
-        y = scanner.nextInt();
+        num2 = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
@@ -76,7 +76,7 @@ public class WeekFourMethods {
         System.out.println("");
       }
     }
-    if (y % x == 0) {
+    if (num2 % num1 == 0) {
       System.out.println("True, the second integer is a multiple of the first"
           + " integer");
     } else {

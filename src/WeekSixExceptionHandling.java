@@ -26,7 +26,7 @@ public class WeekSixExceptionHandling {
       } else {
         System.out.println(userInputNumber + " is a valid ID number");
       }
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println(userInputNumber + " is not a valid ID number");
     }
     System.out.println("");
@@ -55,11 +55,11 @@ public class WeekSixExceptionHandling {
         } else {
           throw new Exception();
         }
-      } catch (InputMismatchException e) {
+      } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
         scanner.nextLine();
         System.out.println("");
-      } catch (Exception e) {
+      } catch (Exception ex) {
         System.out.println("Incorrect. " + userInput + " is not a multiple of 5"
             + ".");
         scanner.nextLine();
@@ -137,7 +137,7 @@ public class WeekSixExceptionHandling {
     try {
       double slope = ((y2 - y1) / (x2 - x1));
       System.out.println("The slope of the line is " + slope);
-    } catch (Exception e) {
+    } catch (Exception ex) {
       System.out.println("This is a vertical line, the slope is undefined.");
     }
     System.out.println("");

@@ -7,14 +7,14 @@ public class PurchasedItem {
 
   // Constructor for the PurchasedItem class, sets the values of the name and
   // unitPrice fields
-  public PurchasedItem(String n, double up) {
-    setName(n);
-    setPrice(up);
+  public PurchasedItem(String tempName, double tempPrice) {
+    setName(tempName);
+    setPrice(tempPrice);
   }
 
   // Sets the name field to the given value
-  public void setName(String n) {
-    name = n;
+  public void setName(String tempName) {
+    name = tempName;
   }
 
   // Returns the current value of the name field
@@ -23,9 +23,9 @@ public class PurchasedItem {
   }
 
   // Sets the unitPrice field to the given value if it is over 0
-  public void setPrice(double up) {
-    if (up > 0) {
-      unitPrice = up;
+  public void setPrice(double tempPrice) {
+    if (tempPrice > 0) {
+      unitPrice = tempPrice;
     } else {
       unitPrice = 0;
     }

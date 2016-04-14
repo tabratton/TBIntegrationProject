@@ -8,16 +8,16 @@ public class WeighedItem extends PurchasedItem {
   // Constructor for the WeighedItem class, calls the constructor from the
   // parent class to set the name and unitPrice fields, then sets the weight
   // and priceAfterWeight fields
-  public WeighedItem(String n, double up, double w) {
-    super(n, up);
-    setWeight(w);
+  public WeighedItem(String tempName, double tempPrice, double tempWeight) {
+    super(tempName, tempPrice);
+    setWeight(tempWeight);
     setPriceAfterWeight();
   }
 
   // Sets the value of the weight field to the given value if it is over 0
-  public void setWeight(double w) {
-    if (w > 0) {
-      weight = w;
+  public void setWeight(double tempWeight) {
+    if (tempWeight > 0) {
+      weight = tempWeight;
     } else {
       weight = 0;
     }
@@ -40,7 +40,7 @@ public class WeighedItem extends PurchasedItem {
 
   // Prints all the information about the item entered by the user
   public String printInfo() {
-    return getName() + "@ $" + getPrice() + " per Kg with " + weight + " Kg " +
-        "bought, for a total of $" + getPriceAfterWeight();
+    return getName() + "@ $" + getPrice() + " per Kg with " + weight + " Kg "
+        + "bought, for a total of $" + getPriceAfterWeight();
   }
 }

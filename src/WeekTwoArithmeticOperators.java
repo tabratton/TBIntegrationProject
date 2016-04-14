@@ -210,11 +210,11 @@ public class WeekTwoArithmeticOperators {
     System.out.println("This program will ask you to input 3 numbers, and it"
         + " will then tell you which one is the largest");
     System.out.println("Enter three integers: ");
-    int x = 0;
+    int num1 = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
-        x = scanner.nextInt();
+        num1 = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
@@ -222,11 +222,11 @@ public class WeekTwoArithmeticOperators {
         System.out.println("");
       }
     }
-    int y = 0;
+    int num2 = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
-        y = scanner.nextInt();
+        num2 = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
@@ -234,11 +234,11 @@ public class WeekTwoArithmeticOperators {
         System.out.println("");
       }
     }
-    int z = 0;
+    int num3 = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
-        z = scanner.nextInt();
+        num3 = scanner.nextInt();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter an integer");
@@ -246,14 +246,14 @@ public class WeekTwoArithmeticOperators {
         System.out.println("");
       }
     }
-    if (x == y && y == z) {
+    if (num1 == num2 && num2 == num3) {
       System.out.println("The entered numbers are all the same.");
-    } else if (x > y && x > z) {
-      System.out.println("The first number, " + x + ", is largest.");
-    } else if (y > x && y > z) {
-      System.out.println("The second number, " + y + ", is largest.");
+    } else if (num1 > num2 && num1 > num3) {
+      System.out.println("The first number, " + num1 + ", is largest.");
+    } else if (num2 > num1 && num2 > num3) {
+      System.out.println("The second number, " + num2 + ", is largest.");
     } else {
-      System.out.println("The third number, " + z + ", is largest.");
+      System.out.println("The third number, " + num3 + ", is largest.");
     }
     System.out.println("");
   }
@@ -267,7 +267,6 @@ public class WeekTwoArithmeticOperators {
         + " rate");
     double principal = 0; // the value of the investment
     double rate = 0;      // the annual interest rate
-    double interest;  // the interest earned during the year
     System.out.println("Please enter the initial investment: ");
     boolean goodUserInput = false;
     while (!goodUserInput) {
@@ -292,6 +291,7 @@ public class WeekTwoArithmeticOperators {
         System.out.println("");
       }
     }
+    double interest;      // the interest earned during the year
     interest = principal * (rate / 100);
     principal = principal + interest;
     System.out
@@ -318,8 +318,8 @@ public class WeekTwoArithmeticOperators {
       }
     }
     double fahrenheitDegrees = (celsiusDegrees * 9 / 5) + 32;
-    System.out.println("The temperature in Fahrenheit is: " +
-        fahrenheitDegrees);
+    System.out.println("The temperature in Fahrenheit is: "
+        + fahrenheitDegrees);
     System.out.println("");
   }
 
@@ -330,11 +330,11 @@ public class WeekTwoArithmeticOperators {
         + " then tell you the results of adding, subtracting, multiplying,"
         + " and dividing them");
     System.out.print("Enter a: ");
-    double a = 0;
+    double num1 = 0;
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
-        a = scanner.nextDouble();
+        num1 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter a number");
@@ -343,11 +343,11 @@ public class WeekTwoArithmeticOperators {
       }
     }
     System.out.print("Enter b: ");
-    double b = 0;
+    double num2 = 0;
     goodUserInput = false;
     while (!goodUserInput) {
       try {
-        b = scanner.nextDouble();
+        num2 = scanner.nextDouble();
         goodUserInput = true;
       } catch (InputMismatchException ex) {
         System.out.println("You have to enter a number");
@@ -355,10 +355,10 @@ public class WeekTwoArithmeticOperators {
         System.out.println("");
       }
     }
-    double resultAddition = a + b;
-    double resultSubtraction = a - b;
-    double resultMultiplication = a * b;
-    double resultDivision = a / b;
+    double resultAddition = num1 + num2;
+    double resultSubtraction = num1 - num2;
+    double resultMultiplication = num1 * num2;
+    double resultDivision = num1 / num2;
     System.out.println("The result of adding is " + resultAddition);
     System.out.println("The result of subtracting is " + resultSubtraction);
     System.out.println("The result of multiplying is " + resultMultiplication);

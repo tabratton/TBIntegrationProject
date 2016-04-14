@@ -44,7 +44,7 @@ public class WeekSevenArrays {
     // Arrays 2 - Locate Smallest Number In An Array
     // Finds the smallest user entered number and then prints what it is and
     // its position in the array
-    int[] a = new int[10];
+    int[] anArray = new int[10];
     int minPos = 0;
     System.out.println("This program will ask you to enter 10 integers, and"
         + " then it will tell you which integer was the smallest and where it"
@@ -54,7 +54,7 @@ public class WeekSevenArrays {
       boolean goodUserInput = false;
       while (!goodUserInput) {
         try {
-          a[i] = scanner.nextInt();
+          anArray[i] = scanner.nextInt();
           goodUserInput = true;
         } catch (InputMismatchException ex) {
           System.out.println("You have to enter an integer");
@@ -64,16 +64,16 @@ public class WeekSevenArrays {
       }
     }
     for (int i = 0; i < 10; i++) {
-      if (a[i] < a[minPos]) {
+      if (anArray[i] < anArray[minPos]) {
         minPos = i;
       }
     }
     System.out.print("The array is: ");
     for (int i = 0; i < 10; i++) {
-      System.out.print(a[i] + " ");
+      System.out.print(anArray[i] + " ");
     }
     System.out.println();
-    System.out.println("The smallest number is: " + a[minPos]);
+    System.out.println("The smallest number is: " + anArray[minPos]);
     System.out.println("Its location is at index: " + minPos);
     System.out.println("");
   }
@@ -81,7 +81,7 @@ public class WeekSevenArrays {
   public static void findSumOfIntegersInArray(Scanner scanner) {
     // Arrays 3 - Sum of Integers in an Array
     // Finds the sum of the integers entered in the array
-    int[] a = new int[10];
+    int[] anArray = new int[10];
     System.out.println("This program will ask you to enter ten integers, it"
         + " will then tell you what the sum of the integers you entered is.");
     System.out.println("Please enter ten integers for the array: ");
@@ -89,7 +89,7 @@ public class WeekSevenArrays {
       boolean goodUserInput = false;
       while (!goodUserInput) {
         try {
-          a[i] = scanner.nextInt();
+          anArray[i] = scanner.nextInt();
           goodUserInput = true;
         } catch (InputMismatchException ex) {
           System.out.println("You have to enter an integer");
@@ -100,8 +100,8 @@ public class WeekSevenArrays {
     }
     int sumOfIntegers = 0;
     for (int i = 0; i < 10; i++) {
-      sumOfIntegers += a[i];
-      }
+      sumOfIntegers += anArray[i];
+    }
     System.out.println("The product of the sum of the integers in the array"
         + " is :" + sumOfIntegers);
     System.out.println("");
@@ -114,8 +114,8 @@ public class WeekSevenArrays {
         + " then reverse the string using an array and print the reversed"
         + " string.");
     System.out.print("Please enter a string: ");
-    String s = scanner.next();
-    char[] str = s.toCharArray();
+    String enteredString = scanner.next();
+    char[] str = enteredString.toCharArray();
     char[] reversedArray = new char[str.length];
     int reversedCount = 0;
     for (int i = str.length - 1; i >= 0; i--) {
@@ -136,7 +136,7 @@ public class WeekSevenArrays {
         + " array");
     System.out.println("Please enter ten integers: ");
     for (int i = 0; i < twoDimensionalArray.length; i++) {
-      for(int j = 0; j < twoDimensionalArray[i].length; j++) {
+      for (int j = 0; j < twoDimensionalArray[i].length; j++) {
         boolean goodUserInput = false;
         while (!goodUserInput) {
           try {
@@ -153,8 +153,8 @@ public class WeekSevenArrays {
     int row = 0;
     int col = 0;
     int largest = 0;
-    for(int i = 0; i < twoDimensionalArray.length; i++) {
-      for(int j = 0; j < twoDimensionalArray[i].length; j++) {
+    for (int i = 0; i < twoDimensionalArray.length; i++) {
+      for (int j = 0; j < twoDimensionalArray[i].length; j++) {
         if (largest < twoDimensionalArray[i][j]) {
           largest = twoDimensionalArray[i][j];
           row = i;

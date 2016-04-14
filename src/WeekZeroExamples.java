@@ -120,7 +120,7 @@ public class WeekZeroExamples {
     System.out.println("Some demonstrations: ");
     System.out.println("1 > 5 evaluates to: " + (1 > 5));
     System.out.println("11 < 87 evaluates to: " + (11 < 87));
-    System.out.println("5 == 5 evaluates to: " + (5 == 5));
+    System.out.println("5 == 5 evaluates to: " + (5 == 6));
     System.out.println("5 != 6 evaluates to: " + (5 != 6));
     System.out.println("1 > 5 && 11 < 87 evaluates to: " + (1 > 5 && 11 < 87));
     System.out.println("1 > 5 || 11 < 87 evaluates to: " + (1 > 5 || 11 < 87));
@@ -202,7 +202,6 @@ public class WeekZeroExamples {
       }
     }
     DateExample date1 = new DateExample(day, month, year);
-    DateExample date2 = new DateExample();
     date1.displayDate();
     System.out.println("");
     goodUserInput = false;
@@ -265,6 +264,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    DateExample date2 = new DateExample();
     date2.setDay(day);
     date2.setMonth(month);
     date2.setYear(year);
@@ -285,8 +285,10 @@ public class WeekZeroExamples {
         + " items you are buying, and it will then create two objects that"
         + " inherit from the same base class");
     System.out.println("");
+    
     System.out.println("Please enter the name of the first item: ");
-    String name1 = scanner.nextLine();
+    final String name1 = scanner.nextLine();
+    
     System.out.println("Please enter the unit price of the first item: ");
     double unitPrice = 0;
     boolean goodUserInput = false;
@@ -300,6 +302,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    
     System.out.println("Please enter the weight of the first item: ");
     double weight = 0;
     goodUserInput = false;
@@ -313,10 +316,11 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-    WeighedItem item1 = new WeighedItem(name1, unitPrice, weight);
+    
     scanner.nextLine();
     System.out.println("Please enter the name of the second item: ");
-    String name2 = scanner.nextLine();
+    final String name2 = scanner.nextLine();
+    
     System.out.println("Please enter the unit price of the second item: ");
     double unitPrice2 = 0;
     goodUserInput = false;
@@ -330,6 +334,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    
     System.out.println("Please enter the quantity of the second item: ");
     int quantity = 0;
     goodUserInput = false;
@@ -343,8 +348,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-    CountedItem item2 = new CountedItem(name2, unitPrice2, quantity);
-    PurchasedItem[] items = new PurchasedItem[] { item1, item2 };
     System.out.println("");
     System.out.println("Polymorphism is the concept that objects can be"
         + " multiple different data types. This means that objects created"
@@ -357,6 +360,9 @@ public class WeekZeroExamples {
         + " type PurchasedItem, and put the objects created from its"
         + " subclasses WeightItem and CountedItem into it. It then iterates"
         + " through the array and prints each objects respective information");
+    WeighedItem item1 = new WeighedItem(name1, unitPrice, weight);
+    CountedItem item2 = new CountedItem(name2, unitPrice2, quantity);
+    PurchasedItem[] items = new PurchasedItem[] { item1, item2 };
     for (PurchasedItem currentItem : items) {
       System.out.println(currentItem.printInfo());
     }

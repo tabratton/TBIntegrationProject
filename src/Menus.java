@@ -61,6 +61,7 @@ public class Menus {
           break;
         case 6:
           WeekZeroExamples.demonstrateInheritanceAndPolymorphism(scanner);
+          break;
         default:
           break;
       }

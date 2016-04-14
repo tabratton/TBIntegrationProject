@@ -26,13 +26,13 @@ public class WeekThreeFlowControl {
         System.out.println("");
       }
     }
-    int i = 1;
-    while (i <= noMultiplesOf3Or4) {
-      if (i % 3 == 0 || i % 4 == 0) {
-        i++;
+    int loopCounter = 1;
+    while (loopCounter <= noMultiplesOf3Or4) {
+      if (loopCounter % 3 == 0 || loopCounter % 4 == 0) {
+        loopCounter++;
       } else {
-        System.out.println(i);
-        i++;
+        System.out.println(loopCounter);
+        loopCounter++;
       }
     }
     System.out.println("");
@@ -217,19 +217,20 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static int calculateLuckySum(final int a, final int b, final int c) {
+  public static int calculateLuckySum(final int num1, final int num2,
+      final int num3) {
     // Uses some if-else statements to determine how to add 3 numbers
     // 13 and any numbers input after it are not added
     int sum;
     final int magicLuckyThirteen = 13;
-    if (a == magicLuckyThirteen) {
+    if (num1 == magicLuckyThirteen) {
       sum = 0;
-    } else if (b == magicLuckyThirteen) {
-      sum = a;
-    } else if (c == magicLuckyThirteen) {
-      sum = a + b;
+    } else if (num2 == magicLuckyThirteen) {
+      sum = num1;
+    } else if (num3 == magicLuckyThirteen) {
+      sum = num1 + num2;
     } else {
-      sum = a + b + c;
+      sum = num1 + num2 + num3;
     }
     return sum;
   }

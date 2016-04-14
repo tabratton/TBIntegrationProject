@@ -31,8 +31,8 @@ public class WeekNineStrings {
     String string = scanner.nextLine();
     String longestWord = "";
     String[] stringArray = string.split(" ");
-    for(String testString : stringArray) {
-      if(longestWord.length() < testString.length()) {
+    for (String testString : stringArray) {
+      if (longestWord.length() < testString.length()) {
         longestWord = testString;
       }
     }
@@ -40,17 +40,17 @@ public class WeekNineStrings {
     System.out.println("");
   }
 
-  public static void checkPalindrome(Scanner scanner){
+  public static void checkPalindrome(Scanner scanner) {
     // Strings 3 - Palindrome Check
     // Asks the user to enter a string and then checks if it is a palindrome
-    System.out.println("This program will ask you to enter a string, and then" +
-        " it will tell you if that string is a palindrome or not.");
+    System.out.println("This program will ask you to enter a string, and then"
+        + " it will tell you if that string is a palindrome or not.");
     System.out.print("Please enter a string: ");
     scanner.nextLine();
     String line = scanner.nextLine();
     StringBuilder temp = new StringBuilder(line);
     String reversed = temp.reverse().toString();
-    if (line.equals(reversed)){
+    if (line.equals(reversed)) {
       System.out.println("The entered string is a palindrome.");
     } else {
       System.out.println("The entered string is not a palindrome.");
@@ -68,8 +68,8 @@ public class WeekNineStrings {
     scanner.nextLine();
     String string = scanner.nextLine();
     StringBuilder temp = new StringBuilder(string);
-    for (int i = temp.length() - 1; 0 <= i; i--){
-      switch (temp.charAt(i)){
+    for (int i = temp.length() - 1; 0 <= i; i--) {
+      switch (temp.charAt(i)) {
         case 'a':
           temp.deleteCharAt(i);
           break;
