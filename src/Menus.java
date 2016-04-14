@@ -16,18 +16,20 @@ public class Menus {
       while (!goodUserInput) {
         System.out.println("Please choose the program that you would like"
             + " to run from the list below by entering the number in"
-            + "front of its name: ");
+            + " front of its name: ");
         System.out.println("1. Hello World");
         System.out.println("2. Explanation of variable types in Java");
         System.out.println("3. Explanation of integer division");
-        System.out.println("4. Explanation of relational and "
-            + " conditional operators");
+        System.out.println("4. Explanation of relational and conditional"
+            + " operators");
         System.out.println("5. Example of class with private fields and"
             + " set/get methods");
+        System.out.println("6. Explanation and demonstration of Inheritance"
+            + " and Polymorphism");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
+          if (userChoice < 1 || userChoice > 6) {
             throw new Exception();
           }
           goodUserInput = true;
@@ -56,6 +58,9 @@ public class Menus {
           break;
         case 5:
           WeekZeroExamples.privateFieldsDemonstration(scanner);
+          break;
+        case 6:
+          WeekZeroExamples.demonstrateInheritanceAndPolymorphism(scanner);
         default:
           break;
       }
@@ -459,10 +464,10 @@ public class Menus {
             + " to run from the list below by entering the number in"
             + " front of its name: ");
         System.out.println("1. Even Numbers Only");
-        System.out.println("2. Locate Largest Number in Array");
-        System.out.println("3. Product of Greatest and Smallest in Array");
+        System.out.println("2. Locate Smallest Number in Array");
+        System.out.println("3. Sum of Integers in Array");
         System.out.println("4. Reverse a String");
-        System.out.println("5. Swapping Elements");
+        System.out.println("5. Search Two Dimensional Array");
         System.out.println("");
         try {
           userChoice = scanner.nextInt();
@@ -485,16 +490,16 @@ public class Menus {
           WeekSevenArrays.printEvenNumbersOnly(scanner);
           break;
         case 2:
-          WeekSevenArrays.locateLargestInArray(scanner);
+          WeekSevenArrays.locateSmallestInArray(scanner);
           break;
         case 3:
-          WeekSevenArrays.findProductOfGreatestAndSmallest(scanner);
+          WeekSevenArrays.findSumOfIntegersInArray(scanner);
           break;
         case 4:
           WeekSevenArrays.reverseAString(scanner);
           break;
         case 5:
-          WeekSevenArrays.swapElements(scanner);
+          WeekSevenArrays.searchTwoDimensionalArray(scanner);
           break;
         default:
           break;

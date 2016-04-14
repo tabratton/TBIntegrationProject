@@ -141,7 +141,6 @@ public class WeekZeroExamples {
     int day = 0;
     int month = 0;
     int year = 0;
-
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -162,7 +161,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -183,7 +181,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -204,12 +201,10 @@ public class WeekZeroExamples {
         System.out.println();
       }
     }
-
     DateExample date1 = new DateExample(day, month, year);
     DateExample date2 = new DateExample();
     date1.displayDate();
     System.out.println("");
-
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -230,7 +225,6 @@ public class WeekZeroExamples {
         System.out.println();
       }
     }
-
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -251,7 +245,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-
     goodUserInput = false;
     while (!goodUserInput) {
       try {
@@ -272,11 +265,101 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-
     date2.setDay(day);
     date2.setMonth(month);
     date2.setYear(year);
     date2.displayDate();
+    System.out.println("");
+  }
+
+  public static void demonstrateInheritanceAndPolymorphism(Scanner scanner) {
+    // This method creates two objects of different types derived from the
+    // same base class, and demonstrates inheritance and polymorphism with them
+    scanner.nextLine();
+    System.out.println("Inheritance is when a class, called a subclass, gets"
+        + " all of the fields and methods in another class, called the"
+        + " superclass. These fields and methods are available to be used in"
+        + " the subclass without having to be rewritten in it.");
+    System.out.println("");
+    System.out.println("This program will ask you to enter information about"
+        + " items you are buying, and it will then create two objects that"
+        + " inherit from the same base class");
+    System.out.println("");
+    System.out.println("Please enter the name of the first item: ");
+    String name1 = scanner.nextLine();
+    System.out.println("Please enter the unit price of the first item: ");
+    double unitPrice = 0;
+    boolean goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        unitPrice = scanner.nextDouble();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter a number");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
+    System.out.println("Please enter the weight of the first item: ");
+    double weight = 0;
+    goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        weight = scanner.nextDouble();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter a number");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
+    WeighedItem item1 = new WeighedItem(name1, unitPrice, weight);
+    scanner.nextLine();
+    System.out.println("Please enter the name of the second item: ");
+    String name2 = scanner.nextLine();
+    System.out.println("Please enter the unit price of the second item: ");
+    double unitPrice2 = 0;
+    goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        unitPrice2 = scanner.nextDouble();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter a number");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
+    System.out.println("Please enter the quantity of the second item: ");
+    int quantity = 0;
+    goodUserInput = false;
+    while (!goodUserInput) {
+      try {
+        quantity = scanner.nextInt();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
+      }
+    }
+    CountedItem item2 = new CountedItem(name2, unitPrice2, quantity);
+    PurchasedItem[] items = new PurchasedItem[] { item1, item2 };
+    System.out.println("");
+    System.out.println("Polymorphism is the concept that objects can be"
+        + " multiple different data types. This means that objects created"
+        + " from a subclass have the data type of the subclass, as well as"
+        + " the data type of its superclass, as well as the data type of all"
+        + " the classes up the chain of inheritance to the Object class of"
+        + " Java.");
+    System.out.println("");
+    System.out.println("For example, this program will now create an array of"
+        + " type PurchasedItem, and put the objects created from its"
+        + " subclasses WeightItem and CountedItem into it. It then iterates"
+        + " through the array and prints each objects respective information");
+    for (PurchasedItem currentItem : items) {
+      System.out.println(currentItem.printInfo());
+    }
     System.out.println("");
   }
 }
