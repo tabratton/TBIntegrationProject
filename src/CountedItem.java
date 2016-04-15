@@ -1,45 +1,80 @@
-// Created by Tyler Bratton
-// Creates a subclass of PurchasedItem that deals with items based on unit price
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   2016-04-13
+ */
 public class CountedItem extends PurchasedItem {
+
+  /**
+   * The amount of the item that is being bought.
+   */
   private int quantity;
+
+  /**
+   * The price of the total amount of the item being bought.
+   */
   private double priceAfterQuantity;
-  
-  // Constructor for the CountedItem class, calls the constructor from the
-  // parent class to set the name and unitPrice fields, then sets the quantity
-  // and PriceAfterQuantity fields
+
+  /**
+   * Initializes the name, unitPrice, quantity, and priceAfterQuantity fields.
+   *
+   * @param tempName  String that indicates the name of the item
+   * @param tempPrice The price of the item per unit
+   * @param tempQuan  The quantity of the item that is being bought
+   */
   public CountedItem(String tempName, double tempPrice, int tempQuan) {
     super(tempName, tempPrice);
     setQuantity(tempQuan);
     setPriceAfterQuantity();
   }
 
-  // Sets the value of the quantity field to the given value if it is over 0
+  /**
+   * Sets the quantity of the item being bought if the value is over 0.
+   *
+   * @param tempQuan The amount of the item that is being bought
+   */
   public void setQuantity(int tempQuan) {
     if (tempQuan > 0) {
-      quantity = tempQuan;
+      this.quantity = tempQuan;
     } else {
-      quantity = 0;
+      this.quantity = 0;
     }
   }
 
-  // Returns the current value of the quantity field
+  /**
+   * Gets the current value stored in the quantity field.
+   *
+   * @return Returns the current value of the quantity field
+   */
   public int getQuantity() {
     return quantity;
   }
 
-  // Sets the value of the priceAfterQuantity field based on unitPrice and
-  // quantity
+  /**
+   * Sets the value of the priceAfterQuantity field based on the current
+   * value of the unitPrice and quantity fields.
+   */
   public void setPriceAfterQuantity() {
-    priceAfterQuantity = getPrice() * getQuantity();
+    this.priceAfterQuantity = getPrice() * getQuantity();
   }
-  
-  // Returns the current value of the priceAfterQuantity field
+
+  /**
+   * Gets the current value stored in the priceAfterQuantity field
+   *
+   * @return Returns the current price for the total amount of the item being
+   *         bought.
+   */
   public double getPriceAfterQuantity() {
     return priceAfterQuantity;
   }
-  
-  // Prints all the information about the item entered by the user
+
+  /**
+   * Prints all of the information in the fields of the item.
+   *
+   * @return Returns a formatted string containing information from all the
+   *         fields of the item.
+   */
   public String printInfo() {
     return getName() + "@ $" + getPrice() + " per unit with " + quantity
         + " units bought, for a total of $" + getPriceAfterQuantity();

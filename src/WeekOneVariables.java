@@ -204,13 +204,14 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
-  public static double calculateTriangleArea(final double side1,
-      final double side2, final double side3) {
+  public static double calculateTriangleArea(double side1,
+                                             double side2, double side3) {
     // Takes the three side lengths of a triangle as parameters
     // Uses Heron's formula to calculate the area of a triangle from its side
     // lengths
     double heronS = (side1 + side2 + side3) / 2;
-    return Math.pow((heronS * (heronS - side1) * (heronS - side2) * (heronS - side3)), 0.5);
+    return Math.pow((heronS * (heronS - side1) * (heronS - side2) * (heronS
+        - side3)), 0.5);
   }
 
 }

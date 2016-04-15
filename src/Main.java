@@ -5,7 +5,18 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   2016-01-22
+ */
 public class Main {
+
+  /**
+   * The main method for the program. Runs the main menu system
+   *
+   * @param args Takes any command line arguments. None currently supported
+   */
   public static void main(final String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean loopRunning = true;
@@ -103,10 +114,17 @@ public class Main {
   // This method header declares the askToRunAgain method and specifies
   // that objects created from the Scanner class and ints are the necessary
   // parameters of this method.
-  public static boolean askToRunAgain(final Scanner scanner, final int menu) {
-    // Asks the user if they would like to choose another program/category.
-    // When menu == 0, the "category" question is asked. When menu != 0, the
-    // "different program" question is asked.
+
+  /**
+   * Asks the user if they would like to choose another program or category
+   *
+   * @param scanner An object of type Scanner to take user input
+   * @param menu    When menu == 0, the "category" question is asked. When
+   *                menu != 0, the "different program" question is asked.
+   * @return        Returns a boolean value to determine if the menu loop will
+   *                keep running
+   */
+  public static boolean askToRunAgain(Scanner scanner, int menu) {
     boolean validInput = false;
     boolean isLoopRunning = true;
     if (menu == 0) {

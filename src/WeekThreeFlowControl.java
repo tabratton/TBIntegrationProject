@@ -218,7 +218,7 @@ public class WeekThreeFlowControl {
   }
 
   public static int calculateLuckySum(final int num1, final int num2,
-      final int num3) {
+                                      final int num3) {
     // Uses some if-else statements to determine how to add 3 numbers
     // 13 and any numbers input after it are not added
     int sum;

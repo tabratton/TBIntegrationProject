@@ -1,42 +1,78 @@
-// Created by Tyler Bratton
-// Creates a class of that stores information about items being bought
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   2016-04-13
+ */
 public class PurchasedItem {
+
+  /**
+   * The name of the item.
+   */
   private String name;
+
+  /**
+   * The price of the item per unit of that item.
+   */
   private double unitPrice;
 
-  // Constructor for the PurchasedItem class, sets the values of the name and
-  // unitPrice fields
+  /**
+   * Initializes the name and unitPrice fields for the item.
+   *
+   * @param tempName  String that indicates the name of the item
+   * @param tempPrice The price of the item per unit
+   */
   public PurchasedItem(String tempName, double tempPrice) {
     setName(tempName);
     setPrice(tempPrice);
   }
 
-  // Sets the name field to the given value
+  /**
+   * Sets the name of the item to the given string.
+   *
+   * @param tempName A string that will become the name of the item
+   */
   public void setName(String tempName) {
-    name = tempName;
+    this.name = tempName;
   }
 
-  // Returns the current value of the name field
+  /**
+   * Gets the current name of the item.
+   *
+   * @return Returns a string that is the name of the item being bought
+   */
   public String getName() {
     return name;
   }
 
-  // Sets the unitPrice field to the given value if it is over 0
+  /**
+   * Sets the unitPrice of the item being bought if the value is over 0.
+   *
+   * @param tempPrice The price of the item that is being bought per unit
+   */
   public void setPrice(double tempPrice) {
     if (tempPrice > 0) {
-      unitPrice = tempPrice;
+      this.unitPrice = tempPrice;
     } else {
-      unitPrice = 0;
+      this.unitPrice = 0;
     }
   }
 
-  // Returns the current value of the unitPrice field
+  /**
+   * Gets the current value stored in the unitPrice field.
+   *
+   * @return Returns the price of the item per unit of that item
+   */
   public double getPrice() {
     return unitPrice;
   }
 
-  // Prints all the information about the item entered by the user
+  /**
+   * Prints all of the information in the fields of the item.
+   *
+   * @return Returns a formatted string containing information from all the
+   *         fields of the item.
+   */
   public String printInfo() {
     return getName() + "@ " + getPrice();
   }

@@ -288,7 +288,6 @@ public class WeekZeroExamples {
     
     System.out.println("Please enter the name of the first item: ");
     final String name1 = scanner.nextLine();
-    
     System.out.println("Please enter the unit price of the first item: ");
     double unitPrice = 0;
     boolean goodUserInput = false;
@@ -302,7 +301,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-    
     System.out.println("Please enter the weight of the first item: ");
     double weight = 0;
     goodUserInput = false;
@@ -316,11 +314,9 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-    
     scanner.nextLine();
     System.out.println("Please enter the name of the second item: ");
     final String name2 = scanner.nextLine();
-    
     System.out.println("Please enter the unit price of the second item: ");
     double unitPrice2 = 0;
     goodUserInput = false;
@@ -334,7 +330,6 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
-    
     System.out.println("Please enter the quantity of the second item: ");
     int quantity = 0;
     goodUserInput = false;
