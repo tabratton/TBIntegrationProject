@@ -1,6 +1,6 @@
 
 /**
- * @author  Tyler Bratton
+ * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
  * @since   2016-04-13
  */
@@ -42,8 +42,6 @@ public class WeighedItem extends PurchasedItem {
     }
   }
 
-  // Returns the current value of the weight field
-
   /**
    * Gets the current value stored in the weight field.
    *
@@ -60,8 +58,6 @@ public class WeighedItem extends PurchasedItem {
   public void setPriceAfterWeight() {
     this.priceAfterWeight = getPrice() * getWeight();
   }
-
-  // Returns the current value of the priceAfterWeight field
 
   /**
    * Gets the current value stored in the priceAfterWeight field.
