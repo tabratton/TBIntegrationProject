@@ -15,6 +15,14 @@ public class PurchasedItem {
    * The price of the item per unit of that item.
    */
   private double unitPrice;
+  
+  /**
+   * Default constructor with no parameters, initializes values to null and 0.
+   */
+  public PurchasedItem() {
+    this.name = null;
+    this.unitPrice = 0;
+  }
 
   /**
    * Initializes the name and unitPrice fields for the item.

@@ -6,11 +6,20 @@ import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekTwoArithmeticOperators {
-  public static void checkIfAbsoluteValueIsEqual(final Scanner scanner) {
-    // Arithmetic 1 - Absolute Equals
-    // This program takes two numbers and then tells the user if the absolute
-    // value of both numbers is equal
+  
+  /**
+   * Asks the user for 2 int values and then prints if they have the same
+   * absolute value.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void checkIfAbsoluteValueIsEqual(Scanner scanner) {
     System.out.println("This program will ask you for two numbers, and then"
         + " it will tell you if the absolute value of both numbers is the"
         + " same");
@@ -48,10 +57,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void findFloorAndCeiling(final Scanner scanner) {
-    // Arithmetic 2 - Floor and Ceiling
-    // Demonstrates two different ways to round numbers in Java by using the
-    // floor and ceil functions
+  /**
+   * Asks the user for a number, then prints the value of it rounded down and
+   * up.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findFloorAndCeiling(Scanner scanner) {
     System.out.println("This program will ask you to enter a decimal number,"
         + " and then it will tell you the result of rounding it up and"
         + " down");
@@ -73,10 +85,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void calculateSquareRoot(final Scanner scanner) {
-    // Arithmetic 3 - Square Root
-    // Finds the square root and fourth root of a user input number and
-    // rounds it to 5 decimal places
+  /**
+   * Asks the user for a number, then prints the square root and fourth root of
+   * that number rounded to 5 decimal places.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void calculateSquareRoot(Scanner scanner) {
     System.out.println("This program will ask you to enter a number, and it"
         + " will then find the square root and fourth root, and then tell"
         + " you they are to 5 decimal places");
@@ -101,9 +116,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void useTaylorSeries(final Scanner scanner) {
-    // Arithmetic 4 - Taylor Series
-    // Finds the sine of an angle by using the Taylor Series to five terms
+  /**
+   * Asks the user o enter an angle in degress, then prints the sin of that
+   * angle using the Taylor Series expansion.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void useTaylorSeries(Scanner scanner) {
     System.out.println("This program will ask you for an angle in degrees,"
         + " and it will then tell you the sine of that number using the"
         + " Taylor Series to 5 terms");
@@ -132,9 +151,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void findThreeAndFiveMultiples(final Scanner scanner) {
-    // Arithmetic 5 - Multiples of 3 and 5
-    // Finds the sum of the multiples of 3 and 5 less than the input
+  /**
+   * Asks the user for an int value, then prints the sum of all the multiples
+   * of 3 and all the multiples of 5 less than that number.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findThreeAndFiveMultiples(Scanner scanner) {
     System.out.println("This program will ask you to input a number, and then"
         + " it will calculate the sum of the sum of all the multiples of 3"
         + " and the sum of all the multiples of 5 less than that number");
@@ -168,9 +191,12 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void checkIfLeapYear(final Scanner scanner) {
-    // Operators 1 - Leap Year
-    // Takes an input year and then says if it's a leap year or not
+  /**
+   * Asks the user for a year, then prints if that year is a leap year or not.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void checkIfLeapYear(Scanner scanner) {
     System.out.println("This program will ask you to enter a year, then it will"
         + " tell you if it is a leap year or not");
     System.out.println("Please enter the year to be checked: ");
@@ -204,9 +230,12 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void findLargestNumber(final Scanner scanner) {
-    // Operators 2 - Largest of Three Numbers
-    // Takes 3 input numbers and says what the largest is
+  /**
+   * Asks the user for 3 int values and then prints what the largest one is.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findLargestNumber(Scanner scanner) {
     System.out.println("This program will ask you to input 3 numbers, and it"
         + " will then tell you which one is the largest");
     System.out.println("Enter three integers: ");
@@ -258,15 +287,18 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void calculateSimpleInterest(final Scanner scanner) {
-    // Operators 3 - Find Simple Interest
-    // Takes initial investment and the annual interest rate, then tells you
-    // how much interest you make in a year
+  /**
+   * Asks the user for an interest rate and an initial investment, then prints
+   * how much interest that would make in a year.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void calculateSimpleInterest(Scanner scanner) {
     System.out.println("This program will tell you how much annual interest"
         + " you will make, given the original investment and interest"
         + " rate");
-    double principal = 0; // the value of the investment
-    double rate = 0;      // the annual interest rate
+    double principal = 0;
+    double rate = 0;
     System.out.println("Please enter the initial investment: ");
     boolean goodUserInput = false;
     while (!goodUserInput) {
@@ -299,9 +331,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void convertCelsiusToFahrenheit(final Scanner scanner) {
-    // Operators 4 - DegreeToFahrenheit
-    // This program converts Celsius to Fahrenheit
+  /**
+   * Asks the user for a temperature in Celsius and then prints that
+   * temperature in Fahrenheit.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void convertCelsiusToFahrenheit(Scanner scanner) {
     System.out.println("This program will ask you for a temperature in Celsius"
         + " and then convert it to Fahrenheit");
     System.out.println("Please enter a temperature in Celsius: ");
@@ -323,9 +359,13 @@ public class WeekTwoArithmeticOperators {
     System.out.println("");
   }
 
-  public static void useArithmeticOperators(final Scanner scanner) {
-    // Operators 5 - Arithmetic Operator
-    // Performs some basic arithmetic on some numbers
+  /**
+   * Asks the user for 2 int values, then prints the result of adding,
+   * subtracting, multiplying, and dividing them.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void useArithmeticOperators(Scanner scanner) {
     System.out.println("This program will ask you to input 2 numbers, it will"
         + " then tell you the results of adding, subtracting, multiplying,"
         + " and dividing them");

@@ -5,11 +5,19 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekOneVariables {
-  public static void checkIfEvenOrOdd(final Scanner scanner) {
-    // Variables 1 - Even or Odd
-    // Takes one number from the user and then prints if it is even or odd
-    // Creates a new scanner object to accept input
+  
+  /**
+   * Asks the user for an int value and prints if it is even or odd.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void checkIfEvenOrOdd(Scanner scanner) {
     System.out.println("This program will ask you for a number, and will then"
         + " tell you if it is even or odd");
     boolean goodUserInput = false;
@@ -33,10 +41,12 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
-  public static void multiplyTwoNumbers(final Scanner scanner) {
-    // Variables 2 - Multiply Any Two Numbers
-    // Takes two numbers from the user, multiplies them, and then prints the
-    // product
+  /**
+   * Asks the user for 2 int values and then prints the product of them.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void multiplyTwoNumbers(Scanner scanner) {
     System.out.println("The following program will ask you to give it two"
         + " numbers, which it will then multiply them and tell you the"
         + " product");
@@ -72,10 +82,12 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
-  public static void takeAgeNameSalary(final Scanner scanner) {
-    // Variables 3 - Age, Name, Salary
-    // Takes input from the user and then prints it back with comments on the
-    // input
+  /**
+   * Asks the user for some information and then prints comments about it.
+   * 
+   * @param scanner  a Scanner object for user input
+   */
+  public static void takeAgeNameSalary(Scanner scanner) {
     System.out.println("This program will ask you for some basic information"
         + " about yourself and then respond to you with small comments on"
         + " it");
@@ -113,9 +125,12 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
-  public static void checkIfPrime(final Scanner scanner) {
-    // Variables 4 - Prime Number Checker
-    // Takes a number from the user and then checks if it is prime
+  /**
+   * Asks the user for an int value and then prints if it is prime or not.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void checkIfPrime(Scanner scanner) {
     System.out.println("This program will ask for you to give it a number,"
         + " and it will then tell you if that number is a prime number or"
         + " not");
@@ -152,10 +167,16 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
-  public static void askForTriangleSides(final Scanner scanner) {
-    // Variables 5 - Area of a Triangle
-    // Rewritten from programmr exercise to take user input instead of
-    // displaying the area of predetermined triangles
+  /**
+   * Asks the user for the side lengths of a triangle, then prints the area of
+   * the triangle.
+   * 
+   * <p>Rewritten from a programmr exercise to take user input instead of
+   * displaying the area of a few predetermined triangles.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void askForTriangleSides(Scanner scanner) {
     System.out.println("This program takes the side lengths of a triangle and"
         + " uses Heron's formula to calculate the area, which it then"
         + " prints to the console.");
@@ -204,11 +225,16 @@ public class WeekOneVariables {
     System.out.println("");
   }
 
+  /**
+   * Calculates the area of a triangle with 3 given sides using Heron's Formula.
+   * 
+   * @param side1 the length of the first side
+   * @param side2 the length of the second side
+   * @param side3 the length of the third side
+   * @return the area of the triangle created from the 3 side lengths
+   */
   public static double calculateTriangleArea(double side1,
                                              double side2, double side3) {
-    // Takes the three side lengths of a triangle as parameters
-    // Uses Heron's formula to calculate the area of a triangle from its side
-    // lengths
     double heronS = (side1 + side2 + side3) / 2;
     return Math.pow((heronS * (heronS - side1) * (heronS - side2) * (heronS
         - side3)), 0.5);

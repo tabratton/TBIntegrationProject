@@ -15,6 +15,15 @@ public class CountedItem extends PurchasedItem {
    * The price of the total amount of the item being bought.
    */
   private double priceAfterQuantity;
+  
+  /**
+   * Default constructor with no parameters, initializes values to null and 0.
+   */
+  public CountedItem() {
+    super();
+    this.quantity = 0;
+    this.priceAfterQuantity = 0;
+  }
 
   /**
    * Initializes the name, unitPrice, quantity, and priceAfterQuantity fields.

@@ -17,7 +17,7 @@ public class Main {
    *
    * @param args Takes any command line arguments. None currently supported
    */
-  public static void main(final String[] args) {
+  public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean loopRunning = true;
     while (loopRunning) {   // Loops the choosing of a category

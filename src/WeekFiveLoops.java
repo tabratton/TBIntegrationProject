@@ -5,11 +5,20 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekFiveLoops {
-  public static void findSumOfPrimeDigits(final Scanner scanner) {
-    // Loops 1 - Sum of Prime Digits
-    // Asks the user for a number and then finds the sum of all the prime
-    // digits in the number
+  
+  /**
+   * Asks the user to enter an int and then prints the sum of all prime digits
+   * of that int.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findSumOfPrimeDigits(Scanner scanner) {
     System.out.println("This program will ask you to enter an integer, and then"
         + " it will tell you the sum of all of the prime digits in that"
         + " number");
@@ -49,10 +58,13 @@ public class WeekFiveLoops {
     System.out.println("");
   }
 
-  public static void findNumberOfACharacter(final Scanner scanner) {
-    // Loops 2 - Number of a Character
-    // Asks the user for a character they want to count and then to enter a
-    // string. Then it counts the number of that character in the string
+  /**
+   * Asks he user to enter a character, then prints the number of times that
+   * character appears in a string they enter.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findNumberOfACharacter(Scanner scanner) {
     System.out.println("This program will ask you to enter a character to"
         + " count, and then tell you how many times that character appears"
         + " in a string that you type");
@@ -93,10 +105,13 @@ public class WeekFiveLoops {
     System.out.println("");
   }
 
-  public static void printBoxOfPounds(final Scanner scanner) {
-    // Loops 3 - Box of #'s
-    // Asks the user for the width and height of a box, then prints a box
-    // that wide and high composed of # characters
+  /**
+   * Asks the user for the width and height of a box, then prints a box with
+   * those dimensions made of # characters.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void printBoxOfPounds(Scanner scanner) {
     System.out.println("This program will ask you to enter the height and"
         + " width of a box, and then it will print a box of # characters"
         + " with that height and width");
@@ -135,9 +150,12 @@ public class WeekFiveLoops {
     System.out.println("");
   }
 
-  public static void findSumOfFiveNumbers(final Scanner scanner) {
-    // Loops 4 - Sum of Five Numbers
-    // Asks the user for 5 numbers, and then adds them together
+  /**
+   * Asks the user for 5 int values and then prints the sum of those values.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void findSumOfFiveNumbers(Scanner scanner) {
     System.out.println("This program will ask you how many integers you want"
         + " to add, then it will ask you to put in those integers, and then"
         + " it will tell you the sum of those integers");
@@ -177,9 +195,12 @@ public class WeekFiveLoops {
     System.out.println("");
   }
 
-  public static void reverseString(final Scanner scanner) {
-    // Loops 5 - Reverse a String
-    // Asks the user for a string and then prints that string reversed
+  /**
+   * Asks the user for a string and then prints the reverse of that string.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void reverseString(Scanner scanner) {
     System.out.println("This program will ask you to enter a string, and then"
         + " it will print out the reverse of that string");
     StringBuffer buf = new StringBuffer();

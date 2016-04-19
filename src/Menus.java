@@ -5,10 +5,17 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class Menus {
-  public static void weekZeroMenu(final Scanner scanner) {
-    // The menu for the explanation category, takes user input and calls the
-    // method of the selected program
+  
+  /**
+   * The menu for the Week Zero - Explanations category, calls user selected programs.
+   */
+  public static void weekZeroMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) { // Lets user choose a program
@@ -69,9 +76,10 @@ public class Menus {
     }
   }
 
-  public static void weekOneMenu(final Scanner scanner) {
-    // The menu for the Week 1 - Variables category, takes user input and calls
-    // the method of the selected program
+  /**
+   * The menu for the Week One - Variables category, calls user selected programs.
+   */
+  public static void weekOneMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -125,9 +133,10 @@ public class Menus {
     }
   }
 
-  public static void weekTwoArithmeticMenu(final Scanner scanner) {
-    // The menu for the Week 2 - Arithmetic, takes user input and calls the
-    // method of the selected program
+  /**
+   * The menu for the Week Two - Arithmetic category, calls user selected programs.
+   */
+  public static void weekTwoArithmeticMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -181,9 +190,10 @@ public class Menus {
     }
   }
 
-  public static void weekTwoOperatorsMenu(final Scanner scanner) {
-    // The menu for the Week 2 - Operators category, takes user input and calls
-    // the method of the selected program
+  /**
+   * The menu for the Week Two - Operators category, calls user selected programs.
+   */
+  public static void weekTwoOperatorsMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -237,9 +247,10 @@ public class Menus {
     }
   }
 
-  public static void weekThreeMenu(final Scanner scanner) {
-    // The menu for the Week 3 - Flow Control category, takes user input and
-    // calls the method of the selected program
+  /**
+   * The menu for the Week Three - Flow Control category, calls user selected programs.
+   */
+  public static void weekThreeMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -293,9 +304,10 @@ public class Menus {
     }
   }
 
-  public static void weekFourMenu(final Scanner scanner) {
-    // The menu for the Week 4 - Methods category, takes user input and calls
-    // the method of the selected program
+  /**
+   * The menu for the Week Four - Methods category, calls user selected programs.
+   */
+  public static void weekFourMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -345,9 +357,10 @@ public class Menus {
     }
   }
 
-  public static void weekFiveMenu(final Scanner scanner) {
-    // The menu for the Week 5 - Loops category, takes user input and calls
-    // the method of the selected program
+  /**
+   * The menu for the Week Five - Loops category, calls user selected programs.
+   */
+  public static void weekFiveMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -400,10 +413,11 @@ public class Menus {
       loopRunning = Main.askToRunAgain(scanner, 1);
     }
   }
-
-  public static void weekSixMenu(final Scanner scanner) {
-    // The menu for the Week 6 - Exception Handling category, takes user input
-    // and calls the method of the selected program
+  
+  /**
+   * The menu for the Week Six - Exception Handling category, calls user selected programs.
+   */
+  public static void weekSixMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -453,9 +467,10 @@ public class Menus {
     }
   }
 
-  public static void weekSevenMenu(final Scanner scanner) {
-    // The menu for the Week 7 - Arrays category, takes user input and calls
-    // the method of the selected program
+  /**
+   * The menu for the Week Seven - Arrays category, calls user selected programs.
+   */
+  public static void weekSevenMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -509,9 +524,10 @@ public class Menus {
     }
   }
 
-  public static void weekEightMenu(final Scanner scanner) {
-    // The menu for the Week 8 - Collections category, takes user input and
-    // calls the method of the selected program
+  /**
+   * The menu for the Week Eight - Collections category, calls user selected programs.
+   */
+  public static void weekEightMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {
@@ -565,9 +581,10 @@ public class Menus {
     }
   }
 
-  public static void weekNineMenu(final Scanner scanner) {
-    // The menu for the Week 9 - Strings category, takes user input and
-    // calls the method of the selected program
+  /**
+   * The menu for the Week Nine - Strings category, calls user selected programs.
+   */
+  public static void weekNineMenu(Scanner scanner) {
     boolean loopRunning = true;
     int userChoice = 0;
     while (loopRunning) {

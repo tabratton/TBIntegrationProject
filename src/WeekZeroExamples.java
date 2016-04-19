@@ -5,8 +5,16 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekZeroExamples {
-  // Explains the "Hello World!" program and then demonstrates it.
+  
+  /**
+   * Explains the "Hello World!" program and then demonstrates it.
+   */
   public static void explainHelloWorld() {
     System.out.println("The Hello World program is the most basic computer"
         + " program, showing that you made the computer do something");
@@ -14,17 +22,18 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
+  /**
+   * Provides explanations and examples of the primitive data types in Java.
+   */
   public static void explainVariableTypes() {
-    // Examples and Explanations of variable types
-    // Declares variables, explains the different types, and prints them
-    final byte declaringVariablesByte = 65;
-    final short declaringVariablesShort = 15_065;
-    final int declaringVariablesInt = 7_355_608;
-    final long declaringVariablesLong = 6_441_023_087_321_637_684L;
-    final float declaringVariablesFloat = 45.4f;
-    final double declaringVariablesDouble = 67.675586d;
-    final char declaringVariablesChar = 't';
-    final boolean declaringVariablesBoolean = true;
+    byte declaringVariablesByte = 65;
+    short declaringVariablesShort = 15_065;
+    int declaringVariablesInt = 7_355_608;
+    long declaringVariablesLong = 6_441_023_087_321_637_684L;
+    float declaringVariablesFloat = 45.4f;
+    double declaringVariablesDouble = 67.675586d;
+    char declaringVariablesChar = 't';
+    boolean declaringVariablesBoolean = true;
     System.out.println("This next program will print a few variables to"
         + " demonstrate the kinds of variables in Java.");
     System.out.println("A Variable is kind of like a box.  You can put things"
@@ -56,10 +65,12 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
+  /**
+   * Gives an explanation and demonstration of integer division.
+   */
   public static void explainIntegerDivision() {
-    // Integer Division Definition
-    final int nine = 9;
-    final int five = 5;
+    int nine = 9;
+    int five = 5;
     System.out.println("This program is going to demonstrate, and try to"
         + " explain what integer division is and how it works in Java");
     System.out.println("I'm going to divide 2 integers and hopefully you'll"
@@ -75,8 +86,11 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
+  /**
+   * Gives an explanation and demonstration of relational and conditional
+   * operators.
+   */
   public static void explainRelationalConditional() {
-    // Explanation of Relational and Conditional Operators
     System.out.println("Relational operators are used to create boolean"
         + " expressions that are then used to determine if a value is greater"
         + " than, greater than or equal to, less than, or less than or equal to"
@@ -127,12 +141,13 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
-  public static void privateFieldsDemonstration(final Scanner scanner) {
-    // Classes 1 - Date Class
-    // Creates a separate class and creates an object from that class, then
-    // asks the user for input and uses a constructor to create the object,
-    // displays their input, and uses set/get methods to enter new values for
-    // private fields
+  /**
+   * Demonstrates how objects created from user created classes work by
+   * creating and manipulating 2 objects from the DateExample class.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void privateFieldsDemonstration(Scanner scanner) {
     System.out.println("This program will create a class called day and"
         + " an object created from that class that will store the day, month,"
         + " and year that you input.");
@@ -272,9 +287,13 @@ public class WeekZeroExamples {
     System.out.println("");
   }
 
+  /**
+   * Creates two objects of different types derived from the same base class,
+   * and demonstrates inheritance and polymorphism with them.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void demonstrateInheritanceAndPolymorphism(Scanner scanner) {
-    // This method creates two objects of different types derived from the
-    // same base class, and demonstrates inheritance and polymorphism with them
     scanner.nextLine();
     System.out.println("Inheritance is when a class, called a subclass, gets"
         + " all of the fields and methods in another class, called the"
@@ -286,8 +305,10 @@ public class WeekZeroExamples {
         + " inherit from the same base class");
     System.out.println("");
     
+    WeighedItem item1 = new WeighedItem();
     System.out.println("Please enter the name of the first item: ");
-    final String name1 = scanner.nextLine();
+    String name1 = scanner.nextLine();
+    item1.setName(name1);
     System.out.println("Please enter the unit price of the first item: ");
     double unitPrice = 0;
     boolean goodUserInput = false;
@@ -301,6 +322,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    item1.setPrice(unitPrice);
     System.out.println("Please enter the weight of the first item: ");
     double weight = 0;
     goodUserInput = false;
@@ -314,9 +336,12 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    item1.setWeight(weight);
     scanner.nextLine();
+    CountedItem item2 = new CountedItem();
     System.out.println("Please enter the name of the second item: ");
-    final String name2 = scanner.nextLine();
+    String name2 = scanner.nextLine();
+    item2.setName(name2);
     System.out.println("Please enter the unit price of the second item: ");
     double unitPrice2 = 0;
     goodUserInput = false;
@@ -330,6 +355,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    item2.setPrice(unitPrice2);
     System.out.println("Please enter the quantity of the second item: ");
     int quantity = 0;
     goodUserInput = false;
@@ -343,6 +369,7 @@ public class WeekZeroExamples {
         System.out.println("");
       }
     }
+    item2.setQuantity(quantity);
     System.out.println("");
     System.out.println("Polymorphism is the concept that objects can be"
         + " multiple different data types. This means that objects created"
@@ -355,8 +382,6 @@ public class WeekZeroExamples {
         + " type PurchasedItem, and put the objects created from its"
         + " subclasses WeightItem and CountedItem into it. It then iterates"
         + " through the array and prints each objects respective information");
-    WeighedItem item1 = new WeighedItem(name1, unitPrice, weight);
-    CountedItem item2 = new CountedItem(name2, unitPrice2, quantity);
     PurchasedItem[] items = new PurchasedItem[] { item1, item2 };
     for (PurchasedItem currentItem : items) {
       System.out.println(currentItem.printInfo());

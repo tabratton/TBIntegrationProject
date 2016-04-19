@@ -5,11 +5,20 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekThreeFlowControl {
-  public static void listNotMultiplesOfThreeOrFour(final Scanner scanner) {
-    // Flow Control 1 - No Multiples of 3 or 4
-    // Prints every number between 1 and the input that is not a multiple of
-    // 3 or 4
+  
+  /**
+   * Asks the user for an int value and prints every number between 1 and the
+   * user input that is not a multiple of 3 or 4.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void listNotMultiplesOfThreeOrFour(Scanner scanner) {
     System.out.println("This program will ask you for a number, and then it"
         + " will list every number between 1 and the number you entered"
         + " that is not a multiple of 3 or 4");
@@ -38,10 +47,13 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static void tellRightOrWrong(final Scanner scanner) {
-    // Flow Control 2 - Right or Wrong
-    // Asks the user the answer to an addition question, tells them if
-    // they're wrong
+  /**
+   * Asks the user for the answer to a question, then prints if they were right
+   * or wrong.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void tellRightOrWrong(Scanner scanner) {
     System.out.println("What is 12 + 12?");
     int rightOrWrongInput = 0;
     boolean goodUserInput = false;
@@ -65,9 +77,13 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static void convertSpaceWeight(final Scanner scanner) {
-    // Flow Control 3 - Space Boxing
-    // This program converts weight on earth to weight on other planets
+  /**
+   * Asks the user to enter their weight and then prints their weight on
+   * another planet of their choice.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void convertSpaceWeight(Scanner scanner) {
     System.out.println("This program will ask for your current weight, and"
         + " then tell you your weight on another planet of your choice");
     System.out.print("Please enter your current earth weight: ");
@@ -111,12 +127,12 @@ public class WeekThreeFlowControl {
         System.out.println("");
       }
     }
-    final double gravityVenus = 0.78;
-    final double gravityMars = 0.39;
-    final double gravityJupiter = 2.65;
-    final double gravitySaturn = 1.17;
-    final double gravityUranus = 1.05;
-    final double gravityNeptune = 1.23;
+    double gravityVenus = 0.78;
+    double gravityMars = 0.39;
+    double gravityJupiter = 2.65;
+    double gravitySaturn = 1.17;
+    double gravityUranus = 1.05;
+    double gravityNeptune = 1.23;
     switch (inputPlanet) {
       case 1:
         weight *= gravityVenus;
@@ -143,16 +159,18 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static void takeLuckySum(final Scanner scanner) {
-    // Flow Control 4 - Lucky Sum
-    // Adds numbers together, but a number is 13, it is not added, and any
-    // numbers after it are not added either
+  /**
+   * Asks the user for 3 int values, sums every value entered before 13 and
+   * prints the sum.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void takeLuckySum(Scanner scanner) {
     System.out.println("This program will ask you for 3 numbers, then it will"
         + " add them together, unless one of them is 13. Then it will add"
         + " any numbers before 13, but not after it");
     System.out.println("Please enter 3 integers:");
     int luckySumA = scanner.nextInt();
-
     int luckySumB = scanner.nextInt();
     int luckySumC = scanner.nextInt();
     int luckySumS = calculateLuckySum(luckySumA, luckySumB, luckySumC);
@@ -160,9 +178,13 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static void calculateRedLotteryTicket(final Scanner scanner) {
-    // Flow Control 5 - Red Lottery Number
-    // Gives a value based off 3 "lottery tickets" with values of 0 to 2
+  /**
+   * Asks he user to enter 3 int values, then tells them the value of their
+   * ticket.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void calculateRedLotteryTicket(Scanner scanner) {
     System.out.println("This program will ask you for 3 integers, and it will"
         + " then tell you the value of your 'ticket' based on those"
         + " numbers");
@@ -217,12 +239,18 @@ public class WeekThreeFlowControl {
     System.out.println("");
   }
 
-  public static int calculateLuckySum(final int num1, final int num2,
-                                      final int num3) {
-    // Uses some if-else statements to determine how to add 3 numbers
-    // 13 and any numbers input after it are not added
+  /**
+   * Sums 3 int values, only adds values that appear before 13.
+   * 
+   * @param num1 the first int value entered
+   * @param num2 the second int value entered
+   * @param num3 the third int value entered
+   * @return the sum of the int values that appear before 13, also not
+   *         including 13 itself
+   */
+  public static int calculateLuckySum(int num1, int num2, int num3) {
     int sum;
-    final int magicLuckyThirteen = 13;
+    int magicLuckyThirteen = 13;
     if (num1 == magicLuckyThirteen) {
       sum = 0;
     } else if (num2 == magicLuckyThirteen) {

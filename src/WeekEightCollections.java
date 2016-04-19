@@ -7,11 +7,21 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Stack;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekEightCollections {
+  
+  /**
+   * Takes 10 integers from the user, puts them in an ArrayList and then
+   * creates a copy of the ArrayList with the last int being replaced with -7,
+   * finally prints both ArrayLists.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void copyArrayLists(Scanner scanner) {
-    // Collections 1 - Copying ArrayLists
-    // Takes ten input integers into an ArrayList, copies it to a new one,
-    // and replaces the last element with -7
     System.out.println("This program will ask you to enter ten integers, it"
         + " will put them into an ArrayList, copy the ArrayList into a new"
         + " ArrayList, replace the last integer with -7, and then prints both"
@@ -39,10 +49,13 @@ public class WeekEightCollections {
     System.out.println("");
   }
 
+  /**
+   * Takes integers from the user, uses an ArrayList to find the largest int
+   * and its location, then prints that information to the user.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void locateLargestValue(Scanner scanner) {
-    // Collections 2 - Locating Largest Value in ArrayList
-    // Takes user specified number of integers, puts them in an ArrayList,
-    // finds the largest value and prints it and its index location
     ArrayList<Integer> al = new ArrayList<Integer>();
     System.out.println("This program will ask you to enter the number of"
         + " integers you would like to enter, and then to etner that many"
@@ -89,9 +102,13 @@ public class WeekEightCollections {
     System.out.println("");
   }
 
+  /**
+   * Takes 5 strings from the user and finds the longest one with an ArrayList,
+   * then prints the length of that string to the user.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void findLongestString(Scanner scanner) {
-    // Collections 3 - Longest String
-    // Takes five strings and finds the longest one, prints it back out
     ArrayList<String> al = new ArrayList<String>();
     System.out.println("This program will ask you to enter five strings, it"
         + " will then use an ArrayList to find the longest string and tell"
@@ -106,10 +123,13 @@ public class WeekEightCollections {
     System.out.println("");
   }
 
+  /**
+   * Takes 3 integers from the user and pushes them to a stack and printing the
+   * current contents of the stack, then removes the last one.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void useStack(Scanner scanner) {
-    // Collections 4 - Stack
-    // Takes three integers, pushes them to a stack while printing the
-    // current stack, removes the last one from the stack
     System.out.println("This program will ask you to enter three integers,"
         + " then it will push each one to a stack and show you the stack"
         + " after the number is added to it, then it will remove the last one"
@@ -153,7 +173,7 @@ public class WeekEightCollections {
         System.out.println("");
       }
     }
-    Stack st = new Stack();
+    Stack<Integer> st = new Stack<Integer>();
     System.out.println(st);
     st.push(num1);
     System.out.println(st);
@@ -166,9 +186,13 @@ public class WeekEightCollections {
     System.out.println("");
   }
 
+  /**
+   * Takes user specified number of int values into an ArrayList, finds the
+   * largest one and then tells the user what the largest int was.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void findLargestValueInArrayList(Scanner scanner) {
-    // Collections 5 - Largest Value in ArrayList
-    // Takes user specified number of integers and finds the largest one
     ArrayList<Integer> al = new ArrayList<Integer>();
     System.out.println("This program will ask you how many integers you would"
         + " like to enter, then for you to enter that many integers.  It will"
@@ -213,14 +237,19 @@ public class WeekEightCollections {
     System.out.println("");
   }
 
+  /**
+   * Finds the longest string in an ArrayList.
+   * 
+   * @param list an ArrayList object of type String
+   * @return the index at which the largest string is located
+   */
   public static int findMaxLength(ArrayList<String> list) {
-    // Finds which string in an ArrayList is the longest
     int max;
     if (list.size() == 0) {
       max = 0;
     } else {
       max = list.get(0).length();
-      for (int i = 0; i < list.size(); i++) {
+      for (int i = 1; i < list.size(); i++) {
         if (list.get(i).length() > max) {
           max = list.get(i).length();
         }

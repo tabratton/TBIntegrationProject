@@ -4,11 +4,19 @@
 
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekNineStrings {
+  
+  /**
+   * Asks the user for a string and then prints the length of the string.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void findLengthOfAString(Scanner scanner) {
-    // Strings 1 - Length of a String
-    // Asks the user to input a string and then tells them the length of the
-    // string
     System.out.println("This program will ask you to enter a string, and then"
         + " it will tell you the length of that string.");
     System.out.println("Please enter a string: ");
@@ -20,10 +28,13 @@ public class WeekNineStrings {
     System.out.println("");
   }
 
+  /**
+   * Asks he user to enter a sentence and then prints the longest word in the
+   * sentence.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void findLongestWord(Scanner scanner) {
-    // Strings 2 - Longest Word
-    // Asks the user to enter a sentence and then tells them the longest word
-    // in the sentence
     System.out.println("This program will ask you to enter a sentence, and"
         + " then it will tell you the longest word in that sentence.");
     System.out.println("Please enter a sentence:");
@@ -40,9 +51,13 @@ public class WeekNineStrings {
     System.out.println("");
   }
 
+  /**
+   * Asks the user to enter a string and then prints if it is a palindrome or
+   * not.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void checkPalindrome(Scanner scanner) {
-    // Strings 3 - Palindrome Check
-    // Asks the user to enter a string and then checks if it is a palindrome
     System.out.println("This program will ask you to enter a string, and then"
         + " it will tell you if that string is a palindrome or not.");
     System.out.print("Please enter a string: ");
@@ -58,9 +73,13 @@ public class WeekNineStrings {
     System.out.println("");
   }
 
+  /**
+   * Asks the user for a string and then prints that string with all vowels
+   * removed.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void removeVowels(Scanner scanner) {
-    // String 4 - Remove Vowels
-    // Asks the user for a string, and then removes all the vowels
     System.out.println("This program will ask you to enter a string, and then"
         + " it will remove all the vowels from the string and print it back"
         + " out");
@@ -94,9 +113,13 @@ public class WeekNineStrings {
     System.out.println("");
   }
 
+  /**
+   * Asks the user or a string and then prints it with all lower case
+   * characters.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void convertUpperToLower(Scanner scanner) {
-    // String 5 - Uppercase to Lowercase
-    // Asks user to enter a string, converts all of it to lowercase
     System.out.println("This program will ask you to enter a string, and then"
         + " it will convert the entire string to lower case.");
     System.out.println("Please enter an Uppercase string:");

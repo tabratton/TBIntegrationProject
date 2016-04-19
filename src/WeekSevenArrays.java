@@ -5,11 +5,20 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekSevenArrays {
+  
+  /**
+   * Asks the user for 5 int values, places them in an array and then prints
+   * all of the even values.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void printEvenNumbersOnly(Scanner scanner) {
-    // Arrays 1 - Even numbers only
-    // Creates an array of five integers, then prints out only the even
-    // integers in the array
     System.out.println("This program will ask you to input five integers, and"
         + " then it will print out all of the even numbers that you entered.");
     System.out.println("Please enter five integers: ");
@@ -40,10 +49,13 @@ public class WeekSevenArrays {
     System.out.println("");
   }
 
+  /**
+   * Asks the user for 10 int values, places them in an array, then prints the
+   * smallest int and its position in the array.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void locateSmallestInArray(Scanner scanner) {
-    // Arrays 2 - Locate Smallest Number In An Array
-    // Finds the smallest user entered number and then prints what it is and
-    // its position in the array
     int[] anArray = new int[10];
     int minPos = 0;
     System.out.println("This program will ask you to enter 10 integers, and"
@@ -78,9 +90,13 @@ public class WeekSevenArrays {
     System.out.println("");
   }
 
+  /**
+   * Asks the user for 10 int values, places them in an array, then prints the
+   * sum of all the int values.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void findSumOfIntegersInArray(Scanner scanner) {
-    // Arrays 3 - Sum of Integers in an Array
-    // Finds the sum of the integers entered in the array
     int[] anArray = new int[10];
     System.out.println("This program will ask you to enter ten integers, it"
         + " will then tell you what the sum of the integers you entered is.");
@@ -107,9 +123,12 @@ public class WeekSevenArrays {
     System.out.println("");
   }
 
+  /**
+   * Asks the user for a string and then prints the reverse of that string.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void reverseAString(Scanner scanner) {
-    // Arrays 4 - Reverse a String
-    // Takes a user input string and reverse it using an array then prints it
     System.out.println("This program will ask you to enter a string, it will"
         + " then reverse the string using an array and print the reversed"
         + " string.");
@@ -126,9 +145,13 @@ public class WeekSevenArrays {
     System.out.println("");
   }
 
+  /**
+   * Asks the user for 10 int values, places them in a 2D array, then prints
+   * the largest int and its position in the array.
+   * 
+   * @param scanner a Scanner object for user input
+   */
   public static void searchTwoDimensionalArray(Scanner scanner) {
-    // Arrays 5 - Search 2D Array
-    // Asks the user to
     int[][] twoDimensionalArray = new int[5][2];
     System.out.println("This program will ask you to enter ten integers,"
         + " and will enter those integers into a two-dimensional array,"

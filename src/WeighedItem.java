@@ -15,6 +15,15 @@ public class WeighedItem extends PurchasedItem {
    * The price of the total amount of items being bought based on the weight.
    */
   private double priceAfterWeight;
+  
+  /**
+   * Default constructor with no parameters, initializes values to null and 0.
+   */
+  public WeighedItem() {
+    super();
+    this.priceAfterWeight = 0;
+    this.weight = 0;
+  }
 
   /**
    * Initializes the name, unitPrice, quantity, and priceAfterQuantity fields.

@@ -5,11 +5,20 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @version 1.3
+ * @since   
+ */
 public class WeekSixExceptionHandling {
-  public static void idNumberMachine(final Scanner scanner) {
-    // Exception Handling 1 - ID Number Machine
-    // Asks the user to enter a 10 digit long ID. Throws and catches an
-    // exception if it is not a number or if it is not 10 digits long
+  
+  /**
+   * Asks the user to enter a 10 digit ID, throws and catches an exception if
+   * it is not a number or not 10 digits long.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void idNumberMachine(Scanner scanner) {
     System.out.println("This program will ask you to enter an ID number that"
         + " is 10 digits long.  If you do not enter a number or if it is"
         + " not 10 digits, then an exception will be thrown and caught and"
@@ -32,10 +41,13 @@ public class WeekSixExceptionHandling {
     System.out.println("");
   }
 
-  public static void checkIfMultipleOfFive(final Scanner scanner) {
-    // Exception Handling 2 - Ask For Multiple of Five
-    // Asks the user to input a number that is a multiple of 5 and that is
-    // not also 5
+  /**
+   * Asks the user for to enter a multiple of 5, throws and catches an
+   * exception if it is not a multiple of 5.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void checkIfMultipleOfFive(Scanner scanner) {
     System.out.println("This program will ask you to enter a number that is a"
         + " multiple of 5.");
     System.out.println("If you do not enter a multiple of 5 or if you enter"
@@ -69,10 +81,13 @@ public class WeekSixExceptionHandling {
     System.out.println("");
   }
 
-  public static void slopePoint(final Scanner scanner) {
-    // Exception Handling 3 - Slope Point
-    // Asks the user for 2 points in (x, y) form, and then calculates the
-    // slope of the line formed by connecting the points
+  /**
+   * Asks the user for 2 points in (x, y) form, then prints the slope of the
+   * line between those points.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void slopePoint(Scanner scanner) {
     System.out.println("This program will ask you to enter the x and y values"
         + " of two points, and then it will tell you the slope of the line"
         + " between those points.");
@@ -143,11 +158,13 @@ public class WeekSixExceptionHandling {
     System.out.println("");
   }
 
-  public static void convertToCentimeters(final Scanner scanner) {
-    // Exception Handling 4 - Convert feet and inches to cm
-    // Asks the user a height in feet and inches and then prints what
-    // that is in centimeters. Displays Exceptions if an integer is not
-    // entered or a negative integer is entered
+  /**
+   * Asks the user for a height in feet and inches then prints that height in
+   * centimeters.
+   * 
+   * @param scanner a Scanner object for user input
+   */
+  public static void convertToCentimeters(Scanner scanner) {
     System.out.println("This program will ask you to enter a height in feet"
         + " and inches.  If you enter invalid values, the program will catch"
         + " an exception and tell you what you did wrong.");
@@ -196,9 +213,15 @@ public class WeekSixExceptionHandling {
     System.out.println("");
   }
 
-  public static double height(final int feet, final int inches) {
-    // Height in centimeters method.  Takes an int value for feet and an int
-    // value for inches, converts to centimeters.
+  /**
+   * Converts feet and inches to centimeters.
+   * 
+   * @param feet   how long something is in feet
+   * @param inches how many extra inches long the something is (if it isn't an
+   *               even number of feet)
+   * @return the length converted from feet/inches to centimeters
+   */
+  public static double height(int feet, int inches) {
     return (feet * 30.48) + (inches * 2.54);
   }
 }
