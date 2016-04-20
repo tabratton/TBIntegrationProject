@@ -146,8 +146,8 @@ public class WeekSevenArrays {
   }
 
   /**
-   * Asks the user for 10 int values, places them in a 2D array, then prints
-   * the largest int and its position in the array.
+   * Asks the user for 10 int values, places them in a 2D array, asks the
+   * user for an int to find, then searches the array and prints its location.
    * 
    * @param scanner a Scanner object for user input
    */
@@ -155,8 +155,8 @@ public class WeekSevenArrays {
     int[][] twoDimensionalArray = new int[5][2];
     System.out.println("This program will ask you to enter ten integers,"
         + " and will enter those integers into a two-dimensional array,"
-        + " search it and display the position of the largest integer in the"
-        + " array");
+        + " then it will ask you to enter an integer so it can search the"
+        + " array for that integer and tell you its position.");
     System.out.println("Please enter ten integers: ");
     for (int i = 0; i < twoDimensionalArray.length; i++) {
       for (int j = 0; j < twoDimensionalArray[i].length; j++) {
@@ -173,21 +173,45 @@ public class WeekSevenArrays {
         }
       }
     }
-    int row = 0;
-    int col = 0;
-    int largest = 0;
-    for (int i = 0; i < twoDimensionalArray.length; i++) {
-      for (int j = 0; j < twoDimensionalArray[i].length; j++) {
-        if (largest < twoDimensionalArray[i][j]) {
-          largest = twoDimensionalArray[i][j];
-          row = i;
-          col = j;
-        }
+    System.out.println("Please enter an integer to search the array for: ");
+    boolean goodUserInput = false;
+    int intToSearch = 0;
+    while (!goodUserInput) {
+      try {
+        intToSearch = scanner.nextInt();
+        goodUserInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
       }
     }
-    System.out.println("The largest integer is: " + largest);
-    System.out.println("The location of the largest integer is: Row " + row
-        + ", Column " + col);
+    int row = 0;
+    int col = 0;
+    boolean searchingForInt = true;
+    boolean foundInt = false;
+    while (searchingForInt) {
+      col = 0;
+      while (searchingForInt) {
+        if (col >= twoDimensionalArray[row].length) {
+          searchingForInt = false;
+        } else if (twoDimensionalArray[row][col] == intToSearch) {
+          foundInt = true;
+          searchingForInt = false;
+        }
+        col++;
+      }
+      if (foundInt) {
+        searchingForInt = false;
+      } else if (row >= twoDimensionalArray.length) {
+        searchingForInt = false;
+      } else {
+        searchingForInt = true;
+      }
+      row++;
+    }
+    System.out.println("The location of the integer is: Row " + (row - 1)
+        + ", Column " + (col - 1));
     System.out.println("");
   }
 }
