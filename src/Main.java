@@ -12,6 +12,9 @@ import java.util.Scanner;
  */
 public class Main {
 
+  private static final int MIN_MENU_CHOICE = 1;
+  private static final int MAX_MENU_CHOICE = 11;
+
   /**
    * The main method for the program. Runs the main menu system
    *
@@ -42,7 +45,7 @@ public class Main {
         System.out.println("");
         try {
           userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 11) {
+          if (userChoice < MIN_MENU_CHOICE || userChoice > MAX_MENU_CHOICE) {
             throw new Exception();
           }
           goodUserInput = true;
