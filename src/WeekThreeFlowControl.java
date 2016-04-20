@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-03
  */
 public class WeekThreeFlowControl {
   
@@ -245,8 +245,8 @@ public class WeekThreeFlowControl {
    * @param num1 the first int value entered
    * @param num2 the second int value entered
    * @param num3 the third int value entered
-   * @return the sum of the int values that appear before 13, also not
-   *         including 13 itself
+   * @return     the sum of the int values that appear before 13, also not
+   *             including 13 itself
    */
   public static int calculateLuckySum(int num1, int num2, int num3) {
     int sum;

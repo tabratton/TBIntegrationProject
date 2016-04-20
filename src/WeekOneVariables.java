@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-03
  */
 public class WeekOneVariables {
   
@@ -85,7 +85,7 @@ public class WeekOneVariables {
   /**
    * Asks the user for some information and then prints comments about it.
    * 
-   * @param scanner  a Scanner object for user input
+   * @param scanner a Scanner object for user input
    */
   public static void takeAgeNameSalary(Scanner scanner) {
     System.out.println("This program will ask you for some basic information"
@@ -231,7 +231,7 @@ public class WeekOneVariables {
    * @param side1 the length of the first side
    * @param side2 the length of the second side
    * @param side3 the length of the third side
-   * @return the area of the triangle created from the 3 side lengths
+   * @return      the area of the triangle created from the 3 side lengths
    */
   public static double calculateTriangleArea(double side1,
                                              double side2, double side3) {

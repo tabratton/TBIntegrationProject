@@ -2,7 +2,7 @@
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-01
  */
 public class DateExample {
   private int day;
@@ -21,9 +21,9 @@ public class DateExample {
   /**
    * Constructor for the class that has parameters for all fields.
    * 
-   * @param newDay The day for the date object being created
+   * @param newDay   The day for the date object being created
    * @param newMonth The month for the date object being created
-   * @param newYear The year for the date object being created
+   * @param newYear  The year for the date object being created
    */
   public DateExample(int newDay, int newMonth, int newYear) {
     this.day = newDay;

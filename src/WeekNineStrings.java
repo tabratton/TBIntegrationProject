@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-23
  */
 public class WeekNineStrings {
   

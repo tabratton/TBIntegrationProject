@@ -10,7 +10,7 @@ import java.util.Stack;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-21
  */
 public class WeekEightCollections {
   
@@ -241,7 +241,7 @@ public class WeekEightCollections {
    * Finds the longest string in an ArrayList.
    * 
    * @param list an ArrayList object of type String
-   * @return the index at which the largest string is located
+   * @return     the index at which the largest string is located
    */
   public static int findMaxLength(ArrayList<String> list) {
     int max;

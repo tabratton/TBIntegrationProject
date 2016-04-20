@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-03
  */
 public class WeekSixExceptionHandling {
   
@@ -219,7 +219,7 @@ public class WeekSixExceptionHandling {
    * @param feet   how long something is in feet
    * @param inches how many extra inches long the something is (if it isn't an
    *               even number of feet)
-   * @return the length converted from feet/inches to centimeters
+   * @return       the length converted from feet/inches to centimeters
    */
   public static double height(int feet, int inches) {
     return (feet * 30.48) + (inches * 2.54);

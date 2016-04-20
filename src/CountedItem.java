@@ -15,7 +15,7 @@ public class CountedItem extends PurchasedItem {
    * The price of the total amount of the item being bought.
    */
   private double priceAfterQuantity;
-  
+
   /**
    * Default constructor with no parameters, initializes values to null and 0.
    */
@@ -41,7 +41,7 @@ public class CountedItem extends PurchasedItem {
   /**
    * Sets the quantity of the item being bought if the value is over 0.
    *
-   * @param tempQuan The amount of the item that is being bought
+   * @param tempQuan the amount of the item that is being bought
    */
   public void setQuantity(int tempQuan) {
     if (tempQuan > 0) {

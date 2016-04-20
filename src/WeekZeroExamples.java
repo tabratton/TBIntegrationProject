@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   
+ * @since   2016-03-03
  */
 public class WeekZeroExamples {
   
