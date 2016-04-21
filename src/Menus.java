@@ -11,9 +11,12 @@ import java.util.Scanner;
  * @since   2016-03-04
  */
 public class Menus {
-  
+
   /**
-   * The menu for the Week Zero - Explanations category, calls user selected programs.
+   * The menu for the Week Zero - Explanations category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekZeroMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -77,7 +80,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week One - Variables category, calls user selected programs.
+   * The menu for the Week One - Variables category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekOneMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -134,7 +140,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Two - Arithmetic category, calls user selected programs.
+   * The menu for the Week Two - Arithmetic category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekTwoArithmeticMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -191,7 +200,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Two - Operators category, calls user selected programs.
+   * The menu for the Week Two - Operators category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekTwoOperatorsMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -248,7 +260,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Three - Flow Control category, calls user selected programs.
+   * The menu for the Week Three - Flow Control category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekThreeMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -305,7 +320,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Four - Methods category, calls user selected programs.
+   * The menu for the Week Four - Methods category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekFourMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -359,6 +377,8 @@ public class Menus {
 
   /**
    * The menu for the Week Five - Loops category, calls user selected programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekFiveMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -413,9 +433,12 @@ public class Menus {
       loopRunning = Main.askToRunAgain(scanner, 1);
     }
   }
-  
+
   /**
-   * The menu for the Week Six - Exception Handling category, calls user selected programs.
+   * The menu for the Week Six - Exception Handling category, calls user
+   * selected programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekSixMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -468,7 +491,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Seven - Arrays category, calls user selected programs.
+   * The menu for the Week Seven - Arrays category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekSevenMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -525,7 +551,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Eight - Collections category, calls user selected programs.
+   * The menu for the Week Eight - Collections category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekEightMenu(Scanner scanner) {
     boolean loopRunning = true;
@@ -582,7 +611,10 @@ public class Menus {
   }
 
   /**
-   * The menu for the Week Nine - Strings category, calls user selected programs.
+   * The menu for the Week Nine - Strings category, calls user selected
+   * programs.
+   *
+   * @param scanner a Scanner object for user input
    */
   public static void weekNineMenu(Scanner scanner) {
     boolean loopRunning = true;
