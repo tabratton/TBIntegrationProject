@@ -173,6 +173,7 @@ public class WeekSevenArrays {
         }
       }
     }
+    System.out.println("");
     System.out.println("Please enter an integer to search the array for: ");
     boolean goodUserInput = false;
     int intToSearch = 0;
@@ -210,6 +211,7 @@ public class WeekSevenArrays {
       }
       row++;
     }
+    System.out.println("");
     System.out.println("The location of the integer is: Row " + (row - 1)
         + ", Column " + (col - 1));
     System.out.println("");
