@@ -75,7 +75,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -135,7 +135,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -195,7 +195,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -255,7 +255,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -315,7 +315,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -371,7 +371,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -430,7 +430,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -486,7 +486,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -546,7 +546,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -606,7 +606,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 
@@ -666,7 +666,7 @@ public class Menus {
         default:
           break;
       }
-      loopRunning = Main.askToRunAgain(scanner, 1);
+      loopRunning = Main.runAgainInput(scanner, 1);
     }
   }
 }

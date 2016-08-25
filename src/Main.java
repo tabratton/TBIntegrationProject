@@ -6,9 +6,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author  Tyler Bratton tylerbratton96@gmail.com
+ * @author Tyler Bratton tylerbratton96@gmail.com
  * @version 1.3
- * @since   2016-01-22
+ * @since 2016-01-22
  */
 public class Main {
 
@@ -107,14 +107,14 @@ public class Main {
         default:
           break;
       }
-      // Call to the askToRunAgain method with a scanner object and
+      // Call to the runAgainInput method with a scanner object and
       // int value as arguments.
-      loopRunning = askToRunAgain(scanner, 0);
+      loopRunning = runAgainInput(scanner, 0);
     }
     System.out.println("The program has exited by user choice.");
   }
 
-  // This method header declares the askToRunAgain method and specifies
+  // This method header declares the runAgainInput method and specifies
   // that objects created from the Scanner class and ints are the necessary
   // parameters of this method.
 
@@ -124,69 +124,49 @@ public class Main {
    * @param scanner An object of type Scanner to take user input
    * @param menu    When menu == 0, the "category" question is asked. When
    *                menu != 0, the "different program" question is asked.
-   * @return        Returns a boolean value to determine if the menu loop will
-   *                keep running
+   * @return Returns a boolean value to determine if the menu loop will
+   *         keep running
    */
-  public static boolean askToRunAgain(Scanner scanner, int menu) {
+  public static boolean runAgainInput(Scanner scanner, int menu) {
     boolean validInput = false;
     boolean isLoopRunning = true;
-    if (menu == 0) {
-      while (!validInput) {
-        System.out.println("Would you like to choose a program to run from"
-            + " a different category?");
-        System.out.println("Enter 0 for No, or 1 for Yes");
-        int userChoice;
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 0 || userChoice > 1) {
-            throw new Exception();
-          }
-          if (userChoice == 0) {
-            isLoopRunning = false;
-          } else {
-            isLoopRunning = true;
-          }
-          validInput = true;
-          System.out.println("");
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter 0 or 1");
-          scanner.nextLine();
-          System.out.println("");
+    while (!validInput) {
+      int userChoice;
+      try {
+        askMenuQuestion(menu);
+        userChoice = scanner.nextInt();
+        if (userChoice < 0 || userChoice > 1) {
+          throw new Exception();
         }
-      }
-    } else {
-      while (!validInput) {
-        System.out.println("Would you like to choose a different program to"
-            + " run from this category?");
-        System.out.println("Enter 0 for No, or 1 for Yes");
-        int userChoice;
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 0 || userChoice > 1) {
-            throw new Exception();
-          }
-          if (userChoice == 0) {
-            isLoopRunning = false;
-          } else {
-            isLoopRunning = true;
-          }
-          validInput = true;
-          System.out.println("");
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter 0 or 1");
-          scanner.nextLine();
-          System.out.println("");
+        if (userChoice == 0) {
+          isLoopRunning = false;
+        } else {
+          isLoopRunning = true;
         }
+        validInput = true;
+        System.out.println("");
+      } catch (InputMismatchException ex) {
+        System.out.println("You have to enter an integer");
+        scanner.nextLine();
+        System.out.println("");
+      } catch (Exception ex) {
+        System.out.println("You did not enter 0 or 1");
+        scanner.nextLine();
+        System.out.println("");
       }
     }
     return isLoopRunning;
   }
+
+  private static void askMenuQuestion(int menu) {
+    if (menu == 0) {
+      System.out.println("Would you like to choose a program to run from"
+          + " a different category?");
+      System.out.println("Enter 0 for No, or 1 for Yes");
+    } else {
+      System.out.println("Would you like to choose a different program to run from this category?");
+      System.out.println("Enter 0 for No, or 1 for Yes");
+    }
+  }
 }
+
