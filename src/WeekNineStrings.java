@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-03-23
  */
 public class WeekNineStrings {
@@ -17,14 +17,13 @@ public class WeekNineStrings {
    * @param scanner a Scanner object for user input
    */
   public static void findLengthOfAString(Scanner scanner) {
-    System.out.println("This program will ask you to enter a string, and then"
-        + " it will tell you the length of that string.");
+    System.out.println("This program will ask you to enter a string, and then it will tell you"
+        + " the length of that string.");
     System.out.println("Please enter a string: ");
     scanner.nextLine();
     String string = scanner.nextLine();
     int length = string.length();
-    System.out.println("The length of the string is: " + length + "characters"
-        + ".");
+    System.out.printf("%nThe length of the string is: %d characters.", length);
     System.out.println("");
   }
 
@@ -35,8 +34,8 @@ public class WeekNineStrings {
    * @param scanner a Scanner object for user input
    */
   public static void findLongestWord(Scanner scanner) {
-    System.out.println("This program will ask you to enter a sentence, and"
-        + " then it will tell you the longest word in that sentence.");
+    System.out.println("This program will ask you to enter a sentence, and then it will tell you"
+        + " the longest word in that sentence.");
     System.out.println("Please enter a sentence:");
     scanner.nextLine();
     String string = scanner.nextLine();
@@ -47,7 +46,7 @@ public class WeekNineStrings {
         longestWord = testString;
       }
     }
-    System.out.println("The longest word in the sentence is: " + longestWord);
+    System.out.printf("%nThe longest word in the sentence is: %s", longestWord);
     System.out.println("");
   }
 
@@ -58,8 +57,8 @@ public class WeekNineStrings {
    * @param scanner a Scanner object for user input
    */
   public static void checkPalindrome(Scanner scanner) {
-    System.out.println("This program will ask you to enter a string, and then"
-        + " it will tell you if that string is a palindrome or not.");
+    System.out.println("This program will ask you to enter a string, and then it will tell you if"
+        + " that string is a palindrome or not.");
     System.out.print("Please enter a string: ");
     scanner.nextLine();
     String line = scanner.nextLine();
@@ -80,9 +79,8 @@ public class WeekNineStrings {
    * @param scanner a Scanner object for user input
    */
   public static void removeVowels(Scanner scanner) {
-    System.out.println("This program will ask you to enter a string, and then"
-        + " it will remove all the vowels from the string and print it back"
-        + " out");
+    System.out.println("This program will ask you to enter a string, and then it will remove all"
+        + " the vowels from the string and print it back out");
     System.out.println("Please enter a string: ");
     scanner.nextLine();
     String string = scanner.nextLine();
@@ -120,9 +118,9 @@ public class WeekNineStrings {
    * @param scanner a Scanner object for user input
    */
   public static void convertUpperToLower(Scanner scanner) {
-    System.out.println("This program will ask you to enter a string, and then"
-        + " it will convert the entire string to lower case.");
-    System.out.println("Please enter an Uppercase string:");
+    System.out.println("This program will ask you to enter a string, and then it will convert the"
+        + " entire string to lower case.");
+    System.out.println("Please enter an uppercase string:");
     scanner.nextLine();
     String string = scanner.nextLine();
     string = string.toLowerCase();

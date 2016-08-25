@@ -2,12 +2,11 @@
 // Contains all of the sub-menus for each category, which then call the user
 // selected "programs" (methods)
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-03-04
  */
 public class Menus {
@@ -24,35 +23,18 @@ public class Menus {
     while (loopRunning) { // Lets user choose a program
       boolean goodUserInput = false;
       while (!goodUserInput) {
-        System.out.println("Please choose the program that you would like"
-            + " to run from the list below by entering the number in"
-            + " front of its name: ");
+        System.out.println("Please choose the program that you would like to run from the list"
+            + " below by entering the number in front of its name: ");
         System.out.println("1. Hello World");
         System.out.println("2. Explanation of variable types in Java");
         System.out.println("3. Explanation of integer division");
-        System.out.println("4. Explanation of relational and conditional"
-            + " operators");
-        System.out.println("5. Example of class with private fields and"
-            + " set/get methods");
-        System.out.println("6. Explanation and demonstration of Inheritance"
-            + " and Polymorphism");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 6) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        System.out.println("4. Explanation of relational and conditional operators");
+        System.out.println("5. Example of class with private fields and set/get methods");
+        System.out.println("6. Explanation and demonstration of Inheritance and Polymorphism");
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 6);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekZeroExamples.explainHelloWorld();
@@ -91,31 +73,17 @@ public class Menus {
     while (loopRunning) {
       boolean goodUserInput = false;
       while (!goodUserInput) {
-        System.out.println("Please choose the program that you would like"
-            + " to run from the list below by entering the number in"
-            + " front of its name: ");
+        System.out.println("Please choose the program that you would like to run from the list"
+            + " below by entering the number in front of its name: ");
         System.out.println("1. Even or Odd");
         System.out.println("2. Multiply Any Two Numbers");
         System.out.println("3. Age, Name, and Salary");
         System.out.println("4. Prime Number Checker");
         System.out.println("5. Area of a Triangle");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekOneVariables.checkIfEvenOrOdd(scanner);
@@ -151,31 +119,17 @@ public class Menus {
     while (loopRunning) {
       boolean goodUserInput = false;
       while (!goodUserInput) {
-        System.out.println("Please choose the program that you would like"
-            + " to run from the list below by entering the number in"
-            + " front of its name: ");
+        System.out.println("Please choose the program that you would like to run from the list"
+            + " below by entering the number in front of its name: ");
         System.out.println("1. Absolute Equals");
         System.out.println("2. Floor and Ceiling");
         System.out.println("3. Square Root");
         System.out.println("4. Taylor Series");
         System.out.println("5. Multiples of 3 and 5");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 7) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekTwoArithmeticOperators.checkIfAbsoluteValueIsEqual(scanner);
@@ -211,31 +165,17 @@ public class Menus {
     while (loopRunning) {
       boolean goodUserInput = false;
       while (!goodUserInput) {
-        System.out.println("Please choose the program that you would like"
-            + " to run from the list below by entering the number in"
-            + " front of its name: ");
+        System.out.println("Please choose the program that you would like to run from the list"
+            + " below by entering the number in front of its name: ");
         System.out.println("1. Leap Year");
         System.out.println("2. Find Largest of Three Numbers");
         System.out.println("3. Find Simple Interest");
         System.out.println("4. Convert Celsius to Fahrenheit");
         System.out.println("5. Arithmetic in Java Example");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekTwoArithmeticOperators.checkIfLeapYear(scanner);
@@ -279,23 +219,10 @@ public class Menus {
         System.out.println("3. Space Boxing");
         System.out.println("4. Lucky Sum");
         System.out.println("5. Red Lottery Ticket");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekThreeFlowControl.listNotMultiplesOfThreeOrFour(scanner);
@@ -338,23 +265,10 @@ public class Menus {
         System.out.println("2. Convert Upper Case to Lower Case");
         System.out.println("3. Check if a Number is a Multiple");
         System.out.println("4. Find the Square Root of a Number");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 4) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 4);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekFourMethods.calculateAreaOfACircle(scanner);
@@ -394,23 +308,10 @@ public class Menus {
         System.out.println("3. Printing a Box of #'s");
         System.out.println("4. Sum of 5 Numbers");
         System.out.println("5. Reverse a String");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekFiveLoops.findSumOfPrimeDigits(scanner);
@@ -453,23 +354,10 @@ public class Menus {
         System.out.println("2. Ask For a Certain Number");
         System.out.println("3. Slope Point");
         System.out.println("4. Convert Feet and Inches to Centimeters");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 4) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 4);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekSixExceptionHandling.idNumberMachine(scanner);
@@ -510,23 +398,10 @@ public class Menus {
         System.out.println("3. Sum of Integers in Array");
         System.out.println("4. Reverse a String");
         System.out.println("5. Search Two Dimensional Array");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekSevenArrays.printEvenNumbersOnly(scanner);
@@ -570,23 +445,10 @@ public class Menus {
         System.out.println("3. Longest String");
         System.out.println("4. Stack");
         System.out.println("5. The Largest Value in an ArrayList");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekEightCollections.copyArrayLists(scanner);
@@ -630,23 +492,10 @@ public class Menus {
         System.out.println("3. Palindrome Check");
         System.out.println("4. Remove Vowels");
         System.out.println("5. Convert Uppercase to Lowercase");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < 1 || userChoice > 5) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
-          System.out.println("You did not enter a valid menu number");
-          scanner.nextLine();
-          System.out.println("");
-        }
+        userChoice = CheckInput.checkInt(scanner);
+        goodUserInput = CheckInput.checkInputRange(scanner, userChoice, 1, 5);
       }
+      System.out.println("");
       switch (userChoice) {
         case 1:
           WeekNineStrings.findLengthOfAString(scanner);

@@ -2,12 +2,11 @@
 // skills I learned in COP 2006
 // Some code for exercises taken from programmr.com
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since 2016-01-22
  */
 public class Main {
@@ -23,15 +22,13 @@ public class Main {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean loopRunning = true;
+    int userChoice = 0;
     while (loopRunning) {   // Loops the choosing of a category
       boolean goodUserInput = false;
-      int userChoice = 0;
       while (!goodUserInput) {
-        System.out.println("Please choose the category of programs you would"
-            + " like to run from the list below by entering the number in front"
-            + " of its name: ");
-        System.out.println("1. Explanations and Demonstrations and simple"
-            + " things");
+        System.out.println("Please choose the category of programs you would like to run from the"
+            + " list below by entering the number in front of its name: ");
+        System.out.println("1. Explanations and Demonstrations and simple things");
         System.out.println("2. Variables Exercises");
         System.out.println("3. Operators Exercises");
         System.out.println("4. Arithmetic Exercises");
@@ -42,22 +39,14 @@ public class Main {
         System.out.println("9. Array Exercises");
         System.out.println("10. Collections Exercises");
         System.out.println("11. Strings Exercises");
-        System.out.println("");
-        try {
-          userChoice = scanner.nextInt();
-          if (userChoice < MIN_MENU_CHOICE || userChoice > MAX_MENU_CHOICE) {
-            throw new Exception();
-          }
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        } catch (Exception ex) {
+        userChoice = CheckInput.checkInt(scanner);
+        if (userChoice < MIN_MENU_CHOICE || userChoice > MAX_MENU_CHOICE) {
           System.out.println("You did not enter a valid menu number");
           scanner.nextLine();
-          System.out.println("");
+        } else {
+          goodUserInput = true;
         }
+        System.out.println("");
       }
       switch (userChoice) {
         case 1:
@@ -131,29 +120,21 @@ public class Main {
     boolean validInput = false;
     boolean isLoopRunning = true;
     while (!validInput) {
-      int userChoice;
-      try {
-        askMenuQuestion(menu);
-        userChoice = scanner.nextInt();
-        if (userChoice < 0 || userChoice > 1) {
-          throw new Exception();
-        }
-        if (userChoice == 0) {
-          isLoopRunning = false;
-        } else {
-          isLoopRunning = true;
-        }
-        validInput = true;
-        System.out.println("");
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      } catch (Exception ex) {
+      askMenuQuestion(menu);
+      int userChoice = CheckInput.checkInt(scanner);
+      if (userChoice < 0 || userChoice > 1) {
         System.out.println("You did not enter 0 or 1");
         scanner.nextLine();
         System.out.println("");
+      } else {
+        validInput = true;
       }
+      if (userChoice == 0) {
+        isLoopRunning = false;
+      } else {
+        isLoopRunning = true;
+      }
+      System.out.println("");
     }
     return isLoopRunning;
   }

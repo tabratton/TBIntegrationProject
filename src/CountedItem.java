@@ -1,7 +1,7 @@
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-04-13
  */
 public class CountedItem extends PurchasedItem {
@@ -21,8 +21,8 @@ public class CountedItem extends PurchasedItem {
    */
   public CountedItem() {
     super();
-    this.quantity = 0;
-    this.priceAfterQuantity = 0;
+    setQuantity(0);
+    setPriceAfterQuantity();
   }
 
   /**
@@ -30,22 +30,22 @@ public class CountedItem extends PurchasedItem {
    *
    * @param tempName  String that indicates the name of the item
    * @param tempPrice The price of the item per unit
-   * @param tempQuan  The quantity of the item that is being bought
+   * @param tempQuantity  The quantity of the item that is being bought
    */
-  public CountedItem(String tempName, double tempPrice, int tempQuan) {
+  public CountedItem(String tempName, double tempPrice, int tempQuantity) {
     super(tempName, tempPrice);
-    setQuantity(tempQuan);
+    setQuantity(tempQuantity);
     setPriceAfterQuantity();
   }
 
   /**
    * Sets the quantity of the item being bought if the value is over 0.
    *
-   * @param tempQuan the amount of the item that is being bought
+   * @param tempQuantity the amount of the item that is being bought
    */
-  public void setQuantity(int tempQuan) {
-    if (tempQuan > 0) {
-      this.quantity = tempQuan;
+  public void setQuantity(int tempQuantity) {
+    if (tempQuantity > 0) {
+      this.quantity = tempQuantity;
     } else {
       this.quantity = 0;
     }
@@ -85,7 +85,7 @@ public class CountedItem extends PurchasedItem {
    *         fields of the item.
    */
   public String printInfo() {
-    return getName() + "@ $" + getPrice() + " per unit with " + quantity
-        + " units bought, for a total of $" + getPriceAfterQuantity();
+    return String.format("%s@ $%.2f per unit with %d units bought, for a total of $%.2f", getName(),
+        getPrice(), getQuantity(), getPriceAfterQuantity());
   }
 }

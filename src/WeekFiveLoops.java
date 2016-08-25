@@ -2,12 +2,11 @@
 // Contains all of the "programs" (methods) for the Week 5 - Loops category
 // of the menu
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-03-03
  */
 public class WeekFiveLoops {
@@ -19,9 +18,8 @@ public class WeekFiveLoops {
    * @param scanner a Scanner object for user input
    */
   public static void findSumOfPrimeDigits(Scanner scanner) {
-    System.out.println("This program will ask you to enter an integer, and then"
-        + " it will tell you the sum of all of the prime digits in that"
-        + " number");
+    System.out.println("This program will ask you to enter an integer, and then it will tell you"
+        + " the sum of all of the prime digits in that number");
     String str = "";
     boolean goodUserInput = false;
     while (!goodUserInput) {
@@ -54,7 +52,7 @@ public class WeekFiveLoops {
         primeSum += number;
       }
     }
-    System.out.println("The sum of the prime digits is: " + primeSum);
+    System.out.printf("%nThe sum of the prime digits is: %d", primeSum);
     System.out.println("");
   }
 
@@ -65,25 +63,19 @@ public class WeekFiveLoops {
    * @param scanner a Scanner object for user input
    */
   public static void findNumberOfACharacter(Scanner scanner) {
-    System.out.println("This program will ask you to enter a character to"
-        + " count, and then tell you how many times that character appears"
-        + " in a string that you type");
+    System.out.println("This program will ask you to enter a character to count, and then tell"
+        + " you how many times that character appears in a string that you type");
     scanner.nextLine();
     String initialString = "";
     boolean goodUserInput = false;
     while (!goodUserInput) {
       try {
-        System.out.println(
-            "Please enter the character you would like to count:" + " ");
+        System.out.println("Please enter the character you would like to count: ");
         initialString = scanner.nextLine();
         if (initialString.length() > 1) {
           throw new Exception();
         }
         goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
       } catch (Exception ex) {
         System.out.println("You have to enter one character");
         scanner.nextLine();
@@ -100,8 +92,7 @@ public class WeekFiveLoops {
         count += 1;
       }
     }
-    System.out.println("The number of " + desiredCharacter + "'s in the string"
-        + " is: " + count);
+    System.out.printf("%nThe number of %c's in the string is: %d", desiredCharacter, count);
     System.out.println("");
   }
 
@@ -112,35 +103,12 @@ public class WeekFiveLoops {
    * @param scanner a Scanner object for user input
    */
   public static void printBoxOfPounds(Scanner scanner) {
-    System.out.println("This program will ask you to enter the height and"
-        + " width of a box, and then it will print a box of # characters"
-        + " with that height and width");
-    int height = 0;
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        System.out.print("Please enter the height: ");
-        height = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
-    int width = 0;
-    goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        System.out.print("Please enter the width: ");
-        width = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
+    System.out.println("This program will ask you to enter the height and width of a box, and"
+        + " then it will print a box of # characters with that height and width");
+    System.out.print("Please enter the height: ");
+    int height = CheckInput.checkInt(scanner);
+    System.out.print("Please enter the width: ");
+    int width = CheckInput.checkInt(scanner);
     for (int i = 0; i < height; i++) {
       for (int j = 0; j < width; j++) {
         System.out.print("#");
@@ -156,42 +124,18 @@ public class WeekFiveLoops {
    * @param scanner a Scanner object for user input
    */
   public static void findSumOfFiveNumbers(Scanner scanner) {
-    System.out.println("This program will ask you how many integers you want"
-        + " to add, then it will ask you to put in those integers, and then"
-        + " it will tell you the sum of those integers");
+    System.out.println("This program will ask you how many integers you want to add, then it will"
+        + " ask you to put in those integers, and then it will tell you the sum of those integers");
+    System.out.println("Please enter the number of integers you would like to add: ");
     int total = 0;
     int number;
-    int numberOfIntegers = 0;
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        System.out.println("Please enter the number of integers you would like"
-            + " to add: ");
-        numberOfIntegers = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
+    int numberOfIntegers = CheckInput.checkInt(scanner);
     for (int i = 0; i < numberOfIntegers; i++) {
-      number = 0;
-      goodUserInput = false;
-      while (!goodUserInput) {
-        try {
-          System.out.println("Please enter an integer: ");
-          number = scanner.nextInt();
-          goodUserInput = true;
-        } catch (InputMismatchException ex) {
-          System.out.println("You have to enter an integer");
-          scanner.nextLine();
-          System.out.println("");
-        }
-      }
+      System.out.println("Please enter an integer: ");
+      number = CheckInput.checkInt(scanner);
       total += number;
     }
-    System.out.println("The total of the 5 numbers is: " + total);
+    System.out.printf("%nThe total of the 5 numbers is: %d", total);
     System.out.println("");
   }
 
@@ -201,8 +145,8 @@ public class WeekFiveLoops {
    * @param scanner a Scanner object for user input
    */
   public static void reverseString(Scanner scanner) {
-    System.out.println("This program will ask you to enter a string, and then"
-        + " it will print out the reverse of that string");
+    System.out.println("This program will ask you to enter a string, and then it will print out"
+        + " the reverse of that string");
     StringBuffer buf = new StringBuffer();
     System.out.println("Please enter a string: ");
     scanner.nextLine();
@@ -211,7 +155,7 @@ public class WeekFiveLoops {
       buf.append(string.charAt(i));
     }
     String reversedString = buf.toString();
-    System.out.println("The reversed string is: " + reversedString);
+    System.out.printf("%The reversed string is: %s", reversedString);
     System.out.println("");
   }
 }

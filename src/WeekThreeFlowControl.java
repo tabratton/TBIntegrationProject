@@ -2,12 +2,11 @@
 // Contains all of the "programs" (methods) for the Week 3 - Flow Control
 // category of the menu
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-03-03
  */
 public class WeekThreeFlowControl {
@@ -19,29 +18,13 @@ public class WeekThreeFlowControl {
    * @param scanner a Scanner object for user input
    */
   public static void listNotMultiplesOfThreeOrFour(Scanner scanner) {
-    System.out.println("This program will ask you for a number, and then it"
-        + " will list every number between 1 and the number you entered"
-        + " that is not a multiple of 3 or 4");
+    System.out.println("This program will ask you for a number, and then it will list every"
+        + " number between 1 and the number you entered that is not a multiple of 3 or 4");
     System.out.println("Please enter an integer: ");
-    int noMultiplesOf3Or4 = 0;
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        noMultiplesOf3Or4 = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
-    int loopCounter = 1;
-    while (loopCounter <= noMultiplesOf3Or4) {
-      if (loopCounter % 3 == 0 || loopCounter % 4 == 0) {
-        loopCounter++;
-      } else {
-        System.out.println(loopCounter);
-        loopCounter++;
+    int noMultiplesOf3Or4 = CheckInput.checkInt(scanner);
+    for (int i = 1; i <= noMultiplesOf3Or4; i++) {
+      if (i % 3 != 0 || i % 4 != 0) {
+        System.out.println(i);
       }
     }
     System.out.println("");
@@ -55,18 +38,7 @@ public class WeekThreeFlowControl {
    */
   public static void tellRightOrWrong(Scanner scanner) {
     System.out.println("What is 12 + 12?");
-    int rightOrWrongInput = 0;
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        rightOrWrongInput = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
+    int rightOrWrongInput = CheckInput.checkInt(scanner);
     boolean rightOrWrongAnswer;
     if (rightOrWrongInput == 24) {
       rightOrWrongAnswer = true;
@@ -84,24 +56,13 @@ public class WeekThreeFlowControl {
    * @param scanner a Scanner object for user input
    */
   public static void convertSpaceWeight(Scanner scanner) {
-    System.out.println("This program will ask for your current weight, and"
-        + " then tell you your weight on another planet of your choice");
+    System.out.println("This program will ask for your current weight, and then tell you your"
+        + " weight on another planet of your choice");
     System.out.print("Please enter your current earth weight: ");
-    double weight = 0;
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        weight = scanner.nextDouble();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter a number");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
+    double weight = CheckInput.checkDouble(scanner);
     System.out.println();
     int inputPlanet = 0;
-    goodUserInput = false;
+    boolean goodUserInput = false;
     while (!goodUserInput) {
       System.out.println("Please enter the number corresponding to the planet"
           + " you want: ");
@@ -111,21 +72,8 @@ public class WeekThreeFlowControl {
       System.out.println("4. Saturn");
       System.out.println("5. Uranus");
       System.out.println("6. Neptune");
-      try {
-        inputPlanet = scanner.nextInt();
-        if (inputPlanet < 1 || inputPlanet > 6) {
-          throw new Exception();
-        }
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      } catch (Exception ex) {
-        System.out.println("You did not enter a valid menu number");
-        scanner.nextLine();
-        System.out.println("");
-      }
+      inputPlanet = CheckInput.checkInt(scanner);
+      goodUserInput = CheckInput.checkInputRange(scanner, inputPlanet, 1, 6);
     }
     double gravityVenus = 0.78;
     double gravityMars = 0.39;
@@ -155,7 +103,7 @@ public class WeekThreeFlowControl {
       default:
         break;
     }
-    System.out.println("Your weight in pounds on that planet is: " + weight);
+    System.out.printf("%nYour weight in pounds on that planet is: %f", weight);
     System.out.println("");
   }
 
@@ -166,15 +114,14 @@ public class WeekThreeFlowControl {
    * @param scanner a Scanner object for user input
    */
   public static void takeLuckySum(Scanner scanner) {
-    System.out.println("This program will ask you for 3 numbers, then it will"
-        + " add them together, unless one of them is 13. Then it will add"
-        + " any numbers before 13, but not after it");
-    System.out.println("Please enter 3 integers:");
-    int luckySumA = scanner.nextInt();
-    int luckySumB = scanner.nextInt();
-    int luckySumC = scanner.nextInt();
+    System.out.println("This program will ask you for 3 numbers, then it will add them together,"
+        + " unless one of them is 13. Then it will add any numbers before 13, but not after it");
+    System.out.println("Please enter 3 integers: ");
+    int luckySumA = CheckInput.checkInt(scanner);
+    int luckySumB = CheckInput.checkInt(scanner);
+    int luckySumC = CheckInput.checkInt(scanner);
     int luckySumS = calculateLuckySum(luckySumA, luckySumB, luckySumC);
-    System.out.println("Lucky sum: " + luckySumS);
+    System.out.printf("%nLucky sum: %d", luckySumS);
     System.out.println("");
   }
 
@@ -185,47 +132,13 @@ public class WeekThreeFlowControl {
    * @param scanner a Scanner object for user input
    */
   public static void calculateRedLotteryTicket(Scanner scanner) {
-    System.out.println("This program will ask you for 3 integers, and it will"
-        + " then tell you the value of your 'ticket' based on those"
-        + " numbers");
-    int lotteryA = 0;
-    int lotteryB = 0;
-    int lotteryC = 0;
-    int lotteryS;
+    System.out.println("This program will ask you for 3 integers, and it will then tell you the"
+        + " value of your 'ticket' based on those numbers");
     System.out.println("Please enter 3 integers from 0 to 2: ");
-    boolean goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        lotteryA = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
-    goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        lotteryB = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
-    goodUserInput = false;
-    while (!goodUserInput) {
-      try {
-        lotteryC = scanner.nextInt();
-        goodUserInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println("You have to enter an integer");
-        scanner.nextLine();
-        System.out.println("");
-      }
-    }
+    int lotteryA = CheckInput.checkInt(scanner);
+    int lotteryB = CheckInput.checkInt(scanner);
+    int lotteryC = CheckInput.checkInt(scanner);
+    int lotteryS;
     if (lotteryA == 2 && lotteryB == 2 && lotteryC == 2) {
       lotteryS = 10;
     } else if (lotteryA == lotteryB && lotteryB == lotteryC) {
@@ -235,7 +148,7 @@ public class WeekThreeFlowControl {
     } else {
       lotteryS = 0;
     }
-    System.out.println("The value of your ticket is: " + lotteryS);
+    System.out.printf("%nThe value of your ticket is: %d", lotteryS);
     System.out.println("");
   }
 
@@ -248,7 +161,7 @@ public class WeekThreeFlowControl {
    * @return     the sum of the int values that appear before 13, also not
    *             including 13 itself
    */
-  public static int calculateLuckySum(int num1, int num2, int num3) {
+  private static int calculateLuckySum(int num1, int num2, int num3) {
     int sum;
     int magicLuckyThirteen = 13;
     if (num1 == magicLuckyThirteen) {

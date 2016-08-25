@@ -1,7 +1,7 @@
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-04-13
  */
 public class WeighedItem extends PurchasedItem {
@@ -21,8 +21,8 @@ public class WeighedItem extends PurchasedItem {
    */
   public WeighedItem() {
     super();
-    this.priceAfterWeight = 0;
-    this.weight = 0;
+    setWeight(0.0);
+    setPriceAfterWeight();
   }
 
   /**
@@ -57,7 +57,7 @@ public class WeighedItem extends PurchasedItem {
    * @return Returns the weight of the items being bought
    */
   public double getWeight() {
-    return weight;
+    return this.weight;
   }
 
   /**
@@ -75,7 +75,7 @@ public class WeighedItem extends PurchasedItem {
    *         weight of the items
    */
   public double getPriceAfterWeight() {
-    return priceAfterWeight;
+    return this.priceAfterWeight;
   }
 
   /**
@@ -85,7 +85,7 @@ public class WeighedItem extends PurchasedItem {
    *         fields of the item.
    */
   public String printInfo() {
-    return getName() + "@ $" + getPrice() + " per Kg with " + weight + " Kg "
-        + "bought, for a total of $" + getPriceAfterWeight();
+    return String.format("%s@ $%.2f per kg with %.2f kg bought, for a total of $%.2f", getName(),
+        getPrice(), getWeight(), getPriceAfterWeight());
   }
 }

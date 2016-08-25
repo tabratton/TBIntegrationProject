@@ -1,7 +1,7 @@
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-04-13
  */
 public class PurchasedItem {
@@ -20,8 +20,8 @@ public class PurchasedItem {
    * Default constructor with no parameters, initializes values to null and 0.
    */
   public PurchasedItem() {
-    this.name = null;
-    this.unitPrice = 0;
+    setName(null);
+    setPrice(0);
   }
 
   /**
@@ -50,7 +50,7 @@ public class PurchasedItem {
    * @return Returns a string that is the name of the item being bought
    */
   public String getName() {
-    return name;
+    return this.name;
   }
 
   /**
@@ -72,7 +72,7 @@ public class PurchasedItem {
    * @return Returns the price of the item per unit of that item
    */
   public double getPrice() {
-    return unitPrice;
+    return this.unitPrice;
   }
 
   /**
@@ -82,6 +82,6 @@ public class PurchasedItem {
    *         fields of the item.
    */
   public String printInfo() {
-    return getName() + "@ " + getPrice();
+    return String.format("%s@ %.2f", getName(), getPrice());
   }
 }

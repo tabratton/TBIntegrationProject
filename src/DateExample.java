@@ -1,7 +1,7 @@
 
 /**
  * @author  Tyler Bratton tylerbratton96@gmail.com
- * @version 1.3
+ * @version 1.4
  * @since   2016-03-01
  */
 public class DateExample {
@@ -13,9 +13,9 @@ public class DateExample {
    * Default constructor with no parameters, sets all fields to 0.
    */
   public DateExample() {
-    this.day = 0;
-    this.month = 0;
-    this.year = 0;
+    setDay(0);
+    setMonth(0);
+    setYear(0);
   }
 
   /**
@@ -26,9 +26,9 @@ public class DateExample {
    * @param newYear  The year for the date object being created
    */
   public DateExample(int newDay, int newMonth, int newYear) {
-    this.day = newDay;
-    this.month = newMonth;
-    this.year = newYear;
+    setDay(newDay);
+    setMonth(newMonth);
+    setYear(newYear);
   }
 
   /**
@@ -64,7 +64,13 @@ public class DateExample {
    * @param inputDay an int value that represents the new day for the object
    */
   public void setDay(int inputDay) {
-    this.day = inputDay;
+    if (inputDay > 0 || inputDay < 32) {
+      this.day = inputDay;
+    } else {
+      System.out.println("Error: Day must be between 1 and 31");
+      System.out.println("Setting day to 1");
+      this.day = 1;
+    }
   }
 
   /**
@@ -73,7 +79,13 @@ public class DateExample {
    * @param inputMonth an int value that represents the new month for the object
    */
   public void setMonth(int inputMonth) {
-    this.month = inputMonth;
+    if (inputMonth > 0 && inputMonth < 13) {
+      this.month = inputMonth;
+    } else {
+      System.out.println("Error: Month must be between 1 and 12");
+      System.out.println("Setting month to 1");
+      this.month = 1;
+    }
   }
 
   /**
@@ -82,14 +94,20 @@ public class DateExample {
    * @param inputYear an int value that represents the new year for the object
    */
   public void setYear(int inputYear) {
-    this.year = inputYear;
+    if (inputYear > 0) {
+      this.year = inputYear;
+    } else {
+      System.out.println("Error: Year must be 1 or larger");
+      System.out.println("Setting year to 1;");
+      this.year = 1;
+    }
   }
 
   /**
    * Displays the current values for day, month, and year in a formatted string.
    */
   public void displayDate() {
-    System.out.println("The date is (in dd/mm/yyyy format): " + getDay()
-        + "/" + getMonth() + "/" + getYear());
+    System.out.printf("%nThe date is (in dd/mm/yyyy format): %d/%d/%d", getDay(), getMonth(),
+        getYear());
   }
 }
