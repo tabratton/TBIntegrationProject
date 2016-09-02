@@ -59,8 +59,8 @@ public class WeekTwoArithmeticOperators {
         + " square root and fourth root, and then tell you they are to 5 decimal places");
     System.out.println("Please enter a number: ");
     double roots = CheckInput.checkDouble(scanner);
-    System.out.printf("%nThe square root of the number is: %.5f", Math.pow(roots, 0.5));
-    System.out.printf("%nThe fourth root of the number is: %.5f", Math.pow(roots, 0.25));
+    System.out.printf("The square root of the number is: %.5f%n", Math.pow(roots, 0.5));
+    System.out.printf("The fourth root of the number is: %.5f%n", Math.pow(roots, 0.25));
     System.out.println("");
   }
 
@@ -80,7 +80,7 @@ public class WeekTwoArithmeticOperators {
         + ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians) / (5 * 4 * 3 * 2))
         - ((sinRadians * sinRadians * sinRadians * sinRadians * sinRadians * sinRadians
         * sinRadians) / (7 * 6 * 5 * 4 * 3 * 2));
-    System.out.printf("%nThe sine of the angle is: %.6f", sinTaylorSeries);
+    System.out.printf("The sine of the angle is: %.6f%n", sinTaylorSeries);
     System.out.println("");
   }
 
@@ -109,7 +109,7 @@ public class WeekTwoArithmeticOperators {
       sumFifteen += fifteenCounter;
     }
     int finalSum = sumFive + sumThree - sumFifteen;
-    System.out.printf("%nThe final sum is: %d", finalSum);
+    System.out.printf("The final sum is: %d%n", finalSum);
     System.out.println("");
   }
 
@@ -134,9 +134,9 @@ public class WeekTwoArithmeticOperators {
       isLeap = false;
     }
     if (isLeap) {
-      System.out.printf("%n%d is a leap year", leapYear);
+      System.out.printf("%d is a leap year%n", leapYear);
     } else {
-      System.out.printf("%n%d is not a leap year", leapYear);
+      System.out.printf("%d is not a leap year%n", leapYear);
     }
     System.out.println("");
   }
@@ -156,11 +156,11 @@ public class WeekTwoArithmeticOperators {
     if (num1 == num2 && num2 == num3) {
       System.out.println("The entered numbers are all the same.");
     } else if (num1 > num2 && num1 > num3) {
-      System.out.printf("%nThe first number, %d, is largest.", num1);
+      System.out.printf("The first number, %d, is largest.%n", num1);
     } else if (num2 > num1 && num2 > num3) {
-      System.out.printf("%nThe second number, %d, is largest.", num2);
+      System.out.printf("The second number, %d, is largest.%n", num2);
     } else {
-      System.out.printf("%nThe third number, %d, is largest.", num3);
+      System.out.printf("The third number, %d, is largest.%n", num3);
     }
     System.out.println("");
   }
@@ -181,7 +181,7 @@ public class WeekTwoArithmeticOperators {
     double interest;  // the interest earned during the year
     interest = principal * (rate / 100);
     principal = principal + interest;
-    System.out.printf("%nThe value of the investment after one year is: %f", principal);
+    System.out.printf("The value of the investment after one year is: %f%n", principal);
     System.out.println("");
   }
 
@@ -197,7 +197,7 @@ public class WeekTwoArithmeticOperators {
     System.out.println("Please enter a temperature in Celsius: ");
     double celsiusDegrees = CheckInput.checkDouble(scanner);
     double fahrenheitDegrees = (celsiusDegrees * 9 / 5) + 32;
-    System.out.printf("%nThe temperature in Fahrenheit is: %f", fahrenheitDegrees);
+    System.out.printf("The temperature in Fahrenheit is: %f%n", fahrenheitDegrees);
     System.out.println("");
   }
 
@@ -218,10 +218,10 @@ public class WeekTwoArithmeticOperators {
     double resultSubtraction = num1 - num2;
     double resultMultiplication = num1 * num2;
     double resultDivision = num1 / num2;
-    System.out.printf("%nThe result of adding is %f", resultAddition);
-    System.out.printf("%nThe result of subtracting is %f", resultSubtraction);
-    System.out.printf("%nThe result of multiplying is %f", resultMultiplication);
-    System.out.printf("%nThe result of dividing is %f", resultDivision);
+    System.out.printf("The result of adding is %f%n", resultAddition);
+    System.out.printf("The result of subtracting is %f%n", resultSubtraction);
+    System.out.printf("The result of multiplying is %f%n", resultMultiplication);
+    System.out.printf("The result of dividing is %f%n", resultDivision);
     System.out.println("");
   }
 }

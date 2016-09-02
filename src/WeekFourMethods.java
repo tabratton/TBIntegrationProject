@@ -22,7 +22,7 @@ public class WeekFourMethods {
     System.out.print("Please enter the radius: ");
     double radius = CheckInput.checkDouble(scanner);
     double area = radius * radius * 3.14;
-    System.out.printf("%nThe area of the circle is: %f", area);
+    System.out.printf("The area of the circle is: %f%n", area);
     System.out.println("");
   }
 
@@ -38,7 +38,7 @@ public class WeekFourMethods {
     System.out.println("Please enter a string: ");
     scanner.nextLine();
     String input = scanner.nextLine();
-    System.out.printf("%nThe lowercase version of the string: %s", input.toLowerCase());
+    System.out.printf("The lowercase version of the string: %s%n", input.toLowerCase());
     System.out.println("");
   }
 
@@ -74,7 +74,7 @@ public class WeekFourMethods {
     System.out.print("Please enter a number: ");
     double number = CheckInput.checkDouble(scanner);
     double answer = Math.sqrt(number);
-    System.out.printf("%nThe square of %f is: %f", number, answer);
+    System.out.printf("The square of %f is: %f%n", number, answer);
     System.out.println("");
   }
 }

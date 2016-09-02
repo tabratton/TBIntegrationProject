@@ -39,24 +39,24 @@ public class WeekZeroExamples {
         + " for the program to store and use later");
     System.out.println("There are 8 different types of variables in Java, called primitive data"
         + " types, and they are as follows:");
-    System.out.printf("%nbyte: An 8-bit integer. Has a minimum value of -128 and a maximum of 127."
-        + " Example: %d", declaringVariablesByte);
-    System.out.printf("%nshort: A 16-bit integer. Has a minimum value of -32,168 and a maximum of"
-        + " 32,767. Example: %d", declaringVariablesShort);
-    System.out.printf("%nint: A 32-bit integer. Has a minimum value of -2,147,483,648 and a"
-        + " maximum of 2,147,483,647. Example: %d", declaringVariablesInt);
-    System.out.printf("%nlong: A 64-bit integer. Has a minimum value of -9,223,372,036,854,775,"
-        + "808 and a maximum of 9,223,372,036,854,775,807. Example: %d", declaringVariablesLong);
-    System.out.printf("%nfloat: A single-precision 32-bit floating point number. Unlike the"
+    System.out.printf("byte: An 8-bit integer. Has a minimum value of -128 and a maximum of 127."
+        + " Example: %d%n", declaringVariablesByte);
+    System.out.printf("short: A 16-bit integer. Has a minimum value of -32,168 and a maximum of"
+        + " 32,767. Example: %d%n", declaringVariablesShort);
+    System.out.printf("int: A 32-bit integer. Has a minimum value of -2,147,483,648 and a"
+        + " maximum of 2,147,483,647. Example: %d%n", declaringVariablesInt);
+    System.out.printf("long: A 64-bit integer. Has a minimum value of -9,223,372,036,854,775,"
+        + "808 and a maximum of 9,223,372,036,854,775,807. Example: %d%n", declaringVariablesLong);
+    System.out.printf("float: A single-precision 32-bit floating point number. Unlike the"
         + " previous data types, floating point numbers can be used for decimal numbers instead"
-        + " of just integers. Example %f", declaringVariablesFloat);
-    System.out.printf("%ndouble: A double-precision 64-bit floating point number. Unlike the"
+        + " of just integers. Example %f%n", declaringVariablesFloat);
+    System.out.printf("double: A double-precision 64-bit floating point number. Unlike the"
         + " previous data types, floating point numbers can be used for decimal numbers instead"
-        + " of just integers. Example: %f", declaringVariablesDouble);
-    System.out.printf("%nchar: A single 16-bit Unicode character. Example: %c",
+        + " of just integers. Example: %f%n", declaringVariablesDouble);
+    System.out.printf("char: A single 16-bit Unicode character. Example: %c%n",
         declaringVariablesChar);
-    System.out.println("boolean: Only has two possible values, true and false. Example: "
-        + declaringVariablesBoolean);
+    System.out.printf("boolean: Only has two possible values, true and false. Example: %b%n",
+        declaringVariablesBoolean);
     System.out.println("");
   }
 
@@ -69,7 +69,7 @@ public class WeekZeroExamples {
     System.out.println("This program is going to demonstrate, and try to explain what integer"
         + " division is and how it works in Java");
     System.out.println("I'm going to divide 2 integers and hopefully you'll see how this works");
-    System.out.printf("%nThe result of dividing 9 by 5 is: %d", nine / five);
+    System.out.printf("The result of dividing 9 by 5 is: %d%n", nine / five);
     System.out.println("As you can see, that isn't the actual answer you would get by dividing 9"
         + " and 5");
     System.out.println("This happens because Java does something called truncating when two"

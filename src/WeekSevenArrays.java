@@ -86,7 +86,7 @@ public class WeekSevenArrays {
     for (int i = 0; i < 10; i++) {
       sumOfIntegers += anArray[i];
     }
-    System.out.printf("%nThe product of the sum of the integers in the array is: %d",
+    System.out.printf("The product of the sum of the integers in the array is: %d%n",
         sumOfIntegers);
     System.out.println("");
   }
@@ -156,7 +156,7 @@ public class WeekSevenArrays {
       row++;
     }
     System.out.println("");
-    System.out.printf("%nThe location of the integer is: Row %d, Column %d", row - 1, col - 1);
+    System.out.printf("The location of the integer is: Row %d, Column %d%n", row - 1, col - 1);
     System.out.println("");
   }
 }

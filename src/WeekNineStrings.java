@@ -23,7 +23,7 @@ public class WeekNineStrings {
     scanner.nextLine();
     String string = scanner.nextLine();
     int length = string.length();
-    System.out.printf("%nThe length of the string is: %d characters.", length);
+    System.out.printf("The length of the string is: %d characters.%n", length);
     System.out.println("");
   }
 
@@ -46,7 +46,7 @@ public class WeekNineStrings {
         longestWord = testString;
       }
     }
-    System.out.printf("%nThe longest word in the sentence is: %s", longestWord);
+    System.out.printf("The longest word in the sentence is: %s%n", longestWord);
     System.out.println("");
   }
 

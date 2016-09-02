@@ -107,7 +107,7 @@ public class DateExample {
    * Displays the current values for day, month, and year in a formatted string.
    */
   public void displayDate() {
-    System.out.printf("%nThe date is (in dd/mm/yyyy format): %d/%d/%d", getDay(), getMonth(),
+    System.out.printf("The date is (in dd/mm/yyyy format): %d/%d/%d%n", getDay(), getMonth(),
         getYear());
   }
 }

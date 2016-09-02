@@ -103,7 +103,7 @@ public class WeekThreeFlowControl {
       default:
         break;
     }
-    System.out.printf("%nYour weight in pounds on that planet is: %f", weight);
+    System.out.printf("Your weight in pounds on that planet is: %f%n", weight);
     System.out.println("");
   }
 
@@ -121,7 +121,7 @@ public class WeekThreeFlowControl {
     int luckySumB = CheckInput.checkInt(scanner);
     int luckySumC = CheckInput.checkInt(scanner);
     int luckySumS = calculateLuckySum(luckySumA, luckySumB, luckySumC);
-    System.out.printf("%nLucky sum: %d", luckySumS);
+    System.out.printf("Lucky sum: %d%n", luckySumS);
     System.out.println("");
   }
 
@@ -148,7 +148,7 @@ public class WeekThreeFlowControl {
     } else {
       lotteryS = 0;
     }
-    System.out.printf("%nThe value of your ticket is: %d", lotteryS);
+    System.out.printf("The value of your ticket is: %d%n", lotteryS);
     System.out.println("");
   }
 

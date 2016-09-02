@@ -57,13 +57,13 @@ public class WeekSixExceptionHandling {
         if (userInput == 5) {
           throw new Exception();
         } else if (userInput % 5 == 0 || userInput % 2 == 0) {
-          System.out.printf("%nCorrect. %d is a multiple of 5.", userInput);
+          System.out.printf("Correct. %d is a multiple of 5.%n", userInput);
           goodUserInput = true;
         } else {
           throw new Exception();
         }
       } catch (Exception ex) {
-        System.out.printf("%nIncorrect. %d is not a multiple of 5.", userInput);
+        System.out.printf("Incorrect. %d is not a multiple of 5.%n", userInput);
         scanner.nextLine();
         System.out.println("");
       }
@@ -92,7 +92,7 @@ public class WeekSixExceptionHandling {
     double y2 = CheckInput.checkDouble(scanner);
     try {
       double slope = ((y2 - y1) / (x2 - x1));
-      System.out.printf("%nThe slope of the line is %f", slope);
+      System.out.printf("The slope of the line is %f%n", slope);
     } catch (Exception ex) {
       System.out.println("This is a vertical line, the slope is undefined.");
     }
@@ -124,7 +124,7 @@ public class WeekSixExceptionHandling {
       goodUserInput = CheckInput.checkIfPositive(scanner, inches);
     }
     double result = height(feet, inches);
-    System.out.printf("%nThe result is: %f cm", result);
+    System.out.printf("The result is: %f cm%n", result);
     System.out.println("");
   }
 

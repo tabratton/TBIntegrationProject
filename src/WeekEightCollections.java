@@ -63,7 +63,7 @@ public class WeekEightCollections {
         maxIndex = i;
       }
     }
-    System.out.printf("%nThe largest value is %d; which is at index %d", max, maxIndex);
+    System.out.printf("The largest value is %d; which is at index %d%n", max, maxIndex);
     System.out.println("");
   }
 
@@ -83,7 +83,7 @@ public class WeekEightCollections {
       al.add(scanner.nextLine());
     }
     int max = findMaxLength(al);
-    System.out.printf("%nLength of the longest string in the ArrayList: %s", max);
+    System.out.printf("Length of the longest string in the ArrayList: %s%n", max);
     System.out.println("");
   }
 
@@ -129,7 +129,7 @@ public class WeekEightCollections {
         + " entered and tell you what it is.");
     System.out.println("Please enter the number of integers that will be inserted: ");
     int size = CheckInput.checkInt(scanner);
-    System.out.printf("%nPlease enter %d integers to insert into the ArrayList: ", size);
+    System.out.printf("Please enter %d integers to insert into the ArrayList:%n", size);
     while (size-- > 0) {
       al.add(CheckInput.checkInt(scanner));
     }
@@ -139,7 +139,7 @@ public class WeekEightCollections {
         max = values;
       }
     }
-    System.out.printf("%nThe largest value is: %d", max);
+    System.out.printf("The largest value is: %d%n", max);
     System.out.println("");
   }
 

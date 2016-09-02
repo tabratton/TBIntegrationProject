@@ -120,7 +120,7 @@ public class WeekOneVariables {
     System.out.println("Please enter the length of the third side");
     double side3 = CheckInput.checkDouble(scanner);
     double triangleArea = calculateTriangleArea(side1, side2, side3);
-    System.out.printf("%nA triangle with sides %f, %f, and %f an area of: %f", side1, side2,
+    System.out.printf("A triangle with sides %f, %f, and %f an area of: %f%n", side1, side2,
         side3, triangleArea);
     System.out.println("");
   }

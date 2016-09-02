@@ -52,7 +52,7 @@ public class WeekFiveLoops {
         primeSum += number;
       }
     }
-    System.out.printf("%nThe sum of the prime digits is: %d", primeSum);
+    System.out.printf("The sum of the prime digits is: %d%n", primeSum);
     System.out.println("");
   }
 
@@ -92,7 +92,7 @@ public class WeekFiveLoops {
         count += 1;
       }
     }
-    System.out.printf("%nThe number of %c's in the string is: %d", desiredCharacter, count);
+    System.out.printf("The number of %c's in the string is: %d%n", desiredCharacter, count);
     System.out.println("");
   }
 
@@ -135,7 +135,7 @@ public class WeekFiveLoops {
       number = CheckInput.checkInt(scanner);
       total += number;
     }
-    System.out.printf("%nThe total of the 5 numbers is: %d", total);
+    System.out.printf("The total of the 5 numbers is: %d%n", total);
     System.out.println("");
   }
 
@@ -155,7 +155,7 @@ public class WeekFiveLoops {
       buf.append(string.charAt(i));
     }
     String reversedString = buf.toString();
-    System.out.printf("%The reversed string is: %s", reversedString);
+    System.out.printf("The reversed string is: %s%n", reversedString);
     System.out.println("");
   }
 }
